@@ -5,7 +5,7 @@ void setup() {
   size(700, 400); //width, height
   fullScreen(); //displayWidth, displayHeight
   //Population, visual data
-  float musicButtonDrawX = width * 5/6;
+  float musicButtonDrawX = width * 1/2;
   float musicButtonDrawY = height * 1/2;
   pauseScaleWidth = 1.0/25.0; //used to change x-size
   pauseScaleHeight = 1.0/3.0; //used to change y-size
@@ -19,7 +19,7 @@ void setup() {
   //
   stopX = musicButtonDrawX - (width * 14/30);
   stopY = pauseY1;
-  stopWidth = pauseWidth;
+  stopWidth = pauseHeight;
   stopHeight = pauseHeight;
   //
 }//End setup
