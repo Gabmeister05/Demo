@@ -21,6 +21,7 @@ void setup() {
   stopY = ;
   stopWidth = ;
   stopHeight = ;
+  //
 }//End setup
 //
 void draw() {
