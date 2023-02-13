@@ -19,7 +19,7 @@ void setup() {
 }//End setup
 //
 void draw() {
- drawMusicButtons()
+ drawMusicButtons();
 }//End draw
 //
 void keyPressed() {
