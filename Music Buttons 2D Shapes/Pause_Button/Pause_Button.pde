@@ -18,7 +18,7 @@ void setup() {
   pauseHeight = height * pauseScaleHeight;
   //
   stopX = musicButtonDrawX - (width * 14/30);
-  stopY = musicButtonDrawY - (height * 1/5);
+  stopY = pauseY1;
   stopWidth = pauseWidth;
   stopHeight = pauseHeight;
   //
