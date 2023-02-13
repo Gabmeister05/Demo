@@ -14,11 +14,11 @@ void setup() {
   pauseX1 = musicButtonDrawX - pauseWidth - pauseWidth*1/2;
   pauseY1 = musicButtonDrawY;
   pauseX2 = musicButtonDrawX + pauseWidth*1/2;
-  pauseY2=  pauseY1;
+  pauseY2 = pauseY1;
   pauseHeight = height * pauseScaleHeight;
   //
-  stopX = width * 1/30;
-  stopY = height * 1/5;
+  stopX = musicButtonDrawX - (width * 14/30);
+  stopY = musicButtonDrawY - (height * 1/5);
   stopWidth = pauseWidth;
   stopHeight = pauseHeight;
   //
