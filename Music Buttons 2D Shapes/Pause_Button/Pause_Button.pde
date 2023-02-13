@@ -17,10 +17,10 @@ void setup() {
   pauseY2=  pauseY1;
   pauseHeight = height * pauseScaleHeight;
   //
-  stopX = ;
-  stopY = ;
-  stopWidth = ;
-  stopHeight = ;
+  stopX = width * 1/30;
+  stopY = height * 1/5;
+  stopWidth = pauseWidth;
+  stopHeight = pauseHeight;
   //
 }//End setup
 //
