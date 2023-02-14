@@ -1,4 +1,4 @@
-//Global Variabes
+//Global Variables
 //
 void setup() {
   //Landscape (portrait, square)
