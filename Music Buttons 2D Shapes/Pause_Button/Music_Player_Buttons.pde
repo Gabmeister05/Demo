@@ -6,11 +6,13 @@ color black=#000000, resetcolorNightMode=#FFFF4B; //Night Mode Friendly
 color resetcolorDayMode=#FFFFFF; //Not Night Mode Friendly
 //
 void drawMusicButtons() {
- drawPauseButtons();
+ drawPauseButton();
  drawStopButton();
+ drawPlayButton();
 }//End drawMusicButtons
 //
-void drawPauseButtons() {
+void drawPauseButton() {
+  stroke( rgb, alpha );
   fill( black ); //Change this to ternary operator
   rect( pauseX1, pauseY1, pauseWidth, pauseHeight );
   rect( pauseX2, pauseY2, pauseWidth, pauseHeight );
@@ -18,9 +20,14 @@ void drawPauseButtons() {
 }//End drawPauseButton()
 //
 void drawStopButton () {
+  stroke( rgb, alpha );
   fill( black ); //Change this to ternary operator
   rect( stopX, stopY, stopWidth, stopHeight ); //Square
   fill( resetcolorDayMode ); //Change this tp ternary opertaor
 }//End drawStopButton()
+//
+void drawPlayButton() {
+
+}//End drawPlayButton()
 //
 //End Music Player Buttons
