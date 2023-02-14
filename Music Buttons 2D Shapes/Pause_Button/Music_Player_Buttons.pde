@@ -11,8 +11,10 @@ void drawMusicButtons() {
 }//End drawMusicButtons
 //
 void drawPauseButtons() {
+  fill( black ); //Change this to ternary operator
   rect( pauseX1, pauseY1, pauseWidth, pauseHeight );
   rect( pauseX2, pauseY2, pauseWidth, pauseHeight );
+  fill( resetcolorDayMode ); //Change this tp ternary opertaor
 }//End drawPauseButton()
 //
 void drawStopButton () {
