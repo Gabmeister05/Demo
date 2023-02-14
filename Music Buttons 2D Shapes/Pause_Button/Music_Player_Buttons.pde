@@ -6,6 +6,8 @@ color black=#000000, resetcolorNightMode=#FFFF4B; //Night Mode Friendly
 color resetcolorDayMode=#FFFFFF; //Not Night Mode Friendly
 int rgb 
 float alpha
+float v1, v2, v3
+float gray
 //
 void drawMusicButtons() {
  drawPauseButton();
