@@ -5,7 +5,7 @@ float stopX, stopY, stopWidth, stopHeight;
 color black=#000000, resetcolorNightMode=#FFFF4B; //Night Mode Friendly
 color resetcolorDayMode=#FFFFFF; //Not Night Mode Friendly
 int rgb=#FFFF00;
-float alpha
+float alpha=#000000;
 //
 void drawMusicButtons() {
  drawPauseButton();
