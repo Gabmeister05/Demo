@@ -4,7 +4,7 @@ float pauseScaleWidth, pauseScaleHeight;
 float stopX, stopY, stopWidth, stopHeight;
 color black=#000000, resetcolorNightMode=#FFFF4B; //Night Mode Friendly
 color resetcolorDayMode=#FFFFFF; //Not Night Mode Friendly
-int rgb 
+int rgb=#FFFF00;
 float alpha
 float v1, v2, v3
 float gray
