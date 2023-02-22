@@ -25,7 +25,7 @@ void setup() {
   playX1 = musicButtonDrawX + (width * 5/30);
   playY1 = musicButtonDrawY;
   playX2 = musicButtonDrawX - playX1*1/1000;
-  playY2 = musicButtonDrawY - playY1*1/2;
+  playY2 = musicButtonDrawY - playY1*53/100;
   playX3 = playX1*1/2;
   playY3 = playY1;
   //
