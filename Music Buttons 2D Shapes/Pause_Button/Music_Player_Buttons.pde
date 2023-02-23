@@ -33,7 +33,7 @@ void drawStopButton () {
 }//End drawStopButton()
 //
 void drawPlayButton() {
-  translate( 1000, 100000 );
+  translate( 0, 0 );
   rotate( radians(0.0) );
   fill( black ); //Change this to ternary operator
   triangle( playX1, playY1, playX2, playY2, playX3, playY3 );
