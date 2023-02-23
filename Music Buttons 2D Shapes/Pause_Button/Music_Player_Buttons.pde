@@ -22,7 +22,7 @@ void drawPauseButton() {
   fill( black ); //Change this to ternary operator
   rect( pauseX1, pauseY1, pauseWidth, pauseHeight );
   rect( pauseX2, pauseY2, pauseWidth, pauseHeight );
-  fill( resetcolorDayMode ); //Change this tp ternary opertaor
+  fill( resetcolorDayMode ); //Change this tp ternary opertaot
 }//End drawPauseButton()
 //
 void drawStopButton () {
@@ -32,10 +32,12 @@ void drawStopButton () {
 }//End drawStopButton()
 //
 void drawPlayButton() {
+  pushMatrix();
+  rotate( HALF_PI );
   fill( black ); //Change this to ternary operator
   triangle( playX1, playY1, playX2, playY2, playX3, playY3 );
-  rotate( HALF_PI );
   fill( resetcolorDayMode ); //Change this tp ternary opertaor
+  popMatrix();
 }//End drawPlayButton()
 //
 void drawFastForwardButton() {}//End FastForwardButton()
