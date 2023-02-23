@@ -12,6 +12,10 @@ void drawMusicButtons() {
  drawPauseButton();
  drawStopButton();
  drawPlayButton();
+ drawFastForwardButton();
+ drawFastBackwardButton();
+ drawSkipForwardButton();
+ drawSkipBackwardButton();
 }//End drawMusicButtons
 //
 void drawPauseButton() {
@@ -33,5 +37,13 @@ void drawPlayButton() {
   rotate( HALF_PI );
   fill( resetcolorDayMode ); //Change this tp ternary opertaor
 }//End drawPlayButton()
+//
+void drawFastForwardButton() {}//End FastForwardButton()
+//
+void drawFastBackwardButton() {}//End drawFastBackwardButton()
+//
+void drawSkipForwardButton() {}//End drawSkipForwardButton()
+//
+void drawSkipBackwardButton() {}//End drawSkipBackwardButton()
 //
 //End Music Player Buttons
