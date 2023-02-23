@@ -32,13 +32,11 @@ void drawStopButton () {
 }//End drawStopButton()
 //
 void drawPlayButton() {
-  pushMatrix();
   translate();
   rotate( radians(360.0) );
   fill( black ); //Change this to ternary operator
   triangle( playX1, playY1, playX2, playY2, playX3, playY3 );
   fill( resetcolorDayMode ); //Change this tp ternary opertaor
-  popMatrix();
 }//End drawPlayButton()
 //
 void drawFastForwardButton() {}//End FastForwardButton()
