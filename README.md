@@ -32,11 +32,15 @@ Play-Pause: pressing the "P" keyboard button will...
 2. Beginning of .mp3: play file
 "Up to 80%" of .mp3: "I want to play the rest of the song"
 3. "After 80%": "I am done, play the next song"
-ERROR - the computer can play a song file at the end of the file, but nothing will be heard in the speakers
+ERROR - the computer can play a song file at the end of the file, but nothing will be heard in the speakers :|
 
 Stop: pressing S will...
 
 1. pause() the current .mp3 file
 2. rewind() the current .mp3 file so it ready to play at the begining of the file
-ERROR - "STOP" does not exist, only pause()
+ERROR - "STOP" does not exist, only pause() :|
 
+Mute: pressing M will...
+
+1. stop the speakers but the computer will continue to play the file until it ends
+ERROR - if the .mp3 file is muted AND .mp3 is at the end, the unMute() will rewind() the current .mp3 and play it from the beginning :|
