@@ -21,4 +21,5 @@ List of buttons for music player:
     - Optional - Shuffle
 
 - Organize with Population Tab and Music Button Tab, each with a TAB-Driver and VOIDs connected to the Driver
-- 
+- Future: connect player function to visual feedback of button
+- Keyboard Shortcuts for button algorithms
