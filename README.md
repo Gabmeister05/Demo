@@ -33,3 +33,10 @@ Play-Pause: pressing the "P" keyboard button will...
 "Up to 80%" of .mp3: "I want to play the rest of the song"
 3. "After 80%": "I am done, play the next song"
 ERROR - the computer can play a song file at the end of the file, but nothing will be heard in the speakers
+
+Stop: pressing S will...
+
+1. pause() the current .mp3 file
+2. rewind() the current .mp3 file so it ready to play at the begining of the file
+ERROR - "STOP" does not exist, only pause()
+
