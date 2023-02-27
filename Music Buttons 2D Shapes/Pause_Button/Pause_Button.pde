@@ -23,7 +23,7 @@ void setup() {
   stopHeight = pauseHeight;
   //
   playX1 = musicButtonDrawX + (width * 5/30);
-  playY1 = musicButtonDrawY;
+  playY1 = pauseY1;
   playX2 = musicButtonDrawX - playX1*1/1000;
   playY2 = musicButtonDrawY - playY1*53/100;
   playX3 = playX1*1/2;
