@@ -3,6 +3,8 @@ float pauseX1, pauseY1, pauseX2, pauseY2, pauseWidth, pauseHeight;
 float pauseScaleWidth, pauseScaleHeight;
 float stopX, stopY, stopWidth, stopHeight;
 float playX1, playY1, playX2, playY2, playX3, playY3;
+float ffX1, ffY1, ffX2, ffY2, ffX3, ffY3;
+float fbX1, fbY1, fbX2, fbY2, fbX3, fbY3;
 float deg=0.0;
 float x=0, y=0;
 float s=0;
@@ -42,9 +44,13 @@ void drawPlayButton() {
   fill( resetcolorDayMode ); //Change this tp ternary opertaor
 }//End drawPlayButton()
 //
-void drawFastForwardButton() {}//End FastForwardButton()
+void drawFastForwardButton() {
+  triangle( ffX1, ffY1, ffX2, ffY2, ffX3, ffY3 );
+}//End FastForwardButton()
 //
-void drawFastBackwardButton() {}//End drawFastBackwardButton()
+void drawFastBackwardButton() {
+  triangle( fbX1, fbY1, fbX2, fbY2, fbX3, fbY3 );
+}//End drawFastBackwardButton()
 //
 void drawSkipForwardButton() {}//End drawSkipForwardButton()
 //
