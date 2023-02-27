@@ -5,7 +5,7 @@ float stopX, stopY, stopWidth, stopHeight;
 float playX1, playY1, playX2, playY2, playX3, playY3;
 float deg=0.0;
 float x=0, y=0;
-float s=0%;
+float s=0;
 color black=#000000, resetcolorNightMode=#FFFF4B; //Night Mode Friendly
 color resetcolorDayMode=#FFFFFF; //Not Night Mode Friendly
 //Population
@@ -36,7 +36,7 @@ void drawStopButton () {
 void drawPlayButton() {
   translate( 1385, -230);
   rotate( radians(90.0) );
-  scale();
+  scale(3.0);
   fill( black ); //Change this to ternary operator
   triangle( playX1, playY1, playX2, playY2, playX3, playY3 );
   fill( resetcolorDayMode ); //Change this tp ternary opertaor
