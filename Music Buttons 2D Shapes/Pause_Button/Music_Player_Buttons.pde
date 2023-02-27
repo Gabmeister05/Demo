@@ -34,7 +34,7 @@ void drawStopButton () {
 }//End drawStopButton()
 //
 void drawPlayButton() {
-  translate( 1385, -230);
+  translate( 1265, -140);
   rotate( radians(90.0) );
   scale(0.5);
   fill( black ); //Change this to ternary operator
