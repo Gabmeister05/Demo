@@ -34,9 +34,9 @@ void drawStopButton () {
 }//End drawStopButton()
 //
 void drawPlayButton() {
-  translate( 1265, -140);
+  translate( 1265, -90);
   rotate( radians(90.0) );
-  scale(0.5);
+  scale(0.5); //Could be changed but you'll also have to change the translation
   fill( black ); //Change this to ternary operator
   triangle( playX1, playY1, playX2, playY2, playX3, playY3 );
   fill( resetcolorDayMode ); //Change this tp ternary opertaor
