@@ -5,6 +5,10 @@ float stopX, stopY, stopWidth, stopHeight;
 float playX1, playY1, playX2, playY2, playX3, playY3;
 float ffX1, ffY1, ffX2, ffY2, ffX3, ffY3;
 float fbX1, fbY1, fbX2, fbY2, fbX3, fbY3;
+float sfX1, sfY1, sfX2, sfY2, sfX3, sfY3;
+float sfX4, sfY4, sfWidth, sfHeight;
+float sbX1, sbY1, sbX2, sbY2, sbX3, sbY3
+float sbX4, sbY4, sbWidth, sbHeight
 float deg=0.0;
 float x=0, y=0;
 float s=0;
@@ -52,8 +56,14 @@ void drawFastBackwardButton() {
   triangle( fbX1, fbY1, fbX2, fbY2, fbX3, fbY3 );
 }//End drawFastBackwardButton()
 //
-void drawSkipForwardButton() {}//End drawSkipForwardButton()
+void drawSkipForwardButton() {
+  triangle( sfX1, sfY1, sfX2, sfY2, sfX3, sfY3 );
+  rect( sfX4, sfY4, sfWidth, sfHeight );
+}//End drawSkipForwardButton()
 //
-void drawSkipBackwardButton() {}//End drawSkipBackwardButton()
+void drawSkipBackwardButton() {
+  triangle( sbX1, sbY1, sbX2, sbY2, sbX3, sbY3 );
+  rect( sbX4, sbY4, sbWidth, sbHeight );
+}//End drawSkipBackwardButton()
 //
 //End Music Player Buttons
