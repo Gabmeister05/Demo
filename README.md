@@ -23,3 +23,10 @@ List of buttons for music player:
 - Organize with Population Tab and Music Button Tab, each with a TAB-Driver and VOIDs connected to the Driver
 - Future: connect player function to visual feedback of button
 - Keyboard Shortcuts for button algorithms
+
+Play-Pause: pressing the "P" keyboard button will...
+
+1. At anytime, pause will stop playing the file and hold the position in the file
+2. Beginning of .mp3: play file
+"Up to 80%' of .mp3L "I want to play the rest of the song"
+3.
