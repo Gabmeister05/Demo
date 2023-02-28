@@ -9,9 +9,10 @@ import ddf.minim.ugens.*;
 //
 void setup() {
   //
-  songs[1].loop(0); //Change the index manually
-  //
   setupMusic();
+  //
+  songs[0].loop(0); //Change the index manually
+  //
 }//End setup
 //
 void draw() {
