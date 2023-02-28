@@ -9,12 +9,11 @@ import ddf.minim.ugens.*;
 String path = new File("").getAbsolutePath(); //Exported
 String directory = "C:/Users/g.kazimierczak/Documents/Github/Demo/App_Engine"; //Not exported
 //
-Minim minim; //creates an object to access all functions
-AudioPlayer[] songs = new AudioPlayer[3]; //creates "Play List" variable holding extensions WAV, AIFF, AU, SND, and MP3
+
 //
 void setup() {
   //
-  minim = new Minim (this); //load from data directory, loadFile should also load from project folder, like loadImage
+  
   //
   File anyDirectory = new File(path); //Used when exported
   println ("Exported Directory", anyDirectory);
