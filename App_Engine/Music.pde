@@ -11,6 +11,7 @@ void setupMusic() {
   //
   //Remininder: finish OS_Level COde to auto read pathway and files (See Operating System)
   //
+  concatenation();
   songs[] = minim.loadFile();
 }//End setupMusic
 //
