@@ -1,29 +1,27 @@
-void setupPopulation() {
+//Global Variables
+int appWidth, appHeight;
+//
+void setup() {
+  //Landscape (portrait, square)
+  size(700, 400); //width, height
+  //fullScreen(); //displayWidth, displayHeight
   //
-  float musicButtonDrawX = appWidth * 1/2;
-  float musicButtonDrawY = appHeight * 1/2;
+  //ERROR: CANVAS is bigger than Display
+  //ERROR: stating display geomtery (i.e. landscape, portrait, Square)
+  appWidth = width; //displayWidth
+  appHeight = height; //displayHeight
   //
-  pauseScaleWidth = 1.0/25.0; //used to change x-size
-  pauseScaleHeight = 1.0/3.0; //used to change y-size
-  println(pauseScaleWidth);
+  //Population, visual data
+  setupPopulation();
   //
-  pauseWidth = appWidth * pauseScaleWidth;
-  pauseX1 = musicButtonDrawX - pauseWidth - pauseWidth*1/2;
-  pauseY1 = musicButtonDrawY;
-  pauseX2 = musicButtonDrawX + pauseWidth*1/2;
-  pauseY2 = pauseY1;
-  pauseHeight = appHeight * pauseScaleHeight;
-  //
-  stopX = musicButtonDrawX - (appWidth * 14/30);
-  stopY = pauseY1;
-  stopWidth = pauseHeight;
-  stopHeight = pauseHeight;
-  //
-  playX1 = musicButtonDrawX + (appWidth * 5/30);
-  playY1 = pauseY1;
-  playX2 = musicButtonDrawX - playX1*1/1000;
-  playY2 = musicButtonDrawY - playY1*53/100;
-  playX3 = playX1*1/2;
-  playY3 = playY1;
-  //
-}//End setupPopulation()
+}//End setup
+//
+void draw() {
+  drawMusicButtons();
+}//End draw
+//
+void keyPressed() {}//End keyPressed
+//
+void mousePressed() {}//End mousePressed
+//
+//End MAIN Program (Driver)
