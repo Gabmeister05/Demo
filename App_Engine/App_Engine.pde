@@ -6,8 +6,7 @@ import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 //
 //Global Variabes
-String path = new File("").getAbsolutePath(); //Exported
-String directory = "C:/Users/g.kazimierczak/Documents/Github/Demo/App_Engine"; //Not exported
+
 //
 void setup() {
   //
