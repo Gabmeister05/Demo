@@ -9,11 +9,7 @@ import ddf.minim.ugens.*;
 String path = new File("").getAbsolutePath(); //Exported
 String directory = "C:/Users/g.kazimierczak/Documents/Github/Demo/App_Engine"; //Not exported
 //
-
-//
 void setup() {
-  //
-  
   //
   File anyDirectory = new File(path); //Used when exported
   println ("Exported Directory", anyDirectory);
