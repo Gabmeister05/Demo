@@ -1,15 +1,12 @@
-//Global Variables
-//
-void setup() {
-  //Landscape (portrait, square)
-  size(700, 400); //width, height
-  fullScreen(); //displayWidth, displayHeight
-  //Population, visual data
+void setupPopulation() {
+  //
   float musicButtonDrawX = width * 1/2;
   float musicButtonDrawY = height * 1/2;
+  //
   pauseScaleWidth = 1.0/25.0; //used to change x-size
   pauseScaleHeight = 1.0/3.0; //used to change y-size
   println(pauseScaleWidth);
+  //
   pauseWidth = width * pauseScaleWidth;
   pauseX1 = musicButtonDrawX - pauseWidth - pauseWidth*1/2;
   pauseY1 = musicButtonDrawY;
@@ -29,16 +26,4 @@ void setup() {
   playX3 = playX1*1/2;
   playY3 = playY1;
   //
-}//End setup
-//
-void draw() {
- drawMusicButtons();
-}//End draw
-//
-void keyPressed() {
-}//End keyPressed
-//
-void mousePressed() {
-}//End mousePressed
-//
-//End MAIN Program (Driver)
+}//End setupPopulation()
