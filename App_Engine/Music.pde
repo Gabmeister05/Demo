@@ -2,7 +2,7 @@
 Minim minim; //creates an object to access all functions
 AudioPlayer[] songs = new AudioPlayer[2]; //creates "Play List" variable holding extensions WAV, AIFF, AU, SND, and MP3
 AudioPlayer[] soundEffects = new AudioPlayer[2];
-String pathway, ice & fire, i wish i knew, factory, daytime bonfire;
+String pathway, ice and fire, i wish i knew, factory, daytime bonfire;
 //
 void setupMusic() {
   //
@@ -29,7 +29,7 @@ void mousePressedMusic() {}//End mousePressedMusic
 //
 void concatenationOfMusicFiles() {
   pathway = "data/";
-  ice & fire = "Ice & Fire - King Canyon.mp3";
+  ice and fire = "Ice & Fire - King Canyon.mp3";
   i wish i knew  = "I Wish I Knew - Otis McDonald.mp3";
   factory = "Factory Background.mp3";
   daytime bonfire = "Daytime Forrest Bonfire.mp3";
