@@ -11,7 +11,7 @@ void setup() {
   //
   setupMusic();
   //
-  songs[0].loop(0); //Change the index manually
+  songs[currentSong].loop(0); //Change the index manually
   //
 }//End setup
 //
@@ -22,10 +22,10 @@ void keyPressed() {
   keyPressedMusic();
   //
   //Prototyping to copy when works
-  if ( .isMuted() ) {
-    song[].unmute();
+  if ( songs[currentSong].isMuted() ) {
+    songs[currentSong].unmute();
   } else{
-    song[].mute();
+    songs[currentSong].mute();
   }//End Mute Button
   //
 }//End keyPressed
