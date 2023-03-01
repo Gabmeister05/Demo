@@ -62,3 +62,8 @@ Loop Single SOng Once: parameter = 1
 Loop Single Song Infinite: parameter is -1 or blank
 
 Loop Playlist Infinite: parameter = int ( random( 0, array.length() ) )
+
+- Caution: random returns a float
+- Fix with int(), called CASTING
+
+Next track:
