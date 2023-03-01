@@ -78,3 +78,4 @@ Next Song
 
 - play(index)
 - Error -> Array Index out of Bounds: array.length()-1 = 0
+if ( index + 1 >= array.length ) { index = 0; }
