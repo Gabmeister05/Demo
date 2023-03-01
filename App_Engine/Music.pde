@@ -20,6 +20,7 @@ void setupMusic() {
   soundEffects[1] = minim.loadFile( pathway + daytime bonfire );
   //
   keyboardMusic_ShortCuts();
+  //
 }//End setupMusic
 //
 void drawMusic() {}//End drawMusic
