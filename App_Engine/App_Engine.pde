@@ -22,7 +22,7 @@ void keyPressed() {
   keyPressedMusic();
   //
   //Prototyping to copy when works
-  
+  if () {} else{}//End Mute Button
   //
 }//End keyPressed
 //
