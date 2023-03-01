@@ -22,13 +22,16 @@ void keyPressed() {
   keyPressedMusic();
   //
   //Prototyping to copy when works
-  if ( key == 'm' || key == 'M' ) {//Mute Button
+  if ( key == 'm' || key == 'M' ) {//Mute Button, not PAUSE, only affect speakers
     if ( songs[currentSong].isMuted() ) {
     songs[currentSong].unmute();
-  } else{
+  } else if ( songs[currentSong].position() >= songs[currentSong].length() ) {}
+  else{
     songs[currentSong].mute();
   }
-   }//End Mute Button
+ }//End Mute Button
+   
+  //
   }//End keyPressed
 //
 void mousePressed() {
