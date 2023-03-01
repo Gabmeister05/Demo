@@ -25,7 +25,7 @@ void keyPressed() {
   if ( key == 'm' || key == 'M' ) {//Mute Button, not PAUSE, only affect speakers
     if ( songs[currentSong].isMuted() ) {
     songs[currentSong].unmute();
-  } else if ( songs[currentSong].position() >= songs[currentSong].length() ) {}
+  } else if ( songs[currentSong].position() >= songs[currentSong].length()*4/5 ) {}
   else{
     songs[currentSong].mute();
   }
