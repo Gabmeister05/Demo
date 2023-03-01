@@ -12,10 +12,10 @@ void setupMusic() {
   //Remininder: finish OS_Level COde to auto read pathway and files (See Operating System)
   //
   concatenationOfMusicFiles();
-  songs[] = minim.loadFile( path + ice & fire );
-  song[] = minim.loadFile( path + i wish i knew )
-  soundEffects[] = minim.loadFile( path + factory );
-  soundEffects[] = minim.loadFile( path + daytime bonfire );
+  songs[0] = minim.loadFile( path + ice & fire );
+  song[1] = minim.loadFile( path + i wish i knew )
+  soundEffects[0] = minim.loadFile( path + factory );
+  soundEffects[1] = minim.loadFile( path + daytime bonfire );
   //
 }//End setupMusic
 //
