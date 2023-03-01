@@ -7,7 +7,7 @@ void setupMusic() {
   minim = new Minim (this); //load from data directory, loadFile should also load from project folder, like loadImage
   //
   //Set the Directory or Pathway to the Music
-  //Pathway: data / Music or SOund Effect Files
+  //Pathway: data / Music or Sound Effect Files
   //
   //Remininder: finish OS_Level COde to auto read pathway and files (See Operating System)
   //
