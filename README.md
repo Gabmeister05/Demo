@@ -56,3 +56,9 @@ Reverse Skip: within a song for milliseconds or seconds (it depends on the indiv
 Fast Forward: will speed up the song twice than initially forwards
 
 Fast Backward: will speed up the song twice than initially backwards
+
+Loop Single SOng Once: parameter = 1
+
+Loop Single Song Infinite: parameter is -1 or blank
+
+Loop Playlist Infinite: parameter = int ( random( 0, array.length() ) )
