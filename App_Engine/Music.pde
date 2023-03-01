@@ -15,7 +15,7 @@ void setupMusic() {
   //
   concatenationOfMusicFiles();
   songs[0] = minim.loadFile( pathway + ice & fire );
-  song[1] = minim.loadFile( pathway + i wish i knew )
+  song[1] = minim.loadFile( pathway + i wish i knew );
   soundEffects[0] = minim.loadFile( pathway + factory );
   soundEffects[1] = minim.loadFile( pathway + daytime bonfire );
   //
