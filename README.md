@@ -48,3 +48,11 @@ Mute: pressing M will...
 1. stop the speakers but the computer will continue to play the file until it ends
 
 ERROR - if the .mp3 file is muted AND .mp3 is at the end, the unMute() will rewind() the current .mp3 and play it from the beginning :|
+
+Forward Skip: within a song for milliseconds or seconds (it depends on the individual)
+
+Reverse Skip: within a song for milliseconds or seconds (it depends on the individual)
+
+Fast Forward: will speed up the song twice than initially forwards
+
+Fast Backward: will speed up the song twice than initially backwards
