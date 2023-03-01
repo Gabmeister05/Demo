@@ -28,7 +28,7 @@ void keyPressed() {
   } else{
     songs[currentSong].mute();
   }
-  
+   }
   }//End Mute Button
   
   //
