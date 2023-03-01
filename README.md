@@ -79,3 +79,17 @@ Next Song
 - play(index)
 - Error -> Array Index out of Bounds: array.length()-1 = 0
 if ( index + 1 >= array.length ) { index = 0; }
+
+Previous track:
+
+Current Song:
+
+- pause(index)
+- rewind(index)
+- index - 1
+
+Next Song
+
+- play(index)
+- Error -> Array Index out of Bounds: when index=0, index-1=array.length()-1
+if ( index <= -1 ) { index = array.length() - 1 }
