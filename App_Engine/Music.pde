@@ -1,7 +1,8 @@
 //Global Variables
 Minim minim; //creates an object to access all functions
-AudioPlayer[] songs = new AudioPlayer[4]; //creates "Play List" variable holding extensions WAV, AIFF, AU, SND, and MP3
-String path, ice & fire, i wish i knew, factory, daytime bonfire;
+AudioPlayer[] songs = new AudioPlayer[2]; //creates "Play List" variable holding extensions WAV, AIFF, AU, SND, and MP3
+AudioPlayer[] soundEffects = new AudioPlayer[q];
+String pathway, ice & fire, i wish i knew, factory, daytime bonfire;
 //
 void setupMusic() {
   //
@@ -13,10 +14,10 @@ void setupMusic() {
   //Remininder: finish OS_Level COde to auto read pathway and files (See Operating System)
   //
   concatenationOfMusicFiles();
-  songs[0] = minim.loadFile( path + ice & fire );
-  song[1] = minim.loadFile( path + i wish i knew )
-  soundEffects[0] = minim.loadFile( path + factory );
-  soundEffects[1] = minim.loadFile( path + daytime bonfire );
+  songs[0] = minim.loadFile( pathway + ice & fire );
+  song[1] = minim.loadFile( pathway + i wish i knew )
+  soundEffects[0] = minim.loadFile( pathway + factory );
+  soundEffects[1] = minim.loadFile( pathway + daytime bonfire );
   //
 }//End setupMusic
 //
@@ -27,7 +28,7 @@ void keyPressedMusic() {}//End keyPressedMusic
 void mousePressedMusic() {}//End mousePressedMusic
 //
 void concatenationOfMusicFiles() {
-  path = "data/";
+  pathway = "data/";
   ice & fire = "Ice & Fire - King Canyon.mp3";
   i wish i knew  = "I Wish I Knew - Otis McDonald.mp3";
   factory = "Factory Background.mp3";
