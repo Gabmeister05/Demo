@@ -25,7 +25,10 @@ void mousePressedMusic() {}//End mousePressedMusic
 //
 void concatenationOfMusicFiles() {
   path = "data/";
-  Ice & Fire = "ice & fire - king canyon.mp3";
+  ice & fire = "Ice & Fire - King Canyon.mp3";
+  i wish i knew  = "I Wish I Knew - Otis McDonald.mp3";
+  factory = "Factory Background.mp3";
+  daytime bonfire = "Daytime Forrest Bonfire.mp3";
 }//End concatentation
 //
 //End Music SubProgram
