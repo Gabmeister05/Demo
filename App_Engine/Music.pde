@@ -1,6 +1,7 @@
 //Global Variables
 Minim minim; //creates an object to access all functions
 AudioPlayer[] songs = new AudioPlayer[4]; //creates "Play List" variable holding extensions WAV, AIFF, AU, SND, and MP3
+String path, ice & fire, i wish i knew, factory, daytime bonfire;
 //
 void setupMusic() {
   //
