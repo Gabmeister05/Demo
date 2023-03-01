@@ -11,7 +11,7 @@ void setupMusic() {
   //
   //Remininder: finish OS_Level COde to auto read pathway and files (See Operating System)
   //
-  concatenation();
+  concatenationOfMusicFiles();
   songs[] = minim.loadFile( path + musicFile );
   soundEffects[] = minim.loadFile( path + soundEffectFile );
   //
@@ -22,5 +22,10 @@ void drawMusic() {}//End drawMusic
 void keyPressedMusic() {}//End keyPressedMusic
 //
 void mousePressedMusic() {}//End mousePressedMusic
+//
+void concatenationOfMusicFiles() {
+  path = "data/";
+  Ice & Fire = "";
+}//End concatentation
 //
 //End Music SubProgram
