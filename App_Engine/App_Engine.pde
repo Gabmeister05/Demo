@@ -28,11 +28,8 @@ void keyPressed() {
   } else{
     songs[currentSong].mute();
   }
-   }
-  }//End Mute Button
-  
-  //
-}//End keyPressed
+   }//End Mute Button
+  }//End keyPressed
 //
 void mousePressed() {
 }//End mousePressed
