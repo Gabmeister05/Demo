@@ -67,3 +67,14 @@ Loop Playlist Infinite: parameter = int ( random( 0, array.length() ) )
 - Fix with int(), called CASTING
 
 Next track:
+
+Current Song:
+
+- pause(index)
+- rewind(index)
+- index + 1
+
+Next Song
+
+- play(index)
+- Error -> Array Index out of Bounds: array.length()-1 = 0
