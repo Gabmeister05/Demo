@@ -22,7 +22,11 @@ void keyPressed() {
   keyPressedMusic();
   //
   //Prototyping to copy when works
-  if ( .isMuted() ) {} else{}//End Mute Button
+  if ( .isMuted() ) {
+    song[].unmute();
+  } else{
+    song[].mute();
+  }//End Mute Button
   //
 }//End keyPressed
 //
