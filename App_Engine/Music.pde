@@ -2,7 +2,7 @@
 Minim minim; //creates an object to access all functions
 AudioPlayer[] songs = new AudioPlayer[2]; //creates "Play List" variable holding extensions WAV, AIFF, AU, SND, and MP3
 AudioPlayer[] soundEffects = new AudioPlayer[2];
-String pathway, ice and fire, i wish i knew, factory, daytime bonfire;
+String pathway, iceandfire, iwishiknew, factory, daytimebonfire;
 int currentSong=0;
 //
 void setupMusic() {
@@ -15,12 +15,10 @@ void setupMusic() {
   //Remininder: finish OS_Level COde to auto read pathway and files (See Operating System)
   //
   concatenationOfMusicFiles();
-  songs[0] = minim.loadFile( pathway + ice & fire );
-  song[1] = minim.loadFile( pathway + i wish i knew );
+  songs[0] = minim.loadFile( pathway + iceandfire );
+  songs[1] = minim.loadFile( pathway + iwishiknew );
   soundEffects[0] = minim.loadFile( pathway + factory );
-  soundEffects[1] = minim.loadFile( pathway + daytime bonfire );
-  //
-  keyboardMusic_ShortCuts();
+  soundEffects[1] = minim.loadFile( pathway + daytimebonfire );
   //
 }//End setupMusic
 //
@@ -28,6 +26,48 @@ void drawMusic() {}//End drawMusic
 //
 void keyPressedMusic() {
   //Music Key Board Short Cuts
+  //
+  if ( key == 'm' || key == 'M' ) {//Mute Button, not PAUSE, only affect speakers
+  //ERROR: this MUTE Button only works when song is playing
+  //ERROR Fix: unmute or rewind when song is not playing (i.e. unmute next song)
+    if ( songs[currentSong].isMuted() ) {
+      songs[currentSong].unmute();
+    } else if ( songs[currentSong].position() >= songs[currentSong].length()*4/5 ) {
+      //Students to finish SMARTER Mute Button
+      //ERROR: music player breaks if song finishes
+      /* Ideas
+       - rewind the song
+       - play the next song automatically
+       - play of notification to choose the next song
+       */
+      songs[currentSong].rewind(); //simple solution, contains ERROR
+    } else {
+      songs[currentSong].mute();
+    }
+  }//End Mute Button
+  //
+  //Forward & Reverse Skip
+  if ( key == 'f' || key == 'F' ) {
+    //ERROR: if at end, plays begining
+    songs[currentSong].skip(1000); //parameter in milliseconds
+  } else if ( songs[currentSong].position() >= songs[currentSong].length()*4/5 ) {
+    //Finish Conditional
+    //ERROR Catch: if end of song then next song
+  }//End Forward
+  if ( key == 'f' || key == 'R' ) {
+    //Spamming R means start playing at begining of song
+    songs[currentSong].skip(-1000); //parameter in milliseconds
+  }//End Reverse
+  //
+  //Single Loop
+  //if (key == '1') song{currentSongs].loop(1);
+  if ( key == '1' ) {
+    //Finish Playing current song, then replay once
+    delay( songs[currentSong].length() - songs[currentSong].position() );
+    //ERROR: delay stops all player functions, computer doesn't recognize if song is playing
+    songs[currentSong].loop(0);
+  }//End Single Loop
+  //
 }//End keyPressedMusic
 //
 void mousePressedMusic() {
@@ -35,10 +75,10 @@ void mousePressedMusic() {
 //
 void concatenationOfMusicFiles() {
   pathway = "data/";
-  ice and fire = "Ice & Fire - King Canyon.mp3";
-  i wish i knew  = "I Wish I Knew - Otis McDonald.mp3";
+  iceandfire = "Ice & Fire - King Canyon.mp3";
+  iwishiknew  = "I Wish I Knew - Otis McDonald.mp3";
   factory = "Factory Background.mp3";
-  daytime bonfire = "Daytime Forrest Bonfire.mp3";
+  daytimebonfire = "Daytime Forrest Bonfire.mp3";
 }//End concatentation
 //
 //End Music SubProgram
