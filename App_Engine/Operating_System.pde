@@ -4,7 +4,7 @@ Also see Music SubProgram
 //Global Varibales
 String path = new File("").getAbsolutePath(); //Exported
 //CAUTION: GitHub must be linked to the C-Drive instead of FS ... This might need a lesson
-String directory = "//FS-052/studuser$/Gr12/g.kazimierczak/My Documents/GitHub/Demo/App_Engine"; //Not exported
+String directory = "C:/FS-052/studuser$/Gr12/g.kazimierczak/My Documents/GitHub/Demo/App_Engine"; //Not exported
 //Reminder: \n is a character escape, so pathway must have forward slashes
 //
 void steupOS_Level() {
