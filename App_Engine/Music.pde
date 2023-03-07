@@ -95,6 +95,7 @@ if ( key == 'p' || key == 'P' ) { // Play-Pause Button
   if ( songs[currentSong].isPlaying() ) {
     songs[currentSong].pause();
   } else if (songs[currentSong].position() >= songs[currentSong].length()*3/4) {
+    //CAUTION: without code, this conditional will not do anything
   } else {
     songs[currentSong].play(); //no auto rewind like loop()
   }
@@ -113,5 +114,4 @@ void concatenationOfMusicFiles() {
   factory = "Factory Background.mp3";
   daytimebonfire = "Daytime Forrest Bonfire.mp3";
 }//End concatentation
-//
 //End Music SubProgram
