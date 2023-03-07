@@ -60,7 +60,7 @@ void keyPressedMusic() {
   }//End Reverse
   //
   //Single Loop
-  //if (key == '1') song{currentSongs].loop(1);
+  //if (key == '1') song{currentSongs].loop(1); //ERROR: immediately restarts song
   if ( key == '1' ) {
     //Finish Playing current song, then replay once
     delay( songs[currentSong].length() - songs[currentSong].position() );
@@ -68,6 +68,19 @@ void keyPressedMusic() {
     songs[currentSong].loop(0);
   }//End Single Loop
   //
+  //Loop Infinte Times
+  if ( key <= '9' && key != '1' ) {
+    //Finish Playing current song, then replay once
+    delay( songs[currentSong].length() - songs[currentSong].position() );
+    //ERROR: delay stops all player functions, computer doesn't recognize if song is playing
+    songs[currentSong].loop(-1); //parameter is empty or -1
+  }//End Infinte Times
+  //
+  //Stop
+  if () {}//End Stop
+  if ( songs[currentSong].isPlaying() ) { .pause(); .rewind(); } else { .rewind(); }
+  //
+  //Play-Pause
 }//End keyPressedMusic
 //
 void mousePressedMusic() {
@@ -75,6 +88,7 @@ void mousePressedMusic() {
 //
 void concatenationOfMusicFiles() {
   pathway = "data/";
+  iceandfire = "Ice & Fire - King Canyon.mp3";
   iceandfire = "Ice & Fire - King Canyon.mp3";
   iwishiknew  = "I Wish I Knew - Otis McDonald.mp3";
   factory = "Factory Background.mp3";

@@ -16,13 +16,16 @@ void setup() {
 }//End setup
 //
 void draw() {
+  //Debugging in CONSOLE
+  println("Current Song Position:", songs[currentSong].position() );
 }//End draw
 //
 void keyPressed() {
   keyPressedMusic();
   //
   //Prototyping to copy when works
-}//End keyPressed
+  //
+  }//End keyPressed
 //
 void mousePressed() {
 }//End mousePressed
