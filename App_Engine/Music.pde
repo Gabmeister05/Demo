@@ -83,22 +83,21 @@ void keyPressedMusic() {
   - include auto previous & next track if STOP at beginning or end of ile
   */
   if ( songs[currentSong].isPlaying() ) { 
-  songs[currentSong]..pause(); 
-  songs[currentSong]..rewind(); 
+  songs[currentSong].pause(); 
+  songs[currentSong].rewind(); 
 } else { 
-  songs[currentSong]..rewind();
+  songs[currentSong].rewind();
  }
   }//End Stop
   //
   //Play-Pause
 if ( key == 'p' || key == 'P' ) { // Play-Pause Button
   if ( songs[currentSong].isPlaying() ) else if () {
-    .pause();
+    songs[currentSong].pause();
   } else if () {
   } else {
-    .play(); //no auto rewind like loop()
+    songs[currentSong].play(); //no auto rewind like loop()
   }
-  
 }// End Play-Pause
 
 //
