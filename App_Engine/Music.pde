@@ -109,7 +109,6 @@ void mousePressedMusic() {
 void concatenationOfMusicFiles() {
   pathway = "data/";
   iceandfire = "Ice & Fire - King Canyon.mp3";
-  iceandfire = "Ice & Fire - King Canyon.mp3";
   iwishiknew  = "I Wish I Knew - Otis McDonald.mp3";
   factory = "Factory Background.mp3";
   daytimebonfire = "Daytime Forrest Bonfire.mp3";
