@@ -50,9 +50,11 @@ void drawPlayButton() {
 //
 void drawFastForwardButton() {
   triangle( ffX1, ffY1, ffX2, ffY2, ffX3, ffY3 );
+  triangle( ffX1, ffY1, ffX2, ffY2, ffX3, ffY3 );
 }//End FastForwardButton()
 //
 void drawFastBackwardButton() {
+  triangle( fbX1, fbY1, fbX2, fbY2, fbX3, fbY3 );
   triangle( fbX1, fbY1, fbX2, fbY2, fbX3, fbY3 );
 }//End drawFastBackwardButton()
 //
