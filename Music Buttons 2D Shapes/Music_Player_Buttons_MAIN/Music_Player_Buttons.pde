@@ -24,6 +24,7 @@ void drawMusicButtons() {
  drawFastBackwardButton();
  drawSkipForwardButton();
  drawSkipBackwardButton();
+ drawMuteButton();
 }//End drawMusicButtons
 //
 void drawPauseButton() {
@@ -67,5 +68,8 @@ void drawSkipBackwardButton() {
   triangle( sbX1, sbY1, sbX2, sbY2, sbX3, sbY3 );
   rect( sbX4, sbY4, sbWidth, sbHeight );
 }//End drawSkipBackwardButton()
+//
+void drawMuteButton() {
+}//End drawMuteButton
 //
 //End Music Player Buttons
