@@ -40,7 +40,7 @@ void drawStopButton () {
 }//End drawStopButton()
 //
 void drawPlayButton() {
-  translate( 1085, 180);
+  translate( 1085, 180); //has to be manually changed from time to time :(
   rotate( radians(90.0) );
   scale(0.62); //Could be changed but you'll also have to change the translation
   fill( black ); //Change this to ternary operator
