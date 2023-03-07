@@ -17,7 +17,8 @@ void setup() {
 //
 void draw() {
   //Debugging in CONSOLE
-  println("Current Song Position:", songs[currentSong].position() );
+  print("Current Song Position:", songs[currentSong].position() );
+  println("\tEnd of Song:", songs[currentSong].length() );
 }//End draw
 //
 void keyPressed() {
