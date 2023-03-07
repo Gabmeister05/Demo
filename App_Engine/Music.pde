@@ -91,8 +91,16 @@ void keyPressedMusic() {
   }//End Stop
   //
   //Play-Pause
-if ( key == 'p' || key == 'P' ) {}//Play-Pause
-if () else if () {}
+if ( key == 'p' || key == 'P' ) { // Play-Pause Button
+  if ( songs[currentSong].isPlaying() ) else if () {
+    .pause();
+  } else if () {
+  } else {
+    .play(); //no auto rewind like loop()
+  }
+  
+}// End Play-Pause
+
 //
 }//End keyPressedMusic
 //
