@@ -32,7 +32,7 @@ void keyPressedMusic() {
   //ERROR Fix: unmute or rewind when song is not playing (i.e. unmute next song)
     if ( songs[currentSong].isMuted() ) {
       songs[currentSong].unmute();
-    } else if ( songs[currentSong].position() >= songs[currentSong].length()*4/5 ) {
+    } else if ( songs[currentSong].position() >= songs[currentSong].length()*3/4 ) {
       //Students to finish SMARTER Mute Button
       //ERROR: music player breaks if song finishes
       /* Ideas
@@ -50,7 +50,7 @@ void keyPressedMusic() {
   if ( key == 'f' || key == 'F' ) {
     //ERROR: if at end, plays begining
     songs[currentSong].skip(1000); //parameter in milliseconds
-  } else if ( songs[currentSong].position() >= songs[currentSong].length()*4/5 ) {
+  } else if ( songs[currentSong].position() >= songs[currentSong].length()*3/4 ) {
     //Finish Conditional
     //ERROR Catch: if end of song then next song
   }//End Forward
@@ -94,7 +94,7 @@ void keyPressedMusic() {
 if ( key == 'p' || key == 'P' ) { // Play-Pause Button
   if ( songs[currentSong].isPlaying() ) else if () {
     songs[currentSong].pause();
-  } else if () {
+  } else if (songs[currentSong].position() >= songs[currentSong].length()*3/4) {
   } else {
     songs[currentSong].play(); //no auto rewind like loop()
   }
