@@ -77,8 +77,19 @@ void keyPressedMusic() {
   }//End Infinte Times
   //
   //Stop
-  if () {}//End Stop
-  if ( songs[currentSong].isPlaying() ) { .pause(); .rewind(); } else { .rewind(); }
+  if ( key == 's' || key == 'S' ) {
+    /*Note: possible smarter STOP Buttons
+  - include soft "PAUSE" for first 15 seconds
+  - include auto previous & next track if STOP at beginning or end of ile
+  */
+  if ( songs[currentSong].isPlaying() ) { 
+  songs[currentSong]..pause(); 
+  songs[currentSong]..rewind(); 
+} else { 
+  songs[currentSong]..rewind();
+ }
+  //
+  }//End Stop
   //
   //Play-Pause
 }//End keyPressedMusic
