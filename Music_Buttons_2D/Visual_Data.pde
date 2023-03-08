@@ -26,6 +26,8 @@ void setupPopulation() {
   playX3 = playX1*1/2;
   playY3 = playY1;
   //
+  
+  //
   sfX1 = ;
   sfY1 = ;
   sfX2 = ;

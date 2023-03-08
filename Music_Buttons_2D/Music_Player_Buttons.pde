@@ -25,6 +25,8 @@ void drawMusicButtons() {
  drawSkipForwardButton();
  drawSkipBackwardButton();
  drawMuteButton();
+ drawLoopSingleButton();
+ drawLoopInfiniteButton();
 }//End drawMusicButtons
 //
 void drawPauseButton() {
@@ -71,5 +73,11 @@ void drawSkipBackwardButton() {
 //
 void drawMuteButton() {
 }//End drawMuteButton
+//
+void drawLoopSingleButton() {
+}//drawLoopSingleButton
+//
+void drawLoopInfiniteButton() {
+}//drawLoopInfiniteButton
 //
 //End Music Player Buttons
