@@ -7,6 +7,7 @@ Top comments are edits in progress*
 - So far both pause, play and stop buttons are created but they don't have any function yet while the other buttons are being created (ex Skipforward, Skipbackward, Fastforward, Fastbackward, etc)
 - Working on the main app engine, buttons will be made later
 - Creating button functions on the main app engine, reminder to create and draw the rest of the buttons
+- Drawing the rest of the buttons (hopefully) and also creating two new functions for the app engine (more will probably added later on)
 
 List of buttons for music player:
 
