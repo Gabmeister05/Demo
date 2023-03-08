@@ -54,7 +54,7 @@ void keyPressedMusic() {
     //Finish Conditional
     //ERROR Catch: if end of song then next song
   }//End Forward
-  if ( key == 'f' || key == 'R' ) {
+  if ( key == 'r' || key == 'R' ) {
     //Spamming R means start playing at begining of song
     songs[currentSong].skip(-1000); //parameter in milliseconds
   }//End Reverse
