@@ -26,6 +26,17 @@ void setupPopulation() {
   playX3 = playX1*1/2;
   playY3 = playY1;
   //
+  sfX1 = ;
+  sfY1 = ;
+  sfX2 = ;
+  sfY2 = ;
+  sfX3 = ;
+  sfY3 = ;
+  sfX4 = ;
+  sfY4 = ;
+  sfWidth = ;
+  sfHeight = ;
+  //
   sbX1 = ;
   sbY1 = ;
   sbX2 = ;
@@ -37,5 +48,4 @@ void setupPopulation() {
   sbWidth = ;
   sbHeight = ;
   //
-  
 }//End setupPopulation()
