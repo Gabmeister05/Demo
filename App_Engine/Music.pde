@@ -100,7 +100,8 @@ if ( key == 'p' || key == 'P' ) { // Play-Pause Button
     songs[currentSong].play(); //no auto rewind like loop()
   }
 }// End Play-Pause
-
+ //Fast Forward
+ //Fast Backward
 //
 }//End keyPressedMusic
 //
