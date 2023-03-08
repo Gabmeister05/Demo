@@ -101,9 +101,9 @@ void keyPressedMusic() {
   }
 }// End Play-Pause
  //Fast Forward
- 
+ if () {}//End Fast Forward
  //Fast Backward
- 
+ if () {}//End Fast Backward
 //
 }//End keyPressedMusic
 //
