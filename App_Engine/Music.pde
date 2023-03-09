@@ -106,12 +106,12 @@ void keyPressedMusic() {
      songs[currentSong].speedup();
    }
  }//End Fast Forward
- //Fast Backward
+ //Fast Reverse
  if ( key == 'b' || key == 'B' ) {
    if ( songs[currentSong].isPlaying() ) {
      songs[currentSong].slowdown();
    }
- }//End Fast Backward
+ }//End Fast Reverse
 //
 }//End keyPressedMusic
 //
