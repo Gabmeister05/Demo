@@ -118,7 +118,7 @@ void keyPressedMusic() {
   if ( key == 'b' || key == 'B' ) {
     songs[currentSong].reverse(-1000*2);
   }
-}//End Fast Reverse
+//End Fast Reverse
 //
 //Autoplay Button
 if ( key == 'o' || key == 'O' ) {
