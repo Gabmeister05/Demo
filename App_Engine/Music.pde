@@ -28,6 +28,8 @@ void drawMusic() {
   print("Current Song Position:", songs[currentSong].position() );
   println("\tEnd of Song:", songs[currentSong].length() );
   //
+  autoPlayMusic();
+  //
 }//End drawMusic
 //
 void keyPressedMusic() {
@@ -140,7 +142,7 @@ void concatenationOfMusicFiles() {
   daytimebonfire = "Daytime Forrest Bonfire.mp3";
 }//End concatentation
 //
-void autoPlayMusic () {
+void autoPlayMusic() {
   if ( autoPlayOn ) {
     if ( autoPlayOn.position() >= autoPlayOn.length()*3/4 ) {
     } else if ( autoPlayOn.rewind() currentSong+=1 ) {
