@@ -147,7 +147,7 @@ void autoPlayMusic () {
     } else {
       autoPlayOn.play();
     }
-  } //End Autoplay
+  }
 }//End Auto Play Music
 //
 //End Music SubProgram
