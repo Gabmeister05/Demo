@@ -92,8 +92,8 @@ void keyPressedMusic() {
   //
   //Play-Pause
   if ( key == 'p' || key == 'P' ) {//Play-Pause Button
-  if ( songs[currentSong].isPlaying() ) {
-    songs[currentSong].pause();
+    if ( songs[currentSong].isPlaying() ) {
+     songs[currentSong].pause();
   } else if (songs[currentSong].position() >= songs[currentSong].length()*3/4) {
     //CAUTION: without code, this conditional will not do anything
   } else {
@@ -103,12 +103,14 @@ void keyPressedMusic() {
  //Fast Forward
  if ( key == 'a' || key == 'A' ) {
    if ( songs[currentSong].isPlaying() ) {
-     
+     songs[currentSong].speedup();
    }
  }//End Fast Forward
  //Fast Backward
  if ( key == 'b' || key == 'B' ) {
-   
+   if ( songs[currentSong].isPlaying() ) {
+     songs[currentSong].slowdown();
+   }
  }//End Fast Backward
 //
 }//End keyPressedMusic
