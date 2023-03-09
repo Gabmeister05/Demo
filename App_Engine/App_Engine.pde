@@ -22,8 +22,11 @@ void draw() {
   //
   //Autoplay Section, see Music Subprogram
   if ( autoPlayOn ) {//Auto Play
-    if ( autoPlayOn.position() >= autoPlayOn.length() ) {
-    } else if () {} else {}
+    if ( autoPlayOn.position() >= autoPlayOn.length()*3/4 ) {
+    } else if ( autoPlayOn.rewind() currentSong+1 ) {
+    } else {
+      autoPlayOn.play()
+    }
   } //End Autoplay
   //
 }//End draw
@@ -33,7 +36,7 @@ void keyPressed() {
   //
   //Prototyping to copy when works
   //
-  }//End keyPressed
+}//End keyPressed
 //
 void mousePressed() {
 }//End mousePressed
