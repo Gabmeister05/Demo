@@ -24,6 +24,18 @@ void setupMusic() {
 }//End setupMusic
 //
 void drawMusic() {
+  //Debugging in CONSOLE
+  print("Current Song Position:", songs[currentSong].position() );
+  println("\tEnd of Song:", songs[currentSong].length() );
+  //
+  //Autoplay Section, see Music Subprogram
+  if ( autoPlayOn ) {//Auto Play
+    if ( autoPlayOn.position() >= autoPlayOn.length()*3/4 ) {
+    } else if ( autoPlayOn.rewind() currentSong+1 ) {
+    } else {
+      autoPlayOn.play()
+    }
+  } //End Autoplay
 }//End drawMusic
 //
 void keyPressedMusic() {
