@@ -113,7 +113,7 @@ void keyPressedMusic() {
  }//End Fast Reverse
  //
  //Autoplay Button
- if () {}
+ if () {} else {}
  //
 }//End keyPressedMusic
 //
