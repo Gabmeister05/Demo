@@ -111,7 +111,10 @@ void keyPressedMusic() {
    songs[currentSong].reverse(-1000*2);
  }
  }//End Fast Reverse
-//
+ //
+ //Autoplay Button
+ if () {}
+ //
 }//End keyPressedMusic
 //
 void mousePressedMusic() {
