@@ -23,14 +23,15 @@ void setupMusic() {
   //
 }//End setupMusic
 //
-void drawMusic() {}//End drawMusic
+void drawMusic() {
+}//End drawMusic
 //
 void keyPressedMusic() {
   //Music Key Board Short Cuts
   //
   if ( key == 'm' || key == 'M' ) {//Mute Button, not PAUSE, only affect speakers
-  //ERROR: this MUTE Button only works when song is playing
-  //ERROR Fix: unmute or rewind when song is not playing (i.e. unmute next song)
+    //ERROR: this MUTE Button only works when song is playing
+    //ERROR Fix: unmute or rewind when song is not playing (i.e. unmute next song)
     if ( songs[currentSong].isMuted() ) {
       songs[currentSong].unmute();
     } else if ( songs[currentSong].position() >= songs[currentSong].length()*3/4 ) {
@@ -80,41 +81,47 @@ void keyPressedMusic() {
   //Stop
   if ( key == 's' || key == 'S' ) {
     /*Note: possible smarter STOP Buttons
-  - include soft "PAUSE" for first 15 seconds
-  - include auto previous & next track if STOP at beginning or end of ile
-  */
-  if ( songs[currentSong].isPlaying() ) { 
-  songs[currentSong].pause(); 
-  songs[currentSong].rewind(); 
-} else { 
-  songs[currentSong].rewind();
- }
+     - include soft "PAUSE" for first 15 seconds
+     - include auto previous & next track if STOP at beginning or end of ile
+     */
+    if ( songs[currentSong].isPlaying() ) {
+      songs[currentSong].pause();
+      songs[currentSong].rewind();
+    } else {
+      songs[currentSong].rewind();
+    }
   }//End Stop
   //
   //Play-Pause
   if ( key == 'p' || key == 'P' ) {//Play-Pause Button
     if ( songs[currentSong].isPlaying() ) {
-     songs[currentSong].pause();
-  } else if (songs[currentSong].position() >= songs[currentSong].length()*3/4) {
-    //CAUTION: without code, this conditional will not do anything
-  } else {
-    songs[currentSong].play(); //no auto rewind like loop()
+      songs[currentSong].pause();
+    } else if (songs[currentSong].position() >= songs[currentSong].length()*3/4) {
+      //CAUTION: without code, this conditional will not do anything
+    } else {
+      songs[currentSong].play(); //no auto rewind like loop()
+    }
+  }// End Play-Pause
+  //Fast Forward
+  if ( key == 'a' || key == 'A' ) {
+    songs[currentSong].forward(1000*2);
+  } else if ( songs[currentSong].position() >= songs[currentSong].length()*3/4 ) {
+  }//End Fast Forward
+  //Fast Reverse
+  if ( key == 'b' || key == 'B' ) {
+    songs[currentSong].reverse(-1000*2);
   }
-}// End Play-Pause
- //Fast Forward
- if ( key == 'a' || key == 'A' ) {
-   songs[currentSong].forward(1000*2);
-   } else if ( songs[currentSong].position() >= songs[currentSong].length()*3/4 ) {
- }//End Fast Forward
- //Fast Reverse
- if ( key == 'b' || key == 'B' ) {
-   songs[currentSong].reverse(-1000*2);
- }
- }//End Fast Reverse
- //
- //Autoplay Button
- if ( autoPlayOn == false ) { autoPlayOn = true; } else { autoPlayOn = false; }
- //
+}//End Fast Reverse
+//
+//Autoplay Button
+if ( key == 'o' || key == 'O' ) {
+  if ( autoPlayOn == false ) {
+    autoPlayOn = true;
+  } else {
+    autoPlayOn = false;
+  }
+}
+//
 }//End keyPressedMusic
 //
 void mousePressedMusic() {
