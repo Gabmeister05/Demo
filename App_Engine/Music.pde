@@ -31,9 +31,9 @@ void drawMusic() {
   //Autoplay Section, see Music Subprogram
   if ( autoPlayOn ) {//Auto Play
     if ( autoPlayOn.position() >= autoPlayOn.length()*3/4 ) {
-    } else if ( autoPlayOn.rewind() currentSong+1 ) {
+    } else if ( autoPlayOn.rewind() currentSong+=1 ) {
     } else {
-      autoPlayOn.play()
+      autoPlayOn.play();
     }
   } //End Autoplay
 }//End drawMusic
