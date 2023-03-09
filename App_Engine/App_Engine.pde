@@ -22,7 +22,7 @@ void draw() {
   //
   //Autoplay Section, see Music Subprogram
   if ( autoPlayOn ) {//Auto Play
-    if ( autoPlay.position() >= autoPlay.length() ) {
+    if ( autoPlayOn.position() >= autoPlayOn.length() ) {
     } else if () {} else{}
   } //End Autoplay
   //
