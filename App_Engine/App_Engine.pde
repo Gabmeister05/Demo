@@ -21,7 +21,9 @@ void draw() {
   println("\tEnd of Song:", songs[currentSong].length() );
   //
   //Autoplay Section, see Music Subprogram
-  if () {} //End Autoplay
+  if ( autoPlayOn ) {//Auto Play
+    if () {} else if () {} else{}
+  } //End Autoplay
   //
 }//End draw
 //
