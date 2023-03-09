@@ -145,7 +145,7 @@ void concatenationOfMusicFiles() {
 void autoPlayMusic() {
   if ( autoPlayOn ) {
     if ( autoPlayOn.position() >= autoPlayOn.length()*3/4 ) {
-    } else if ( autoPlayOn.rewind() currentSong+=1 ) {
+    } else if ( autoPlayOn.rewind() ) {
     } else {
       autoPlayOn.play();
     }
