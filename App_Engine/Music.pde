@@ -147,4 +147,7 @@ void concatenationOfMusicFiles() {
   factory = "Factory Background.mp3";
   daytimebonfire = "Daytime Forrest Bonfire.mp3";
 }//End concatentation
+//
+void autoPlayMusic () {}//End Auto Play Music
+//
 //End Music SubProgram
