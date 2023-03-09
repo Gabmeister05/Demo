@@ -101,7 +101,7 @@ void keyPressedMusic() {
   }
 }// End Play-Pause
  //Fast Forward
- if ( key == '' || key == '' ) {
+ if ( key == 'a' || key == 'A' ) {
  }//End Fast Forward
  //Fast Backward
  if ( key == 'b' || key == 'B' ) {
