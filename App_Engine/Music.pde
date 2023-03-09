@@ -91,7 +91,7 @@ void keyPressedMusic() {
   }//End Stop
   //
   //Play-Pause
-  if ( key == 'p' || key == 'P' ) { // Play-Pause Button
+  if ( key == 'p' || key == 'P' ) {//Play-Pause Button
   if ( songs[currentSong].isPlaying() ) {
     songs[currentSong].pause();
   } else if (songs[currentSong].position() >= songs[currentSong].length()*3/4) {
@@ -101,10 +101,12 @@ void keyPressedMusic() {
   }
 }// End Play-Pause
  //Fast Forward
- if ( key == 'a' || key == 'A' ) {
+ if ( key == 'a' || key == 'A' ) { //
+   
  }//End Fast Forward
  //Fast Backward
  if ( key == 'b' || key == 'B' ) {
+   
  }//End Fast Backward
 //
 }//End keyPressedMusic
