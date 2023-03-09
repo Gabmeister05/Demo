@@ -101,8 +101,10 @@ void keyPressedMusic() {
   }
 }// End Play-Pause
  //Fast Forward
- if ( key == 'a' || key == 'A' ) { //
-   
+ if ( key == 'a' || key == 'A' ) {
+   if ( songs[currentSong].isPlaying() ) {
+     
+   }
  }//End Fast Forward
  //Fast Backward
  if ( key == 'b' || key == 'B' ) {
