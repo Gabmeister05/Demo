@@ -19,6 +19,10 @@ void draw() {
   //Debugging in CONSOLE
   print("Current Song Position:", songs[currentSong].position() );
   println("\tEnd of Song:", songs[currentSong].length() );
+  //
+  //Autoplay Section, see Music Subprogram
+  if () {} //End Autoplay
+  //
 }//End draw
 //
 void keyPressed() {
