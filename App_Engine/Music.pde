@@ -103,13 +103,13 @@ void keyPressedMusic() {
  //Fast Forward
  if ( key == 'a' || key == 'A' ) {
    if ( songs[currentSong].isPlaying() ) {
-     songs[currentSong].forward();
+     songs[currentSong].forward(1000*2);
    }
  }//End Fast Forward
  //Fast Reverse
  if ( key == 'b' || key == 'B' ) {
    if ( songs[currentSong].isPlaying() ) {
-     songs[currentSong].reverse();
+     songs[currentSong].reverse(-1000*2);
    } 
  }//End Fast Reverse
 //
