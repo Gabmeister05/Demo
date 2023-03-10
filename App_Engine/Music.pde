@@ -108,17 +108,6 @@ void keyPressedMusic() {
       songs[currentSong].play(); //no auto rewind like loop()
     }
   }// End Play-Pause
-  //
-  //Fast Forward
-  if ( key == 'a' || key == 'A' ) {
-    songs[currentSong].forward(1000*2);
-  } else if ( songs[currentSong].position() >= songs[currentSong].length()*3/4 ) {
-  }//End Fast Forward
-  //Fast Reverse
-  if ( key == 'l' || key == 'L' ) {
-    songs[currentSong].reverse(-1000*2);
-  }
-//End Fast Reverse
 //
 //Autoplay Button
 if ( key == 'o' || key == 'O' ) {
