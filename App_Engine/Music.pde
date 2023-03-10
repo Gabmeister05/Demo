@@ -133,12 +133,15 @@ if ( key == 'o' || key == 'O' ) {
 if ( key == 'n' || key == 'N' ) {
   if ( songs[currentSong].isPlaying() ) {
       //Empty IF 
+    } else if ( currentSong == songs.length - 1 ) { //ERROR Catch:ArrayOutOfBounds
+      currentSong = songs.length - songs.length; //Intention is Zero
     } else {
       //.rewind();
-      currentSong++;
       //THROWS ArrayOutOfBounds Error
+      currentSong++;
+      
       /*
-      if ( currentSong == numberOfSongs - 1 ) { //Throws error: ArrayIndexOutOfBounds
+      if () { //Throws error: ArrayIndexOutOfBounds
         currentSong = numberOfSongs - numberOfSongs;
       } else {
         currentSong++;
