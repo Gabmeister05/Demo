@@ -134,7 +134,19 @@ if ( key == 'n' || key == 'N' ) {
   } //End Next Song Button
 //
 //Previous Song Button
-if ( key == 'b' || key == 'B' ) {} //End Previous Song Button
+if ( key == 'b' || key == 'B' ) {
+  if ( songs[currentSong].isPlaying() ) {
+      //Empty IF 
+    } else if ( currentSong == songs.length - 1 ) { //ERROR Catch:ArrayOutOfBounds
+      currentSong = songs.length - songs.length; //Intention is Zero
+      songs[currentSong].rewind();
+    } else {
+      //.rewind();
+      //THROWS ArrayOutOfBounds Error
+      currentSong++;
+      songs[currentSong].rewind();
+    }
+} //End Previous Song Button
 //
 }//End keyPressedMusic
 //
