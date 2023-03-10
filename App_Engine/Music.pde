@@ -115,7 +115,7 @@ void keyPressedMusic() {
   } else if ( songs[currentSong].position() >= songs[currentSong].length()*3/4 ) {
   }//End Fast Forward
   //Fast Reverse
-  if ( key == 'b' || key == 'B' ) {
+  if ( key == 'l' || key == 'L' ) {
     songs[currentSong].reverse(-1000*2);
   }
 //End Fast Reverse
@@ -128,6 +128,28 @@ if ( key == 'o' || key == 'O' ) {
     autoPlayOn = false;
   }
 }//End Autoplay
+//
+//Next Song Button
+if ( key == 'n' || key == 'N' ) {
+  if ( songs[currentSong].isPlaying() ) {
+      //Empty IF 
+    } else {
+      //.rewind();
+      currentSong++;
+      //THROWS ArrayOutOfBounds Error
+      /*
+      if ( currentSong == numberOfSongs - 1 ) { //Throws error: ArrayIndexOutOfBounds
+        currentSong = numberOfSongs - numberOfSongs;
+      } else {
+        currentSong++;
+      }//End Catch "ArrayIndexOutOfBounds"
+      */
+      //Song was not playing, so the next song does not auto play
+    }
+  } //End Next Song Button
+//
+//Previous Song Button
+if ( key == 'b' || key == 'B' ) {} //End Previous Song Button
 //
 }//End keyPressedMusic
 //
