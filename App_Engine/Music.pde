@@ -137,7 +137,7 @@ if ( key == 'n' || key == 'N' ) {
 if ( key == 'b' || key == 'B' ) {
   if ( songs[currentSong].isPlaying() ) {
       //Empty IF 
-    } else if ( currentSong == songs.length - 1 ) { //ERROR Catch:ArrayOutOfBounds
+    } else if ( currentSong == songs.length + 1 ) { //ERROR Catch:ArrayOutOfBounds
       currentSong = songs.length - songs.length; //Intention is Zero
       songs[currentSong].rewind();
     } else {
@@ -163,11 +163,9 @@ void concatenationOfMusicFiles() {
 //
 void autoPlayMusic() {
   if ( autoPlayOn ) {
-    if ( autoPlayOn.position() >= autoPlayOn.length()*3/4 ) {
-    } else if ( autoPlayOn.rewind() ) {
-    } else {
-      autoPlayOn.play();
-    }
+   //if () {} if else () {} else {}
+    //Ex#1: .position() >= .length(), then rewind(), currentSong+=1, .play()
+    //Ex#2: .isPlaying(), when false rewind(), currentSong+=1, .play()
   }
 }//End Auto Play Music
 //
