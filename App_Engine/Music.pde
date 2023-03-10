@@ -139,15 +139,6 @@ if ( key == 'n' || key == 'N' ) {
       //.rewind();
       //THROWS ArrayOutOfBounds Error
       currentSong++;
-      
-      /*
-      if () { //Throws error: ArrayIndexOutOfBounds
-        currentSong = numberOfSongs - numberOfSongs;
-      } else {
-        currentSong++;
-      }//End Catch "ArrayIndexOutOfBounds"
-      */
-      //Song was not playing, so the next song does not auto play
     }
   } //End Next Song Button
 //
