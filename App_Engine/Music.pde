@@ -163,7 +163,7 @@ void concatenationOfMusicFiles() {
 //
 void autoPlayMusic() {
   if ( autoPlayOn ) {
-   //if () {} if else () {} else {}
+   //if () {} else if () {} else {}
     //Ex#1: .position() >= .length(), then rewind(), currentSong+=1, .play()
     //Ex#2: .isPlaying(), when false rewind(), currentSong+=1, .play()
   }

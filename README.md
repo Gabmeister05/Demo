@@ -98,3 +98,5 @@ Next Song
 - Error -> Array Index out of Bounds: when index=0, index-1=array.length()-1
 
 if ( index <= -1 ) { index = array.length() - 1 }
+
+Shuffle:
