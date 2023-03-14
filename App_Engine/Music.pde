@@ -35,23 +35,7 @@ void drawMusic() {
 void keyPressedMusic() {
   //Music Key Board Short Cuts
   //
-  if ( key == 'm' || key == 'M' ) {//Mute Button, not PAUSE, only affect speakers
-    //ERROR: this MUTE Button only works when song is playing
-    //ERROR Fix: unmute or rewind when song is not playing (i.e. unmute next song)
-    if ( songs[currentSong].isMuted() ) {
-      songs[currentSong].unmute();
-    } else if ( songs[currentSong].position() >= songs[currentSong].length()*3/4 ) {
-      //Students to finish SMARTER Mute Button
-      //ERROR: music player breaks if song finishes
-      /* Ideas
-       - rewind the song
-       - play the next song automatically
-       - play of notification to choose the next song
-       */
-      songs[currentSong].rewind(); //simple solution, contains ERROR
-    } else {
-      songs[currentSong].mute();
-    }
+  if ( key == 'm' || key == 'M' ) {
   }//End Mute Button
   //
   //Forward & Reverse Skip
@@ -108,20 +92,20 @@ void keyPressedMusic() {
       songs[currentSong].play(); //no auto rewind like loop()
     }
   }// End Play-Pause
-//
-//Autoplay Button
-if ( key == 'o' || key == 'O' ) {
-  if ( autoPlayOn == false ) {
-    autoPlayOn = true;
-  } else {
-    autoPlayOn = false;
-  }
-}//End Autoplay
-//
-//Next Song Button
-if ( key == 'n' || key == 'N' ) {
-  if ( songs[currentSong].isPlaying() ) {
-      //Empty IF 
+  //
+  //Autoplay Button
+  if ( key == 'o' || key == 'O' ) {
+    if ( autoPlayOn == false ) {
+      autoPlayOn = true;
+    } else {
+      autoPlayOn = false;
+    }
+  }//End Autoplay
+  //
+  //Next Song Button
+  if ( key == 'n' || key == 'N' ) {
+    if ( songs[currentSong].isPlaying() ) {
+      //Empty IF
     } else if ( currentSong == songs.length - 1 ) { //ERROR Catch:ArrayOutOfBounds
       currentSong = songs.length - songs.length; //Intention is Zero
       songs[currentSong].rewind();
@@ -132,11 +116,11 @@ if ( key == 'n' || key == 'N' ) {
       songs[currentSong].rewind();
     }
   } //End Next Song Button
-//
-//Previous Song Button
-if ( key == 'b' || key == 'B' ) {
-  if ( songs[currentSong].isPlaying() ) {
-      //Empty IF 
+  //
+  //Previous Song Button
+  if ( key == 'b' || key == 'B' ) {
+    if ( songs[currentSong].isPlaying() ) {
+      //Empty IF
     } else if ( currentSong == songs.length + 1 ) { //ERROR Catch:ArrayOutOfBounds
       currentSong = songs.length - songs.length; //Intention is Zero
       songs[currentSong].rewind();
@@ -146,8 +130,8 @@ if ( key == 'b' || key == 'B' ) {
       currentSong++;
       songs[currentSong].rewind();
     }
-} //End Previous Song Button
-//
+  } //End Previous Song Button
+  //
 }//End keyPressedMusic
 //
 void mousePressedMusic() {
@@ -163,10 +147,30 @@ void concatenationOfMusicFiles() {
 //
 void autoPlayMusic() {
   if ( autoPlayOn ) {
-   //if () {} else if () {} else {}
+    //if () {} else if () {} else {}
     //Ex#1: .position() >= .length(), then rewind(), currentSong+=1, .play()
     //Ex#2: .isPlaying(), when false rewind(), currentSong+=1, .play()
   }
 }//End Auto Play Music
+//
+void mute() {
+  //Mute Button, not PAUSE, only affect speakers
+  //ERROR: this MUTE Button only works when song is playing
+  //ERROR Fix: unmute or rewind when song is not playing (i.e. unmute next song)
+  if ( songs[currentSong].isMuted() ) {
+    songs[currentSong].unmute();
+  } else if ( songs[currentSong].position() >= songs[currentSong].length()*3/4 ) {
+    //Students to finish SMARTER Mute Button
+    //ERROR: music player breaks if song finishes
+    /* Ideas
+     - rewind the song
+     - play the next song automatically
+     - play of notification to choose the next song
+     */
+    songs[currentSong].rewind(); //simple solution, contains ERROR
+  } else {
+    songs[currentSong].mute();
+  }
+}//End
 //
 //End Music SubProgram
