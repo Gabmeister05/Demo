@@ -36,15 +36,12 @@ void keyPressedMusic() {
   //Music Key Board Short Cuts
   //
   if ( key == 'm' || key == 'M' ) {
+    mute();
   }//End Mute Button
   //
   //Forward & Reverse Skip
   if ( key == 'f' || key == 'F' ) {
-    //ERROR: if at end, plays begining
-    songs[currentSong].skip(10000); //parameter in milliseconds
-  } else if ( songs[currentSong].position() >= songs[currentSong].length()*3/4 ) {
-    //Finish Conditional
-    //ERROR Catch: if end of song then next song
+    forward();
   }//End Forward
   if ( key == 'r' || key == 'R' ) {
     //Spamming R means start playing at begining of song
@@ -171,6 +168,14 @@ void mute() {
   } else {
     songs[currentSong].mute();
   }
-}//End
+}//End Mute
+//
+void forward() {
+  //ERROR: if at end, plays begining
+  songs[currentSong].skip(10000); //parameter in milliseconds
+} else if ( songs[currentSong].position() >= songs[currentSong].length()*3/4 ) {
+  //Finish Conditional
+  //ERROR Catch: if end of song then next song
+}//End Forward
 //
 //End Music SubProgram
