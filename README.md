@@ -16,15 +16,15 @@ List of buttons for music player:
 - Play-Pause
 - Skip Forward
 - Skip Backward
-- Fast Foward
-- Fast Backward
 - Previous Track
 - Next Track
 - Loop Single Song Once
 - Loop Single Song Infnite
 - Loop Playlist Infinite
 - Mute Button
-- Optional - Shuffle
+- Optional -> Shuffle
+- Optional -> Fast Foward
+- Optional -> Fast Backward
 
 - Organize with Population Tab and Music Button Tab, each with a TAB-Driver and VOIDs connected to the Driver
 - Future: connect player function to visual feedback of button
@@ -56,9 +56,9 @@ Forward Skip: within a song for milliseconds or seconds (it depends on the indiv
 
 Reverse Skip: within a song for milliseconds or seconds (it depends on the individual)
 
-Fast Forward: will speed up the song twice than initially forwards
+Fast Forward: will speed up the song *twice than initially forwards (it depends on the individual)
 
-Fast Backward: will speed up the song twice than initially backwards
+Fast Backward: will speed up the song *twice than initially backwards (it depends on the individual)
 
 Loop Single SOng Once: parameter = 1
 
