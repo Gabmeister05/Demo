@@ -131,16 +131,16 @@ void mute() {
 void forward() {
   //ERROR: if at end, plays begining
   if ( songs[currentSong].isPlaying() ) {
-  songs[currentSong].skip(10000); //parameter in milliseconds
+    songs[currentSong].skip(10000); //parameter in milliseconds
   } else if ( songs[currentSong].position() >= songs[currentSong].length()*3/4 );
-    //Finish Conditional
-    //ERROR Catch: if end of song then next song
-  }//End Forward
-  //
-  void reverse() {
-    //Spamming R means start playing at begining of song
-    songs[currentSong].skip(-10000); //parameter in milliseconds
-  }//End Reverse
+  //Finish Conditional
+  //ERROR Catch: if end of song then next song
+}//End Forward
+//
+void reverse() {
+  //Spamming R means start playing at begining of song
+  songs[currentSong].skip(-10000); //parameter in milliseconds
+}//End Reverse
 //
 void singleLoop() {
   //Finish Playing current song, then replay once
