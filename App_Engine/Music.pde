@@ -50,43 +50,22 @@ void keyPressedMusic() {
   //Single Loop
   //if (key == '1') song{currentSongs].loop(1); //ERROR: immediately restarts song
   if ( key == '1' ) {
-    //Finish Playing current song, then replay once
-    delay( songs[currentSong].length() - songs[currentSong].position() );
-    //ERROR: delay stops all player functions, computer doesn't recognize if song is playing
-    songs[currentSong].loop(0);
+    singleLoop();
   }//End Single Loop
   //
-  //Loop Infinte Times
+  //Loop Infinte Loop
   if ( key <= '9' && key != '1' ) {
-    //Finish Playing current song, then replay once
-    delay( songs[currentSong].length() - songs[currentSong].position() );
-    //ERROR: delay stops all player functions, computer doesn't recognize if song is playing
-    songs[currentSong].loop(-1); //parameter is empty or -1
-  }//End Infinte Times
+    infiniteLoop();
+  }//End Infinte Loop
   //
   //Stop
   if ( key == 's' || key == 'S' ) {
-    /*Note: possible smarter STOP Buttons
-     - include soft "PAUSE" for first 15 seconds
-     - include auto previous & next track if STOP at beginning or end of ile
-     */
-    if ( songs[currentSong].isPlaying() ) {
-      songs[currentSong].pause();
-      songs[currentSong].rewind();
-    } else {
-      songs[currentSong].rewind();
-    }
+    stop();
   }//End Stop
   //
   //Play-Pause
-  if ( key == 'p' || key == 'P' ) {//Play-Pause Button
-    if ( songs[currentSong].isPlaying() ) {
-      songs[currentSong].pause();
-    } else if (songs[currentSong].position() >= songs[currentSong].length()*3/4) {
-      //CAUTION: without code, this conditional will not do anything
-    } else {
-      songs[currentSong].play(); //no auto rewind like loop()
-    }
+  if ( key == 'p' || key == 'P' ) {
+    playpause();
   }// End Play-Pause
   //
   //Autoplay Button
@@ -100,32 +79,12 @@ void keyPressedMusic() {
   //
   //Next Song Button
   if ( key == 'n' || key == 'N' ) {
-    if ( songs[currentSong].isPlaying() ) {
-      //Empty IF
-    } else if ( currentSong == songs.length - 1 ) { //ERROR Catch:ArrayOutOfBounds
-      currentSong = songs.length - songs.length; //Intention is Zero
-      songs[currentSong].rewind();
-    } else {
-      //.rewind();
-      //THROWS ArrayOutOfBounds Error
-      currentSong++;
-      songs[currentSong].rewind();
-    }
+    songNext();
   } //End Next Song Button
   //
   //Previous Song Button
   if ( key == 'b' || key == 'B' ) {
-    if ( songs[currentSong].isPlaying() ) {
-      //Empty IF
-    } else if ( currentSong == songs.length + 1 ) { //ERROR Catch:ArrayOutOfBounds
-      currentSong = songs.length - songs.length; //Intention is Zero
-      songs[currentSong].rewind();
-    } else {
-      //.rewind();
-      //THROWS ArrayOutOfBounds Error
-      currentSong++;
-      songs[currentSong].rewind();
-    }
+    songPrevious();
   } //End Previous Song Button
   //
 }//End keyPressedMusic
@@ -181,4 +140,71 @@ void reverse() {
   //Spamming R means start playing at begining of song
   songs[currentSong].skip(-10000); //parameter in milliseconds
 }//End Reverse
+//
+void singleLoop() {
+  //Finish Playing current song, then replay once
+  delay( songs[currentSong].length() - songs[currentSong].position() );
+  //ERROR: delay stops all player functions, computer doesn't recognize if song is playing
+  songs[currentSong].loop(0);
+}//End Single Loop
+//
+void infiniteLoop() {
+  //Finish Playing current song, then replay once
+  delay( songs[currentSong].length() - songs[currentSong].position() );
+  //ERROR: delay stops all player functions, computer doesn't recognize if song is playing
+  songs[currentSong].loop(-1); //parameter is empty or -1
+}//End Infinite Loop
+//
+void stop() {
+  /*Note: possible smarter STOP Buttons
+   - include soft "PAUSE" for first 15 seconds
+   - include auto previous & next track if STOP at beginning or end of ile
+   */
+  if ( songs[currentSong].isPlaying() ) {
+    songs[currentSong].pause();
+    songs[currentSong].rewind();
+  } else {
+    songs[currentSong].rewind();
+  }
+}//End Stop
+//
+void playpause() {
+  //Play-Pause Button
+  if ( songs[currentSong].isPlaying() ) {
+    songs[currentSong].pause();
+  } else if (songs[currentSong].position() >= songs[currentSong].length()*3/4) {
+    //CAUTION: without code, this conditional will not do anything
+  } else {
+    songs[currentSong].play(); //no auto rewind like loop()
+  }
+}//End Play-Pause
+//
+void songNext() {
+  if ( songs[currentSong].isPlaying() ) {
+    //Empty IF
+  } else if ( currentSong == songs.length - 1 ) { //ERROR Catch:ArrayOutOfBounds
+    currentSong = songs.length - songs.length; //Intention is Zero
+    songs[currentSong].rewind();
+  } else {
+    //.rewind();
+    //THROWS ArrayOutOfBounds Error
+    currentSong++;
+    songs[currentSong].rewind();
+  }
+}// Next Song
+//
+void songPrevious() {
+  if ( songs[currentSong].isPlaying() ) {
+    //Empty IF
+  } else if ( currentSong == songs.length + 1 ) { //ERROR Catch:ArrayOutOfBounds
+    currentSong = songs.length - songs.length; //Intention is Zero
+    songs[currentSong].rewind();
+  } else {
+    //.rewind();
+    //THROWS ArrayOutOfBounds Error
+    currentSong++;
+    songs[currentSong].rewind();
+  }
+}//Previous Song
+//
 //End Music SubProgram
