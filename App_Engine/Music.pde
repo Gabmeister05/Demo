@@ -44,8 +44,7 @@ void keyPressedMusic() {
     forward();
   }//End Forward
   if ( key == 'r' || key == 'R' ) {
-    //Spamming R means start playing at begining of song
-    songs[currentSong].skip(-10000); //parameter in milliseconds
+    reverse();
   }//End Reverse
   //
   //Single Loop
@@ -178,4 +177,8 @@ void forward() {
   //ERROR Catch: if end of song then next song
 }//End Forward
 //
+void reverse() {
+  //Spamming R means start playing at begining of song
+  songs[currentSong].skip(-10000); //parameter in milliseconds
+}//End Reverse
 //End Music SubProgram
