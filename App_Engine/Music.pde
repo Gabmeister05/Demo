@@ -5,7 +5,6 @@ AudioPlayer[] soundEffects = new AudioPlayer[2];
 String pathway, iceandfire, iwishiknew, factory, daytimebonfire;
 int currentSong=0;
 Boolean autoPlayOn=false;
-Boolean mismatch;
 //
 void setupMusic() {
   //
