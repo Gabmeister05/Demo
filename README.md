@@ -7,8 +7,9 @@ Top comments are edits in progress*
 - Creating button functions on the main app engine, reminder to create and draw the rest of the buttons
 - Drawing the rest of the buttons (hopefully) and also creating two new functions for the app engine (more will probably added later on)
 - Both Fast Forward and Fast Backward will be on hold for now
-- Working on ERRORS, voids, possible button functions and planning Night-Mode
 - Most of the buttons have functions but still they have ERRORS that needs to be corrected
+- Fast Forward, Backward and Shuffle buttons are optional
+- Planning Night-Mode and possible button functions, working and fixing on ERRORS
 
 List of buttons for music player:
 
