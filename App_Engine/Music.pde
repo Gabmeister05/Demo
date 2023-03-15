@@ -173,7 +173,7 @@ void playpause() {
   //Play-Pause Button
   if ( songs[currentSong].isPlaying() ) {
     songs[currentSong].pause();
-  } else if (songs[currentSong].position() >= songs[currentSong].length()*3/4) {
+  } else if ( songs[currentSong].position() >= songs[currentSong].length()*3/4 ) {
     //CAUTION: without code, this conditional will not do anything
   } else {
     songs[currentSong].play(); //no auto rewind like loop()
@@ -182,7 +182,7 @@ void playpause() {
 //
 void songNext() {
   if ( songs[currentSong].isPlaying() ) {
-    //Empty IF
+    songs[currentSong].position() >= songs[currentSong].length()*3/4
   } else if ( currentSong == songs.length - 1 ) { //ERROR Catch:ArrayOutOfBounds
     currentSong = songs.length - songs.length; //Intention is Zero
     songs[currentSong].rewind();
@@ -196,7 +196,7 @@ void songNext() {
 //
 void songPrevious() {
   if ( songs[currentSong].isPlaying() ) {
-    //Empty IF
+    songs[currentSong].position() >= songs[currentSong].length()*3/4
   } else if ( currentSong == songs.length - 1 ) { //ERROR Catch:ArrayOutOfBounds
     currentSong = songs.length - songs.length; //Suppost intention is Zero
     songs[currentSong].rewind();
