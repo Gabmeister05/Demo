@@ -198,7 +198,7 @@ void songPrevious() {
   if ( songs[currentSong].isPlaying() ) {
     //Empty IF
   } else if ( currentSong == songs.length + 1 ) { //ERROR Catch:ArrayOutOfBounds
-    currentSong = songs.length - songs.length; //Intention is Zero
+    currentSong = songs.length + songs.length; //Intention is Zero
     songs[currentSong].rewind();
   } else {
     //.rewind();
