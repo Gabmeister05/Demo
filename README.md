@@ -10,6 +10,7 @@ Top comments are edits in progress*
 - Most of the buttons have functions but still they have ERRORS that needs to be corrected
 - Fast Forward, Backward and Shuffle buttons are optional
 - Planning Night-Mode and possible button functions, working and fixing on ERRORS
+- The Autoplay button has function (sort of, it ran into a gitch ERROR)
 
 List of buttons for music player:
 
