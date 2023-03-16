@@ -202,7 +202,6 @@ void songPrevious() {
     //.rewind();
     //THROWS ArrayOutOfBounds Error
     currentSong--;
-    songs[currentSong].rewind();
   }
 }//Previous Song
 //
