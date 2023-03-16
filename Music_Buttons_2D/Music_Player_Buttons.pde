@@ -3,8 +3,6 @@ float pauseX1, pauseY1, pauseX2, pauseY2, pauseWidth, pauseHeight;
 float pauseScaleWidth, pauseScaleHeight;
 float stopX, stopY, stopWidth, stopHeight;
 float playX1, playY1, playX2, playY2, playX3, playY3;
-float ffX1, ffY1, ffX2, ffY2, ffX3, ffY3;
-float fbX1, fbY1, fbX2, fbY2, fbX3, fbY3;
 float sfX1, sfY1, sfX2, sfY2, sfX3, sfY3;
 float sfX4, sfY4, sfWidth, sfHeight;
 float sbX1, sbY1, sbX2, sbY2, sbX3, sbY3;
@@ -20,8 +18,6 @@ void drawMusicButtons() {
  drawPauseButton();
  drawStopButton();
  drawPlayButton();
- drawFastForwardButton();
- drawFastBackwardButton();
  drawSkipForwardButton();
  drawSkipBackwardButton();
  drawMuteButton();
@@ -43,23 +39,13 @@ void drawStopButton () {
 }//End drawStopButton()
 //
 void drawPlayButton() {
-  translate( 1085, 130 ); //has to be manually changed from time to time :(
+  translate( 1230, 125 ); //has to be manually changed from time to time :(
   rotate( radians(90.0) );
   scale(0.62); //Could be changed but you'll also have to change the translation
   fill( black ); //Change this to ternary operator
   triangle( playX1, playY1, playX2, playY2, playX3, playY3 );
   fill( resetcolorDayMode ); //Change this tp ternary operator
 }//End drawPlayButton()
-//
-void drawFastForwardButton() {
-  triangle( ffX1, ffY1, ffX2, ffY2, ffX3, ffY3 );
-  triangle( ffX1, ffY1, ffX2, ffY2, ffX3, ffY3 );
-}//End FastForwardButton()
-//
-void drawFastBackwardButton() {
-  triangle( fbX1, fbY1, fbX2, fbY2, fbX3, fbY3 );
-  triangle( fbX1, fbY1, fbX2, fbY2, fbX3, fbY3 );
-}//End drawFastBackwardButton()
 //
 void drawSkipForwardButton() {
   triangle( sfX1, sfY1, sfX2, sfY2, sfX3, sfY3 );
