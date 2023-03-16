@@ -112,6 +112,7 @@ void autoPlayMusic() {
     //Ex#1: .position() >= .length(), then rewind(), currentSong+=1, .play()
     //Ex#2: .isPlaying(), when false rewind(), currentSong+=1, .play()
     //ERROR: When autoplay is turn on, music is silenced and song position gitches between 0, 23 and 46
+    //Once autoplay is turn off, song rewinds to beginning of the song
   }
 }//End Auto Play Music
 //
