@@ -26,40 +26,4 @@ void setupPopulation() {
   playX3 = playX1*1/2;
   playY3 = playY1;
   //
-  ffX1 = ;
-  ffY1 = ;
-  ffX2 = ;
-  ffY2 = ;
-  ffX3 = ;
-  ffY3 = ;
-  //
-  fbX1 = ;
-  fbY1 = ;
-  fbX2 = ;
-  fbY2 = ;
-  fbX3 = ;
-  fbY3 = ;
-  //
-  sfX1 = ;
-  sfY1 = ;
-  sfX2 = ;
-  sfY2 = ;
-  sfX3 = ;
-  sfY3 = ;
-  sfX4 = ;
-  sfY4 = ;
-  sfWidth = ;
-  sfHeight = ;
-  //
-  sbX1 = ;
-  sbY1 = ;
-  sbX2 = ;
-  sbY2 = ;
-  sbX3 = ;
-  sbY3 = ;
-  sbX4 = ;
-  sbY4 = ;
-  sbWidth = ;
-  sbHeight = ;
-  //
 }//End setupPopulation()

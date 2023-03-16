@@ -33,22 +33,22 @@ void drawPauseButton() {
   fill( black ); //Change this to ternary operator
   rect( pauseX1, pauseY1, pauseWidth, pauseHeight );
   rect( pauseX2, pauseY2, pauseWidth, pauseHeight );
-  fill( resetcolorDayMode ); //Change this tp ternary opertaot
+  fill( resetcolorDayMode ); //Change this to ternary operator
 }//End drawPauseButton()
 //
 void drawStopButton () {
   fill( black ); //Change this to ternary operator
   rect( stopX, stopY, stopWidth, stopHeight ); //Square
-  fill( resetcolorDayMode ); //Change this tp ternary opertaor
+  fill( resetcolorDayMode ); //Change this tp ternary operator
 }//End drawStopButton()
 //
 void drawPlayButton() {
-  translate( 1085, 180); //has to be manually changed from time to time :(
+  translate( 1085, 130 ); //has to be manually changed from time to time :(
   rotate( radians(90.0) );
   scale(0.62); //Could be changed but you'll also have to change the translation
   fill( black ); //Change this to ternary operator
   triangle( playX1, playY1, playX2, playY2, playX3, playY3 );
-  fill( resetcolorDayMode ); //Change this tp ternary opertaor
+  fill( resetcolorDayMode ); //Change this tp ternary operator
 }//End drawPlayButton()
 //
 void drawFastForwardButton() {
