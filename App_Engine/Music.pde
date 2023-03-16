@@ -103,14 +103,15 @@ void concatenationOfMusicFiles() {
 void autoPlayMusic() {
   if ( autoPlayOn ) {
     if ( songs[currentSong].position() >= songs[currentSong].length()*3/4 ) {
-      songs[currentSong].rewind();
+      songs[currentSong].play();
     } else if ( songs[currentSong].position() >= songs[currentSong].length()*4/5 ) {
       currentSong+=1;
     } else {
-      songs[currentSong].play();
+      songs[currentSong].rewind();
     }
     //Ex#1: .position() >= .length(), then rewind(), currentSong+=1, .play()
     //Ex#2: .isPlaying(), when false rewind(), currentSong+=1, .play()
+    //ERROR: When autoplay is turn on, music is silenced and song position gitches between 0, 23 and 46
   }
 }//End Auto Play Music
 //
