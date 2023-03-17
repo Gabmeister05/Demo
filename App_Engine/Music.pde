@@ -105,7 +105,7 @@ void autoPlayMusic() {
     if ( songs[currentSong].position() >= songs[currentSong].length()*3/4 ) {
       songs[currentSong].play();
     } else if ( songs[currentSong].position() >= songs[currentSong].length()*4/5 ) {
-      currentSong+=1;
+      currentSong=1;
     } else {
       songs[currentSong].rewind();
     }
