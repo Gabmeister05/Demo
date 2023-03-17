@@ -103,7 +103,7 @@ void concatenationOfMusicFiles() {
 void autoPlayMusic() {
   if ( autoPlayOn ) {
     if ( songs[currentSong].position() <= songs[currentSong].length()*3/4 ) {
-       songs[currentSong].play();
+      songs[currentSong].play();
     } else if ( songs[currentSong].position() >= songs[currentSong].length()*4/5 ) {
       songs[currentSong].rewind();
       currentSong+=1;
@@ -130,6 +130,7 @@ void mute() {
      - play the next song automatically
      - play of notification to choose the next song
      */
+    currentSong++;
     songs[currentSong].rewind(); //simple solution, contains ERROR
   } else {
     songs[currentSong].mute();
