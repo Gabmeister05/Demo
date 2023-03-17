@@ -130,7 +130,7 @@ void mute() {
      - play the next song automatically
      - play of notification to choose the next song
      */
-    currentSong++;
+    currentSong++; //ERROR: Just like the autoplay, both next and previous songs are mixed and match together
     songs[currentSong].rewind(); //simple solution, contains ERROR
   } else {
     songs[currentSong].mute();
