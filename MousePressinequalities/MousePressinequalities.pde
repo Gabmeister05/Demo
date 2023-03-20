@@ -3,7 +3,7 @@
 //
 //Global Variables
 float stopX, stopY, stopWidth, stopHeight;
-boolean stopHoverOver-false;
+boolean stopHoverOver=false;
 //
 void setup() {
   size(800, 400);
