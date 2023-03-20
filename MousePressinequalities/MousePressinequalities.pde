@@ -10,11 +10,13 @@ void setup() {
   //Population
   float startingX = width*1/2;
   float startingY = height*1/2;
+  float buttonReferentMeasure = width*1/9; //7 buttons plus 2 buttons of space
+  float buttonSide = buttonReferentMeasure; //All buttons are squares
   //
-  stopX = ;
-  stopY = ;
-  stopWidth = ;
-  stopHeight = ;
+  stopX = startingX - 4.5 * (buttonReferentMeasure);
+  stopY = startingY;
+  stopWidth = buttonSide;
+  stopHeight = buttonSide;
   //
 }//End setup
 //
