@@ -2,17 +2,25 @@
  */
 //
 //Global Variables
+float stopX, stopY, stopWidth, stopHeight;
 //
 void setup() {
   size(800, 400);
   //
   //Population
+  float startingX = ;
+  float startingY = ;
+  //
+  stopX = ;
+  stopY = ;
+  stopWidth = ;
+  stopHeight = ;
   //
 }//End setup
 //
 void draw() {
   //Example STOP Button: butto is the logical rectangle
-  rect();
+  rect(stopX, stopY, stopWidth, stopHeight);
   //
 }//End draw
 //
