@@ -5,9 +5,15 @@
 //
 void setup() {
   size(800, 400);
+  //
+  //Population
+  //
 }//End setup
 //
 void draw() {
+  //Example STOP Button: butto is the logical rectangle
+  rect();
+  //
 }//End draw
 //
 void keyPressed() {
