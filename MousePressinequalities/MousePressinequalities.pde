@@ -30,7 +30,16 @@ void keyPressed() {
 }//End keyPressed
 //
 void mousePressed() {
-  if (mouseX>=stopX && mouseX<=stopX+stopWidth && mouseY>=stopY && mouseY<=stopY+stopHeight) println("Button Pressed");
+  //
+  /* Steps for the conditional
+  mouseX>= && mouseX<= && mouseY>= && mouseY<=
+  then, add the variables of the rec()
+  */
+  if (mouseX>=stopX && mouseX<=stopX+stopWidth && mouseY>=stopY && mouseY<=stopY+stopHeight) 
+  {
+    println("Button Pressed");
+    stopHoverOver = true;
+  }
 }//End mousePressed
 //
 //End Main Program
