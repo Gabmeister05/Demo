@@ -8,8 +8,8 @@ void setup() {
   size(800, 400);
   //
   //Population
-  float startingX = ;
-  float startingY = ;
+  float startingX = width*1/2;
+  float startingY = height*1/2;
   //
   stopX = ;
   stopY = ;
