@@ -3,6 +3,7 @@
 //
 //Global Variables
 float stopX, stopY, stopWidth, stopHeight;
+boolean stopHoverOver-false;
 //
 void setup() {
   size(800, 400);
@@ -22,6 +23,7 @@ void setup() {
 //
 void draw() {
   //Example STOP Button: butto is the logical rectangle
+  if ( mouseX>=stopX && mouseX<=stopX+stopWidth && mouseY>=stopY && mouseY<=stopY+stopHeight ) println("Hovering Over Button");
   rect(stopX, stopY, stopWidth, stopHeight);
   //
 }//End draw
