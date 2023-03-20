@@ -30,7 +30,7 @@ void keyPressed() {
 }//End keyPressed
 //
 void mousePressed() {
-  if (mouseX mouseX mouseY mouseY) println("Button Pressed");
+  if (mouseX>=stopX && mouseX<=stopX+stopWidth mouseY mouseY) println("Button Pressed");
 }//End mousePressed
 //
 //End Main Program
