@@ -23,7 +23,13 @@ void setup() {
 //
 void draw() {
   //Example STOP Button: butto is the logical rectangle
-  if ( mouseX>=stopX && mouseX<=stopX+stopWidth && mouseY>=stopY && mouseY<=stopY+stopHeight ) println("Hovering Over Button");
+  if ( mouseX>=stopX && mouseX<=stopX+stopWidth && mouseY>=stopY && mouseY<=stopY+stopHeight )
+  {
+    println("Hovering Over Button");
+  } else 
+  {
+    println("");
+  }
   rect(stopX, stopY, stopWidth, stopHeight);
   //
 }//End draw
@@ -34,10 +40,10 @@ void keyPressed() {
 void mousePressed() {
   //
   /* Steps for the conditional
-  mouseX>= && mouseX<= && mouseY>= && mouseY<=
-  then, add the variables of the rec()
-  */
-  if (mouseX>=stopX && mouseX<=stopX+stopWidth && mouseY>=stopY && mouseY<=stopY+stopHeight) 
+   mouseX>= && mouseX<= && mouseY>= && mouseY<=
+   then, add the variables of the rec()
+   */
+  if ( mouseX>=stopX && mouseX<=stopX+stopWidth && mouseY>=stopY && mouseY<=stopY+stopHeight )
   {
     println("Button Pressed");
     stopHoverOver = true;
