@@ -30,6 +30,7 @@ void keyPressed() {
 }//End keyPressed
 //
 void mousePressed() {
+  if (mouseX mouseX) println("Button Pressed");
 }//End mousePressed
 //
 //End Main Program
