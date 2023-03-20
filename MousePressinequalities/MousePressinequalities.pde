@@ -1,11 +1,19 @@
+/* Prototyping program for locial button pressing
+ */
+//
 //Global Variables
 //
-void setup() {}//End setup
+void setup() {
+  size(800, 400);
+}//End setup
 //
-void draw() {}//End draw
+void draw() {
+}//End draw
 //
-void keyPressed() {}//End keyPressed
+void keyPressed() {
+}//End keyPressed
 //
-void mousePressed() {}//End mousePressed
+void mousePressed() {
+}//End mousePressed
 //
 //End Main Program
