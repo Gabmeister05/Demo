@@ -13,7 +13,7 @@ void setup() {
   float buttonReferentMeasure = width*1/9; //7 buttons plus 2 buttons of space
   float buttonSide = buttonReferentMeasure; //All buttons are squares
   //
-  stopX = startingX - 4.5 * (buttonReferentMeasure);
+  stopX = 0; //startingX - 4.5 * (buttonReferentMeasure)
   stopY = startingY;
   stopWidth = buttonSide;
   stopHeight = buttonSide;
