@@ -3,7 +3,7 @@ int appWidth, appHeight;
 //
 void setup() {
   //Landscape (portrait, square)
-  size(700, 400); //width, height
+  //size(700, 400); //width, height
   fullScreen(); //displayWidth, displayHeight
   //
   //ERROR: CANVAS is bigger than Display

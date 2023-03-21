@@ -10,7 +10,7 @@ void setupPopulation() {
   pauseWidth = startingX * pauseScaleWidth;
   pauseHeight = startingY * pauseScaleHeight;
   pauseX1 = startingX - pauseWidth - pauseWidth*1/2;
-  pauseY1 = startingY - pauseHeight * 1/2;
+  pauseY1 = startingY - pauseHeight*1/2;
   pauseX2 = startingX + pauseWidth*1/2;
   pauseY2 = pauseY1;
   //
