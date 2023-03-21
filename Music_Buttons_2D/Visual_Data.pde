@@ -19,11 +19,11 @@ void setupPopulation() {
   stopWidth = pauseHeight;
   stopHeight = pauseHeight;
   //
-  playX1 = musicButtonDrawX + (appWidth * 5/30);
+  playX1 = pauseX1;
   playY1 = pauseY1;
-  playX2 = musicButtonDrawX - playX1*1/1000;
-  playY2 = musicButtonDrawY - playY1*53/100;
-  playX3 = playX1*1/2;
-  playY3 = playY1;
+  playX2 = pauseX2 + pauseWidth;
+  playY2 = playY1 + (playY3 -playY1)*1/2;
+  playX3 = playX1;
+  playY3 = pauseY1 + pauseHeight;
   //
 }//End setupPopulation()
