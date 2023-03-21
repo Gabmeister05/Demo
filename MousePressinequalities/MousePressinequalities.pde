@@ -23,6 +23,7 @@ void setup() {
 //
 void draw() {
   //Example STOP Button: butto is the logical rectangle
+  //Hoverover Feature
   if ( mouseX>=stopX && mouseX<=stopX+stopWidth && mouseY>=stopY && mouseY<=stopY+stopHeight )
   {
     println("Hovering Over Button");
