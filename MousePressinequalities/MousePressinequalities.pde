@@ -20,6 +20,10 @@ void setup() {
   stopWidth = buttonSide;
   stopHeight = buttonSide;
   //
+  pauseX = ;
+  pauseY = ;
+  pauseWidth = ;
+  pauseHeight = ;
 }//End setup
 //
 void draw() {
