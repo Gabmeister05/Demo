@@ -20,8 +20,8 @@ void setup() {
   stopWidth = buttonSide;
   stopHeight = buttonSide;
   //
-  pauseX = stopX - (buttonReferentMeasure)/12;
-  pauseY = stopY - (buttonReferentMeasure)/12;
+  pauseX = stopX + (buttonReferentMeasure)/12;
+  pauseY = stopY + (buttonReferentMeasure)/12;
   pauseWidth = stopWidth;
   pauseHeight = stopHeight;
 }//End setup
