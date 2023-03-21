@@ -209,6 +209,7 @@ void songPrevious() {
   } else {
     //.rewind();
     //ERROR: -1 is out of bounds, needs a better solution instead of rewind()
+    //error is gone but it can't rewind from song[0] back to whaatever songs the program has
     currentSong--;
     currentSong++;
   }
