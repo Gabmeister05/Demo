@@ -3,6 +3,7 @@
 //
 //Global Variables
 float stopX, stopY, stopWidth, stopHeight;
+float pauseX, pauseY, pauseWidth, pauseHeight;
 boolean stopHoverOver=false;
 //
 void setup() {
@@ -33,6 +34,7 @@ void draw() {
   }//End Hoverover Feature
   rect(stopX, stopY, stopWidth, stopHeight);
   //
+  rect(pauseX, pauseY, pauseWidth, pauseHeight);
 }//End draw
 //
 void keyPressed() {
