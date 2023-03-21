@@ -39,7 +39,6 @@ void drawStopButton () {
 }//End drawStopButton()
 //
 void drawPlayButton() {
-  scale(0.62); //Could be changed but you'll also have to change the translation
   fill( black ); //Change this to ternary operator
   triangle( playX1, playY1, playX2, playY2, playX3, playY3 );
   fill( resetcolorDayMode ); //Change this to ternary operator
