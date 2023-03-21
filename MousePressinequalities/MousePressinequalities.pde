@@ -8,7 +8,7 @@ boolean stopHoverOver=false;
 void setup() {
   size(800, 400);
   //
-  //Population
+  //Population, before moving to VOID in a Subprogram
   float startingX = width*1/2;
   float startingY = height*1/2;
   float buttonReferentMeasure = width*1/9; //7 buttons plus 2 buttons of space
