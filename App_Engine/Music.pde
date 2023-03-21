@@ -210,6 +210,7 @@ void songPrevious() {
     //.rewind();
     //ERROR: -1 is out of bounds, needs a better solution instead of rewind()
     currentSong--;
+    currentSong++;
   }
 }//Previous Song
 //
