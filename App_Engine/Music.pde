@@ -159,6 +159,16 @@ void autoPlayMusic() {
   }
 }//End Auto Play Music
 //
+void autoPlay() { //See autoPlayMusic()
+  if ( autoPlayOn == false ) {
+    autoPlayOn = true;
+    playOn=true;
+  } else {
+    autoPlayOn = false;
+    playOn=false;
+  }
+}//End Auto Play
+//
 void playPause() {
   //Play-Pause Button
   if ( songs[currentSong].isPlaying() ) {
