@@ -52,6 +52,13 @@ void drawMusic() {
   //
   //Stop Button
   rect( stopX, stopY, buttonSide, buttonSide );
+  //
+  //Pause Button
+  rect( pauseX1, pauseY1, pauseWidth, pauseHeight );
+  rect( pauseX2, pauseY2, pauseWidth, pauseHeight );
+  //
+  //Play Button
+  
 }//End drawMusic
 //
 void keyPressedMusic() {
