@@ -1,7 +1,7 @@
 void population() 
 {
   //Population: visual data \
-  float buttonReferentMeasure = width*1/9; //7 buttons plus 2 buttons of space
+  float buttonReferentMeasure = width * 1/9; //7 buttons plus 2 buttons of space
   buttonSide = buttonReferentMeasure; //All buttons are squares
   spaceWidth = buttonReferentMeasure * 1/3;
   //
@@ -18,6 +18,8 @@ void population()
   pauseY2 = pauseY1;
   playX = playX1 = pauseX1;
   playY = playY1 = pauseY1;
+  playX3 = playX1;
+  playY3 = pauseY1 + buttonReferentMeasure;
   
 }//End Population
 //
