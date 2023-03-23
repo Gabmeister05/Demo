@@ -113,58 +113,19 @@ void drawMusic() {
 //
 void keyPressedMusic() {
   //Music Key Board Short Cuts
-  //
-  if ( key == 'm' || key == 'M' ) {
-    mute();
-  }//End Mute Button
-  //
-  //Forward & Reverse Skip
-  if ( key == 'f' || key == 'F' ) {
-    forward();
-  }//End Forward
-  if ( key == 'r' || key == 'R' ) {
-    reverse();
-  }//End Reverse
-  //
-  //Single Loop
-  //if (key == '1') song{currentSongs].loop(1); //ERROR: immediately restarts song
-  if ( key == '1' ) {
-    singleLoop();
-  }//End Single Loop
-  //
-  //Loop Infinte Loop
-  if ( key <= '9' && key != '1' ) {
-    infiniteLoop();
-  }//End Infinte Loop
-  //
-  //Stop
-  if ( key == 's' || key == 'S' ) {
-    stop();
-  }//End Stop
-  //
-  //Play-Pause
-  if ( key == 'p' || key == 'P' ) {
-    playPause();
-  }// End Play-Pause
-  //
-  //Autoplay Button
-  if ( key == 'o' || key == 'O' ) {
-    if ( autoPlayOn == false ) {
-      autoPlayOn = true;
-    } else {
-      autoPlayOn = false;
-    }
-  }//End Autoplay
-  //
-  //Next Song Button
-  if ( key == 'n' || key == 'N' ) {
-    songNext();
-  } //End Next Song Button
-  //
-  //Previous Song Button
-  if ( key == 'b' || key == 'B' ) {
-    songPrevious();
-  } //End Previous Song Button
+  if ( key == 'U' || key=='u' ) autoPlay(); //teacher started
+  if ( key == 'P' || key=='p' ) playPause(); //teacher started
+  if ( key == 'M' || key=='m' ) mute(); //teacher started
+  if ( key == 'S' || key=='s' ) stopSong(); //teacher started
+  if ( key == 'F' || key=='f' ) fastForward(); //teacher started
+  if ( key == 'R' || key=='r' ) fastRewind(); //teacher started
+  if ( key == 'N' || key=='n' ) nextSong(); //teacher started
+  if ( key == 'B' || key=='b' ) previousSong(); //See Next Button, student finishes Previous Button
+  if ( key == 'L' || key=='l' ) loopSongOnce(); //loops current song once
+  if ( key == 'O' || key=='o' ) loopSong(); //loops current song infinitely
+  if ( key == 'K' || key=='k' ) loopPlaylist(); //entire playlist
+  if ( key == 'W' || key=='w' ) shufflePlaylist(); //shuffle
+  if ( key == 'E' || key=='e' ) loopAndShuffle(); //Loop and Shuffle
   //
 }//End keyPressedMusic
 //
