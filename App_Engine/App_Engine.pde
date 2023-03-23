@@ -9,6 +9,9 @@ import ddf.minim.ugens.*;
 //Global Variabes
 //
 void setup() {
+  //Display
+  size(800, 400); //width, height
+  //fullScreen(); //displayWidth, displayHeight
   //
   setupMusic();
   population();
