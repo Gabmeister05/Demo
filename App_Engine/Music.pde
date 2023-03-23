@@ -122,10 +122,10 @@ void keyPressedMusic() {
   if ( key == 'S' || key=='s' ) stopSong(); //teacher started
   if ( key == 'F' || key=='f' ) fastForward(); //teacher started
   if ( key == 'R' || key=='r' ) fastRewind(); //teacher started
-  if ( key == 'N' || key=='n' ) nextSong(); //teacher started
-  if ( key == 'B' || key=='b' ) previousSong(); //See Next Button, student finishes Previous Button
-  if ( key == 'L' || key=='l' ) loopSongOnce(); //loops current song once
-  if ( key == 'O' || key=='o' ) loopSong(); //loops current song infinitely
+  if ( key == 'N' || key=='n' ) songNext(); //teacher started
+  if ( key == 'B' || key=='b' ) songPrevious(); //See Next Button, student finishes Previous Button
+  if ( key == 'L' || key=='l' ) singleLoop(); //loops current song once
+  if ( key == 'O' || key=='o' ) infiniteLoop(); //loops current song infinitely
   if ( key == 'K' || key=='k' ) loopPlaylist(); //entire playlist
   if ( key == 'W' || key=='w' ) shufflePlaylist(); //shuffle
   if ( key == 'E' || key=='e' ) loopAndShuffle(); //Loop and Shuffle
@@ -215,35 +215,21 @@ void stopSong() {
   } else {
     songs[currentSong].rewind();
   }
-}//End Stop
+}//End Stop Song
 //
-void forward() {
+void fastForward() {
   //ERROR: if at end, plays begining
   if ( songs[currentSong].isPlaying() ) {
     songs[currentSong].skip(10000); //parameter in milliseconds
   } else if ( songs[currentSong].position() >= songs[currentSong].length()*3/4 );
   //Finish Conditional
   //ERROR Catch: if end of song then next song
-}//End Forward
+}//End Fast Forward
 //
-void reverse() {
+void fastRewind() {
   //Spamming R means start playing at begining of song
   songs[currentSong].skip(-10000); //parameter in milliseconds
-}//End Reverse
-//
-void singleLoop() {
-  //Finish Playing current song, then replay once
-  delay( songs[currentSong].length() - songs[currentSong].position() );
-  //ERROR: delay stops all player functions, computer doesn't recognize if song is playing
-  songs[currentSong].loop(0);
-}//End Single Loop
-//
-void infiniteLoop() {
-  //Finish Playing current song, then replay once
-  delay( songs[currentSong].length() - songs[currentSong].position() );
-  //ERROR: delay stops all player functions, computer doesn't recognize if song is playing
-  songs[currentSong].loop(-1); //parameter is empty or -1
-}//End Infinite Loop
+}//End Fast Rewind
 //
 void songNext() {
   if ( songs[currentSong].isPlaying() ) {
@@ -271,5 +257,31 @@ void songPrevious() {
     currentSong++;
   }
 }//Previous Song
+//
+void singleLoop() {
+  //Finish Playing current song, then replay once
+  delay( songs[currentSong].length() - songs[currentSong].position() );
+  //ERROR: delay stops all player functions, computer doesn't recognize if song is playing
+  songs[currentSong].loop(0);
+}//End Single Loop
+//
+void infiniteLoop() {
+  //Finish Playing current song, then replay once
+  delay( songs[currentSong].length() - songs[currentSong].position() );
+  //ERROR: delay stops all player functions, computer doesn't recognize if song is playing
+  songs[currentSong].loop(-1); //parameter is empty or -1
+}//End Infinite Loop
+//
+void loopPlaylist() {
+  //Must answer: how does this differ from Auto Play
+}//End
+//
+void shufflePlaylist() {
+  
+}//End
+//
+void loopAndShuffle() {
+  
+}//End
 //
 //End Music SubProgram
