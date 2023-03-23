@@ -42,6 +42,14 @@ void drawMusic() {
   //
   autoPlayMusic();
   //
+  //print("Confirming Center X:", centerX);
+  //print("/t Confirming Center Y:", centerY);
+  //println("/t Confirming Button Position Couter:", buttonPosition);
+  //
+  //Button Space
+  //rect( spaceX, spaceY, spaceWidth, buttonSide );
+  //rect( spaceX, spaceY, spaceHeight, buttonSide );
+  //
   //Stop Button
   rect( stopX, stopY, buttonSide, buttonSide );
 }//End drawMusic
