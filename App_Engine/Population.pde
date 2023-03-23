@@ -8,6 +8,8 @@ void population()
   float centerX = width * 1/2;
   float centerY = height * 1/2;
   int buttonPositionColumn buttonPositionRow;
+  print("Confirming Center X:", centerX);
+  println("\t COnfirming Center Y:". centerY);
 }//End Population
 //
 //End Population Subprogram
