@@ -20,7 +20,9 @@ void population()
   playY = playY1 = pauseY1;
   playX3 = playX1;
   playY3 = pauseY1 + buttonReferentMeasure;
-  
+   playX2 = pauseX2 + pauseWidth;
+  playY2 = playY1 + (playY3 - playY1)*1/2;
+  //
 }//End Population
 //
 //End Population Subprogram
