@@ -159,6 +159,20 @@ void autoPlayMusic() {
   }
 }//End Auto Play Music
 //
+void playPause() {
+  //Play-Pause Button
+  if ( songs[currentSong].isPlaying() ) {
+    songs[currentSong].pause();
+    playOn=false;
+  } else if ( songs[currentSong].position() >= songs[currentSong].length()*3/4 ) {
+    //CAUTION: without code, this conditional will not do anything
+  } else {
+    autoPlay();
+    songs[currentSong].play(); //no auto rewind like loop()
+    playOn=true;
+  }
+}//End Play-Pause
+//
 void mute() {
   //Mute Button, not PAUSE, only affect speakers
   //ERROR: this MUTE Button only works when song is playing
@@ -220,17 +234,6 @@ void stop() {
     songs[currentSong].rewind();
   }
 }//End Stop
-//
-void playPause() {
-  //Play-Pause Button
-  if ( songs[currentSong].isPlaying() ) {
-    songs[currentSong].pause();
-  } else if ( songs[currentSong].position() >= songs[currentSong].length()*3/4 ) {
-    //CAUTION: without code, this conditional will not do anything
-  } else {
-    songs[currentSong].play(); //no auto rewind like loop()
-  }
-}//End Play-Pause
 //
 void songNext() {
   if ( songs[currentSong].isPlaying() ) {
