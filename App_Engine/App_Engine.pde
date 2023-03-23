@@ -23,8 +23,6 @@ void draw() {
 void keyPressed() {
   keyPressedMusic();
   //
-  //Prototyping to copy when works
-  //
 }//End keyPressed
 //
 void mousePressed() {
