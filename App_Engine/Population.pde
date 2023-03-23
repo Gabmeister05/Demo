@@ -27,6 +27,8 @@ void population()
   muteX = pauseX1;
   muteY = pauseY1 - ( buttonPositionRow * buttonReferentMeasure );
   //
+  buttonPositionColumn = 3;
+  //
   stopX = pauseX1 - ( buttonPositionColumn * buttonReferentMeasure );
   stopY = pauseY1;
   //
