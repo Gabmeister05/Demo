@@ -5,6 +5,7 @@ AudioPlayer[] soundEffects = new AudioPlayer[2];
 String pathway, iceandfire, iwishiknew, factory, daytimebonfire;
 int currentSong=0;
 Boolean autoPlayOn=false;
+Boolean playOn=false;
 //
 float buttonSide, spaceWidth, spaceHeight;
 float pauseX1, pauseY1, pauseX2, pauseY2, pauseWidth, pauseHeight;
@@ -18,6 +19,8 @@ float nextX1, nextY1, nextX2, nextY2, nextX3, nextY3, nextXR2, nextYR2, nextWidt
 float prevX1, prevY1, prevX2, prevY2, prevX3, prevY3, prevXR, prevYR, prevWidth;
 float rrX, rrY, nextX, nextY, prevX, prevY, loop1X, loop1Y;
 float loopPlaylistX, loopPlaylistY;
+//
+color deafaultWhite=#FFFFFF, red=#FF0000, green=#00FF00; //Note: colours for nightmode
 void setupMusic() {
   //
   minim = new Minim (this); //load from data directory, loadFile should also load from project folder, like loadImage
