@@ -16,6 +16,9 @@ void population()
   pauseWidth = buttonReferentMeasure * 1/3;
   pauseX2 = centerX + pauseWidth*1/2;
   pauseY2 = pauseY1;
+  playX = playX1 = pauseX1;
+  playY = playY1 = pauseY1;
+  
 }//End Population
 //
 //End Population Subprogram
