@@ -35,6 +35,8 @@ void drawMusic() {
   //
   autoPlayMusic();
   //
+  //Stop Button
+  rect( stopX, stopY, buttonSide, buttonSide );
 }//End drawMusic
 //
 void keyPressedMusic() {
