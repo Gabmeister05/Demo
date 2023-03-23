@@ -23,6 +23,10 @@ void population()
   playX2 = playX1 + buttonReferentMeasure;
   playY2 = playY1 + (playY3-playY1)*1/2;
   //
+  buttonPositionRow = 1;
+  muteX = pauseX1;
+  muteY = pauseY1 - ( buttonPositionRow * buttonReferentMeasure );
+  //
 }//End Population
 //
 //End Population Subprogram
