@@ -130,6 +130,7 @@ void keyPressedMusic() {
 }//End keyPressedMusic
 //
 void mousePressedMusic() {
+  if ( mouseX>=playX && mouseX<=playX+buttonSide && mouseY>=playY && mouseY<=playY+buttonSide ) playPause();
 }//End mousePressedMusic
 //
 void concatenationOfMusicFiles() {
