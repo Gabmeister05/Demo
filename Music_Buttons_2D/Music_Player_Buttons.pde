@@ -26,20 +26,17 @@ void drawMusicButtons() {
 }//End drawMusicButtons
 //
 void drawPauseButton() {
-  fill( black ); //Change this to ternary operator
   rect( pauseX1, pauseY1, pauseWidth, pauseHeight );
   rect( pauseX2, pauseY2, pauseWidth, pauseHeight );
   fill( resetcolorDayMode ); //Change this to ternary operator
 }//End drawPauseButton()
 //
 void drawStopButton () {
-  fill( black ); //Change this to ternary operator
   rect( stopX, stopY, stopWidth, stopHeight ); //Square
   fill( resetcolorDayMode ); //Change this tp ternary operator
 }//End drawStopButton()
 //
 void drawPlayButton() {
-  fill( black ); //Change this to ternary operator
   triangle( playX1, playY1, playX2, playY2, playX3, playY3 );
   fill( resetcolorDayMode ); //Change this to ternary operator
 }//End drawPlayButton()
