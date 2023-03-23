@@ -277,11 +277,9 @@ void loopPlaylist() {
 }//End
 //
 void shufflePlaylist() {
-  
 }//End
 //
 void loopAndShuffle() {
-  
 }//End
 //
 //End Music SubProgram

@@ -1,6 +1,6 @@
 /* CAUTION, code no finished
-Also see Music SubProgram
-*/
+ Also see Music SubProgram
+ */
 //Global Varibales
 String path = new File("").getAbsolutePath(); //Exported
 //CAUTION: GitHub must be linked to the C-Drive instead of FS ... This might need a lesson
