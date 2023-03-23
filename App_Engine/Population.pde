@@ -7,6 +7,7 @@ void population()
   //
   float centerX = width * 1/2;
   float centerY = height * 1/2;
+  int buttonPositionColumn buttonPositionRow;
 }//End Population
 //
 //End Population Subprogram
