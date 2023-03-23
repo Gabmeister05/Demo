@@ -9,6 +9,8 @@ Boolean autoPlayOn=false;
 float buttonSide, spaceWidth, spaceHeight;
 float pauseX1, pauseY1, pauseX2, pauseY2, pauseWidth, pauseHeight;
 float playX, playY, playX1, playY1, playX2, playY2, playX3, playY3;
+float stopX, stopY, muteX, muteY, loopIX, loopIY;
+
 void setupMusic() {
   //
   minim = new Minim (this); //load from data directory, loadFile should also load from project folder, like loadImage
