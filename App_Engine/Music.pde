@@ -54,11 +54,12 @@ void drawMusic() {
   rect( stopX, stopY, buttonSide, buttonSide );
   //
   //Pause Button
-  rect( pauseX1, pauseY1, pauseWidth, pauseHeight );
-  rect( pauseX2, pauseY2, pauseWidth, pauseHeight );
+  rect( pauseX1, pauseY1, buttonSide, buttonSide );
+  rect( pauseX2, pauseY2, buttonSide, buttonSide );
   //
   //Play Button
-  
+  triangle( playX1, playY1, playX2, playY2, playX3, playY3 );
+  //
 }//End drawMusic
 //
 void keyPressedMusic() {
