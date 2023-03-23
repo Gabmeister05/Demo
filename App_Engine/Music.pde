@@ -204,6 +204,19 @@ void mute() {
   }
 }//End Mute
 //
+void stopSong() {
+  /*Note: possible smarter STOP Buttons
+   - include soft "PAUSE" for first 15 seconds
+   - include auto previous & next track if STOP at beginning or end of ile
+   */
+  if ( songs[currentSong].isPlaying() ) {
+    songs[currentSong].pause();
+    songs[currentSong].rewind();
+  } else {
+    songs[currentSong].rewind();
+  }
+}//End Stop
+//
 void forward() {
   //ERROR: if at end, plays begining
   if ( songs[currentSong].isPlaying() ) {
@@ -231,19 +244,6 @@ void infiniteLoop() {
   //ERROR: delay stops all player functions, computer doesn't recognize if song is playing
   songs[currentSong].loop(-1); //parameter is empty or -1
 }//End Infinite Loop
-//
-void stop() {
-  /*Note: possible smarter STOP Buttons
-   - include soft "PAUSE" for first 15 seconds
-   - include auto previous & next track if STOP at beginning or end of ile
-   */
-  if ( songs[currentSong].isPlaying() ) {
-    songs[currentSong].pause();
-    songs[currentSong].rewind();
-  } else {
-    songs[currentSong].rewind();
-  }
-}//End Stop
 //
 void songNext() {
   if ( songs[currentSong].isPlaying() ) {
