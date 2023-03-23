@@ -11,6 +11,7 @@ import ddf.minim.ugens.*;
 void setup() {
   //
   setupMusic();
+  population();
   //
   songs[currentSong].loop(0); //Change the index manually
   //
