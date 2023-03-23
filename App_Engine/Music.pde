@@ -21,6 +21,7 @@ float rrX, rrY, nextX, nextY, prevX, prevY, loop1X, loop1Y;
 float loopPlaylistX, loopPlaylistY;
 //
 color deafaultWhite=#FFFFFF, red=#FF0000, green=#00FF00; //Note: colours for nightmode
+//
 void setupMusic() {
   //
   minim = new Minim (this); //load from data directory, loadFile should also load from project folder, like loadImage
