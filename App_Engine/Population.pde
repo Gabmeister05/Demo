@@ -9,7 +9,7 @@ void population()
   float centerY = height * 1/2;
   int buttonPositionColumn, buttonPositionRow;
   print("Confirming Center X:", centerX);
-  println("\t COnfirming Center Y:". centerY);
+  println("\t COnfirming Center Y:", centerY);
   //
   pauseX1 = centerX - buttonReferentMeasure*1/2;
   pauseY1 = centerY - buttonReferentMeasure*1/2;
