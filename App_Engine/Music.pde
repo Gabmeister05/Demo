@@ -65,7 +65,7 @@ void keyPressedMusic() {
   //
   //Play-Pause
   if ( key == 'p' || key == 'P' ) {
-    playpause();
+    playPause();
   }// End Play-Pause
   //
   //Autoplay Button
@@ -177,7 +177,7 @@ void stop() {
   }
 }//End Stop
 //
-void playpause() {
+void playPause() {
   //Play-Pause Button
   if ( songs[currentSong].isPlaying() ) {
     songs[currentSong].pause();
