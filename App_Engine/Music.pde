@@ -6,6 +6,7 @@ String pathway, iceandfire, iwishiknew, factory, daytimebonfire;
 int currentSong=0;
 Boolean autoPlayOn=false;
 Boolean playOn=false;
+Boolean pauseOn=false;
 //
 float buttonSide, spaceWidth, spaceHeight;
 float pauseX1, pauseY1, pauseX2, pauseY2, pauseWidth, pauseHeight;
@@ -20,7 +21,7 @@ float prevX1, prevY1, prevX2, prevY2, prevX3, prevY3, prevXR, prevYR, prevWidth;
 float rrX, rrY, nextX, nextY, prevX, prevY, loop1X, loop1Y;
 float loopPlaylistX, loopPlaylistY;
 //
-color defaultWhite=#FFFFFF, red=#FF0000, green=#00FF00; //Note: colours for nightmode
+color defaultWhite=#FFFFFF, red=#FF0000, green=#00FF00, yellow=#FFFF00; //Note: colours for nightmode
 //
 void setupMusic() {
   //
@@ -58,8 +59,11 @@ void drawMusic() {
   rect( stopX, stopY, buttonSide, buttonSide );
   //
   //Pause Button
+  if ( pauseOn==true ) {fill(yellow);} else {fill(defaultWhite);};
+  if ( mouseX>=playX && mouseX<=playX+buttonSide && mouseY>=playY && mouseY<=playY+buttonSide ) fill(green);
   rect( pauseX1, pauseY1, buttonSide, buttonSide );
   rect( pauseX2, pauseY2, buttonSide, buttonSide );
+  fill(defaultWhite);
   //
   //Play Button
   if ( playOn==true ) {fill(green);} else {fill(defaultWhite);};
