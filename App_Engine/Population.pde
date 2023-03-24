@@ -19,7 +19,6 @@ void population()
   pauseHeight = centerY * ScaleHeight;
   pauseX2 = centerX + pauseWidth*1/2;
   pauseY2 = pauseY1;
-  //
   playX = playX1 = pauseX1;
   playY = playY1 = pauseY1;
   playX3 = playX1;
