@@ -101,9 +101,9 @@ void concatenationOfMusicFiles() {
 //
 void autoPlayMusic() {
   if ( autoPlayOn ) {
-    if ( songs[currentSong].position() <= songs[currentSong].length()*3/4 ) {
+    if ( songs[currentSong].position() <= songs[currentSong].length()*1/2 ) {
       songs[currentSong].play();
-    } else if ( songs[currentSong].position() >= songs[currentSong].length()*4/5 ) {
+    } else if ( songs[currentSong].position() >= songs[currentSong].length()*3/4 ) {
       currentSong+=1;
     } else {
       songs[currentSong].rewind();
