@@ -20,7 +20,7 @@ float prevX1, prevY1, prevX2, prevY2, prevX3, prevY3, prevXR, prevYR, prevWidth;
 float rrX, rrY, nextX, nextY, prevX, prevY, loop1X, loop1Y;
 float loopPlaylistX, loopPlaylistY;
 //
-color deafaultWhite=#FFFFFF, red=#FF0000, green=#00FF00; //Note: colours for nightmode
+color defaultWhite=#FFFFFF, red=#FF0000, green=#00FF00; //Note: colours for nightmode
 //
 void setupMusic() {
   //
@@ -62,7 +62,10 @@ void drawMusic() {
   rect( pauseX2, pauseY2, buttonSide, buttonSide );
   //
   //Play Button
+  if ( playOn==true ) {fill(green);} else {fill(defaultWhite);};
+  if ( mouseX>=playX && mouseX<=playX+buttonSide && mouseY>=playY && mouseY<=playY+buttonSide ) fill(red);
   triangle( playX1, playY1, playX2, playY2, playX3, playY3 );
+  fill(defaultWhite);
   //
 }//End drawMusic
 //
