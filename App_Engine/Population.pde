@@ -13,10 +13,10 @@ void population()
   print("Confirming Center X:", centerX);
   println("\t Confirming Center Y:", centerY); //Illstrates a character escape
   //
-  pauseX1 = centerX - buttonReferentMeasure*1/2;
-  pauseY1 = centerY - pauseWidth - buttonReferentMeasure*1/2;
-  pauseWidth = buttonReferentMeasure * 1/3;
-  pauseHeight = buttonReferentMeasure * 1/3;
+  pauseX1 = centerX -  pauseWidth - buttonReferentMeasure*1/2;
+  pauseY1 = centerY - buttonReferentMeasure*1/2;
+  pauseWidth = centerX * ScaleWidth;
+  pauseHeight = centerY * ScaleHeight;
   pauseX2 = centerX + pauseWidth*1/2;
   pauseY2 = pauseY1;
   //
