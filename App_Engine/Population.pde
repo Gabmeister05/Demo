@@ -14,6 +14,7 @@ void population()
   pauseX1 = centerX - buttonReferentMeasure*1/2;
   pauseY1 = centerY - buttonReferentMeasure*1/2;
   pauseWidth = buttonReferentMeasure * 1/3;
+  pauseHeight = buttonReferentMeasure * 1/3;
   pauseX2 = centerX + pauseWidth*1/2;
   pauseY2 = pauseY1;
   playX = playX1 = pauseX1;
