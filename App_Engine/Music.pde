@@ -8,7 +8,7 @@ Boolean autoPlayOn=false;
 Boolean playOn=false;
 Boolean pauseOn=false;
 //
-float buttonSide, spaceWidth, spaceHeight;
+float buttonSide, spaceWidth, spaceHeight, ScaleWidth, ScaleHeight;
 float pauseX1, pauseY1, pauseX2, pauseY2, pauseWidth, pauseHeight;
 float playX, playY, playX1, playY1, playX2, playY2, playX3, playY3;
 float stopX, stopY, muteX, muteY, loopIX, loopIY;

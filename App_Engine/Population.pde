@@ -4,6 +4,8 @@ void population()
   float buttonReferentMeasure = width * 1/9;
   buttonSide = buttonReferentMeasure;
   spaceWidth = buttonReferentMeasure * 1/3;
+  ScaleWidth = 1.0/25.0;
+  ScaleHeight = 1.0/3.0;
   //
   float centerX = width * 1/2; //Local Variable, garbage collected at end of setup(), see println in draw()
   float centerY = height * 1/2;
@@ -17,6 +19,7 @@ void population()
   pauseHeight = buttonReferentMeasure * 1/3;
   pauseX2 = centerX + pauseWidth*1/2;
   pauseY2 = pauseY1;
+  //
   playX = playX1 = pauseX1;
   playY = playY1 = pauseY1;
   playX3 = playX1;
