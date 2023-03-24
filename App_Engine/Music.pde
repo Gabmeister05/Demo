@@ -122,9 +122,11 @@ void autoPlay() { //See autoPlayMusic()
   if ( autoPlayOn == false ) {
     autoPlayOn = true;
     playOn=true;
+    pauseOn=true;
   } else {
     autoPlayOn = false;
     playOn=false;
+    pauseOn=false;
   }
 }//End Auto Play
 //
@@ -133,6 +135,7 @@ void playPause() {
   if ( songs[currentSong].isPlaying() ) {
     songs[currentSong].pause();
     playOn=false;
+    pauseOn=true;
   } else if ( songs[currentSong].position() >= songs[currentSong].length()*3/4 ) {
     songs[currentSong].pause();
     currentSong+=1;
@@ -141,6 +144,7 @@ void playPause() {
     autoPlay();
     songs[currentSong].play(); //no auto rewind like loop()
     playOn=true;
+    pauseOn=false;
   }
 }//End Play-Pause
 //
