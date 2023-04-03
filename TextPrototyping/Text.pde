@@ -19,6 +19,8 @@ void textDraw() {
   textReset();
 }// End textDraw
 //
+void textReset () {}// End textReset
+//
 void textkeyPressed() {}// End textkeyPressed
 //
 void textmousePressed() {}// End textmousePressed
