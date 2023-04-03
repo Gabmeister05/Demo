@@ -1,4 +1,5 @@
 //Global Variables
+PFont titleFont;
 //
 void textSetup() {
   String[] fontList = 
