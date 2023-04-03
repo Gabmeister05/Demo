@@ -7,7 +7,9 @@
 //
 void setup() {}// End setup
 //
-void draw() {}// End draw
+void draw() {
+  rect( X1, X2, X3, X4 );
+}// End draw
 //
 void keyPressed() {}// End keyPressed
 //
