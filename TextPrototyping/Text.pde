@@ -12,6 +12,8 @@ void preTextDraw() {
   textFont(font, height);
 }// End preTextDraw
 //
+void textDraw() {}// End textDraw
+//
 void textkeyPressed() {}// End textkeyPressed
 //
 void textmousePressed() {}// End textmousePressed
