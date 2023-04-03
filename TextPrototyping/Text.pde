@@ -14,6 +14,9 @@ void preTextDraw() {
 //
 void textDraw() {
   preTextDraw();
+  textSize(textCalculator(height, string, rectWidth));
+  text(string, rectX, rectY, rectWidth, rectHeight);
+  textReset();
 }// End textDraw
 //
 void textkeyPressed() {}// End textkeyPressed
