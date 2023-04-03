@@ -12,7 +12,9 @@ void preTextDraw() {
   textFont(font, height);
 }// End preTextDraw
 //
-void textDraw() {}// End textDraw
+void textDraw() {
+  preTextDraw();
+}// End textDraw
 //
 void textkeyPressed() {}// End textkeyPressed
 //
