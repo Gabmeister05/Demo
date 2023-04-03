@@ -2,8 +2,8 @@
 PFont titleFont;
 //
 void textSetup() {
-  String[] fontList = 
-  printArray(fontList) 
+  String[] fontList =
+    printArray(fontList)
 }// End textSetup
 //
 void preTextDraw() {
@@ -19,10 +19,16 @@ void textDraw() {
   textReset();
 }// End textDraw
 //
-void textReset () {}// End textReset
+void textReset () {
+}// End textReset
 //
-void textkeyPressed() {}// End textkeyPressed
+float textCalculator() {
+  return ;
+}// End textCalculator
+void textkeyPressed() {
+}// End textkeyPressed
 //
-void textmousePressed() {}// End textmousePressed
+void textmousePressed() {
+}// End textmousePressed
 //
 //End Text SubProgram
