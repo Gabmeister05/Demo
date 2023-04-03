@@ -16,6 +16,12 @@ void drawOneRectangle()
   //Population
   playX1 = startingX - buttonWidth*1/2;
   playY1 = startingY - buttonHeight*1/2;
+  playWidth = buttonWidth;
+  playHeight = buttonHeight;
+  playX3 = playX1;
+  playY3 = playY1 + playHeight;
+  playX2 = ;
+  playY2 = ;
 }// End Draw One Rectangle
 //
 //End One Rectangle SubProgram
