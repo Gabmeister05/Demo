@@ -20,8 +20,11 @@ void drawOneRectangle()
   playHeight = buttonHeight;
   playX3 = playX1;
   playY3 = playY1 + playHeight;
-  playX2 = ;
-  playY2 = ;
+  playX2 = playX3 + playWidth;
+  playY2 = playY1 + (playY3 - playY1)*1/2;
+  //
+  rect();
+  triangle();
 }// End Draw One Rectangle
 //
 //End One Rectangle SubProgram
