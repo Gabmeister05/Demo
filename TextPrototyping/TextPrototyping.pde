@@ -5,8 +5,10 @@
 */
 //Global Variables
 //
-//Population
-void setup() {}// End setup
+void setup() {
+  size(800, 400);
+  drawOneRectangle();
+}// End setup
 //
 void draw() {
   rect( X1, X2, X3, X4 );
