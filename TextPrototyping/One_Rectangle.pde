@@ -1,9 +1,5 @@
 // Text is always put in one rectangle
 //
 //Global Variables
-float X1, X2, X3, X4;
-
-X1 = ;
-X2 = ;
-X3 = ;
-X4 = ;
+float playX1, playY1, playWidth, playHeight; 
+float playX2, playY2, playX3, playY3;
