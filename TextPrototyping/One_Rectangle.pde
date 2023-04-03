@@ -23,8 +23,7 @@ void drawOneRectangle()
   playX2 = playX3 + playWidth;
   playY2 = playY1 + (playY3 - playY1)*1/2;
   //
-  rect();
-  triangle();
+  rect(playX1, playY1, playWidth, playHeight);
 }// End Draw One Rectangle
 //
 //End One Rectangle SubProgram
