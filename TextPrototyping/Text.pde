@@ -1,6 +1,9 @@
 //Global Variables
 //
-void textSetup() {}// End textSetup
+void textSetup() {
+  String[] fontList = 
+  printArray(fontList) 
+}// End textSetup
 //
 void textDraw() {}// End textDraw
 //
