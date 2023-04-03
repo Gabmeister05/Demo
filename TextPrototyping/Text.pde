@@ -6,7 +6,11 @@ void textSetup() {
   printArray(fontList) 
 }// End textSetup
 //
-void textDraw() {}// End textDraw
+void textDraw() {
+  fill(ink);
+  textAlign (alignHorizontal, alignVertical);
+  textFont(font, height);
+}// End textDraw
 //
 void textkeyPressed() {}// End textkeyPressed
 //
