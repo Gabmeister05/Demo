@@ -8,6 +8,7 @@
 void setup() {
   size(800, 400);
   drawOneRectangle();
+  textSetup();
 }// End setup
 //
 void draw() {
