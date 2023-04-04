@@ -38,7 +38,4 @@ void textkeyPressed() {
 void textmousePressed() {
 }// End textmousePressed
 //
-void flatText() {
-}// End flatText
-//
 //End Text SubProgram

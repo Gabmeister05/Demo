@@ -7,6 +7,7 @@
 //
 void setup() {
   size(800, 400);
+  flatText();
   drawOneRectangle();
   textSetup();
 }// End setup
@@ -19,5 +20,7 @@ void keyPressed() {
 //
 void mousePressed() {
 }// End mousePressed
+void flatText() {
+}// End flatText
 //
 //End Main Program
