@@ -2,8 +2,8 @@
 PFont titleFont;
 //
 void textSetup() {
-  String[] fontList =
-    printArray(fontList)
+  String[] fontList = PFont.list(); 
+    printArray(fontList);
 }// End textSetup
 //
 void preTextDraw() {
