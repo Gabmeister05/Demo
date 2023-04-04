@@ -1,6 +1,7 @@
 //Global Variables
 PFont font;
 color ink;
+int alignHorizontal, alignVertical;
 //
 void textSetup() {
   String[] fontList = PFont.list();
