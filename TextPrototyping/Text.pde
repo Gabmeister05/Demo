@@ -4,6 +4,8 @@ float textRectX, textRectY, textRectWidth, textRectHeight;
 String string;
 int alignHorizontal;
 int alignVertical;
+String harrington;
+float 55;
 //
 void textSetup() {
   String[] fontList = PFont.list();
