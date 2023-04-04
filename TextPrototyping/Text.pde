@@ -15,7 +15,7 @@ void preTextDraw( float height, color ink, int alignHorizontal, int alignVertica
   textFont(font, height);
 }// End preTextDraw
 //
-void textDraw() {
+void textDraw( float height, color ink, int alignHorizontal, int alignVertical, PFont font, String string, float textRectX, float textRectY, float textRectWidth, float textRectHeight ) {
   preTextDraw( height, ink, alignHorizontal, alignVertical, font );
   textSize(textCalculator(height, string, textRectWidth));
   text(string, textRectX, textRectY, textRectWidth, textRectHeight);
