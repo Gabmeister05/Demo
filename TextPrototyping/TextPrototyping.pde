@@ -10,6 +10,7 @@ void setup() {
   flatText();
   drawOneRectangle();
   textSetup();
+  textDraw();
 }// End setup
 //
 void draw() {
