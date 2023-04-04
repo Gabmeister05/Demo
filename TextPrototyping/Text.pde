@@ -1,6 +1,6 @@
 //Global Variables
 PFont font;
-color ink;
+color ink, whiteInk=#FFFFFF;
 int alignHorizontal, alignVertical;
 //
 void textSetup() {
@@ -23,9 +23,16 @@ void textDraw( float height, color ink, int alignHorizontal, int alignVertical, 
 }// End textDraw
 //
 void textReset () {
+  fill(whiteInk);
 }// End textReset
 //
-float textCalculator() {
+float textCalculator( float size, ) {
+  textSize(size);
+  while ( textWidth(string) > rectWidth )
+  {
+    size = size * 0.99;
+    textSize(size);
+  }
   return ;
 }// End textCalculator
 void textkeyPressed() {
