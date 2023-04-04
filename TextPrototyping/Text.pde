@@ -26,7 +26,7 @@ void textReset () {
   fill(whiteInk);
 }// End textReset
 //
-float textCalculator( float size, ) {
+float textCalculator( float size, String string, float rectWidth ) {
   textSize(size);
   while ( textWidth(string) > rectWidth )
   {
