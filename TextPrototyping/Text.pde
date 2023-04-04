@@ -16,7 +16,7 @@ void preTextDraw() {
 }// End preTextDraw
 //
 void textDraw() {
-  preTextDraw();
+  preTextDraw( height, ink, alignHorizontal, alignVertical, font );
   textSize(textCalculator(height, string, textRectWidth));
   text(string, textRectX, textRectY, textRectWidth, textRectHeight);
   textReset();
