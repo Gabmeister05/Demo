@@ -10,10 +10,10 @@ void setup() {
   flatText();
   drawOneRectangle();
   textSetup();
-  textDraw();
 }// End setup
 //
 void draw() {
+  textDraw();
 }// End draw
 //
 void keyPressed() {
