@@ -1,10 +1,10 @@
 // Text is always put in one rectangle
 //
 //Global Variables
-float playX1, playY1, playWidth, playHeight; 
+float playX1, playY1, playWidth, playHeight;
 float playX2, playY2, playX3, playY3;
 
-void drawOneRectangle() 
+void drawOneRectangle()
 {
   float pauseScaleWidth = 1.0/1.0; //used to change x-axis
   float pauseScaleHeight = 1.0/1.0; //used to change y-axis

@@ -1,16 +1,16 @@
 //Global Variables
-PFont titleFont;
+PFont font;
 float textRectX, textRectY, textRectWidth, textRectHeight;
 String string;
 int alignHorizontal;
 int alignVertical;
-String harrington;
+String Harrington;
 float 55;
 //
 void textSetup() {
   String[] fontList = PFont.list();
   printArray(fontList);
-  titleFont = createFont ("harrington, 55");
+  font = createFont ("Harrington", 5");
 }// End textSetup
 //
 void preTextDraw() {
