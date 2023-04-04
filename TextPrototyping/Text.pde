@@ -6,10 +6,10 @@ int alignHorizontal, alignVertical;
 void textSetup() {
   String[] fontList = PFont.list();
   printArray(fontList);
-  font = createFont ("Harrington", 5");
+  font = createFont ("Harrington", 5);
 }// End textSetup
 //
-void preTextDraw() {
+void preTextDraw( float height, color ink, int alignHorizontal, int alignVertical, PFont font ) {
   fill(ink);
   textAlign (alignHorizontal, alignVertical);
   textFont(font, height);
