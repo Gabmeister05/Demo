@@ -1,5 +1,7 @@
 //Global Variables
 PFont titleFont;
+float textRectX, textRectY, textRectWidth, textRectHeight;
+String string;
 //
 void textSetup() {
   String[] fontList = PFont.list(); 
@@ -14,8 +16,8 @@ void preTextDraw() {
 //
 void textDraw() {
   preTextDraw();
-  textSize(textCalculator(height, string, rectWidth));
-  text(string, rectX, rectY, rectWidth, rectHeight);
+  textSize(textCalculator(height, string, textRectWidth));
+  text(string, textRectX, textRectY, textRectWidth, textRectHeight);
   textReset();
 }// End textDraw
 //
