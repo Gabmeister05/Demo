@@ -2,6 +2,8 @@
 PFont titleFont;
 float textRectX, textRectY, textRectWidth, textRectHeight;
 String string;
+int alignHorizontal;
+int alignVertical;
 //
 void textSetup() {
   String[] fontList = PFont.list();
