@@ -2,11 +2,12 @@
 PFont font;
 color ink, purpleInk=#AF00FF, whiteInk=#FFFFFF;
 int alignHorizontal, alignVertical;
+String string = "Global Values of String";
 //
 void textSetup() {
   String[] fontList = PFont.list();
   printArray(fontList);
-  font = createFont ("Harrington", 5);
+  font = createFont ("Harrington", 55);
 }// End textSetup
 //
 void preTextDraw( float height, color ink, int alignHorizontal, int alignVertical, PFont font ) {
