@@ -13,7 +13,7 @@ void setup() {
 }// End setup
 //
 void draw() {
-  textDraw( float height, color ink, int alignHorizontal, int alignVertical, PFont font, String string, float textRectX, float textRectY, float textRectWidth, float textRectHeight );
+  textDraw( height, color ink, int alignHorizontal, int alignVertical, PFont font, String string, float textRectX, float textRectY, float textRectWidth, float textRectHeight );
 }// End draw
 //
 void keyPressed() {

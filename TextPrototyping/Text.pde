@@ -1,6 +1,6 @@
 //Global Variables
 PFont font;
-color ink, whiteInk=#FFFFFF;
+color ink, purpleInk=#AF00FF, whiteInk=#FFFFFF;
 int alignHorizontal, alignVertical;
 //
 void textSetup() {
