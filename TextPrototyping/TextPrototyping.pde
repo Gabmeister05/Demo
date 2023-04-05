@@ -14,6 +14,7 @@ void setup() {
 //
 void draw() {
   textDraw( height, purpleInk, CENTER, CENTER, font, string, playX1, playY1, playWidth, playHeight );
+  textDraw( height, purpleInk, CENTER, CENTER, font, string, playX1, playY1+height*1/4, playWidth, playHeight );
 }// End draw
 //
 void keyPressed() {

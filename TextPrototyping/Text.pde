@@ -34,7 +34,8 @@ float textCalculator( float size, String string, float rectWidth ) {
     size = size * 0.99;
     textSize(size);
   }
-  return ;
+  size = size *0.55;
+  return size;
 }// End textCalculator
 void textkeyPressed() {
 }// End textkeyPressed
