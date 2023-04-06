@@ -6,10 +6,10 @@ float playX2, playY2, playX3, playY3;
 
 void drawOneRectangle()
 {
-  float pauseScaleWidth = 1.0/1.0; //used to change x-axis
-  float pauseScaleHeight = 1.0/1.0; //used to change y-axis
-  float startingX = width*1/2 * pauseScaleWidth;
-  float startingY = height*1/2 * pauseScaleHeight;
+  float ScaleWidth = 1.0/1.0; //used to change x-axis
+  float ScaleHeight = 1.0/1.0; //used to change y-axis
+  float startingX = width*1/2 * ScaleWidth;
+  float startingY = height*1/2 * ScaleHeight;
   float buttonWidth = width*1/9;
   float buttonHeight = buttonWidth;
   //

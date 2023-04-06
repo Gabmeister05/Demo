@@ -6,7 +6,7 @@
 //Global Variables
 //
 void setup() {
-  size(800, 400);
+  size(1200, 800);
   flatText();
   drawOneRectangle();
   textSetup();
