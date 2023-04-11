@@ -5,6 +5,7 @@ Filling the Rectangle
 //Global Variables
 int appWidth, appHeight;
 float imageBackgroundX, imageBackgroundY, imageBackgroundWidth, imageBackgroundHeight;
+PImage pic;
 //
 size(600, 200); //Landscape
 appWidth = width;
