@@ -4,9 +4,9 @@ Filling the Rectangle
 */
 //Global Variables
 //
-size();
-appWidth = ;
-appHeight = ;
+size(600, 200);
+appWidth = width;
+appHeight = height;
 //
 //Population
 //
