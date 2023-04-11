@@ -21,7 +21,7 @@ pic = loadImage("C:/FS-052/studuser$/Gr12/g.kazimierczak/My Documents/GitHub/Dem
 //Rectangle layout and Image drawing to Canvas
 rect( imageBackgroundX, imageBackgroundY, imageBackgroundWidth, imageBackgroundHeight );
 //
-tint(); //Grey-Scale, day use
-tint(); //RGB: Night Mode
+tint(255, 128); //Grey-Scale, day use
+//tint(); //RGB: Night Mode
 image( pic, imageBackgroundX, imageBackgroundY, imageBackgroundWidth, imageBackgroundHeight );
 //End Main Program
