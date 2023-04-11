@@ -22,6 +22,6 @@ pic = loadImage("C:/FS-052/studuser$/Gr12/g.kazimierczak/My Documents/GitHub/Dem
 rect( imageBackgroundX, imageBackgroundY, imageBackgroundWidth, imageBackgroundHeight );
 //
 tint(); //Grey-Scale, day use
-tint();
+tint(); //RGB: Night Mode
 image( pic, imageBackgroundX, imageBackgroundY, imageBackgroundWidth, imageBackgroundHeight );
 //End Main Program
