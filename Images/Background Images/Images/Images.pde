@@ -18,4 +18,6 @@ imageBackgroundHeight = appHeight-1;
 //
 //Rectangle layout and Image drawing to Canvas
 rect( imageBackgroundX, imageBackgroundY, imageBackgroundWidth, imageBackgroundHeight );
+//
+image( pic, imageBackgroundX, imageBackgroundY, imageBackgroundWidth, imageBackgroundHeight );
 //End Main Program
