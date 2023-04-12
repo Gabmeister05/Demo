@@ -10,7 +10,7 @@ Boolean nightMode=false;
 float picWidthAdjusted=0.0, picHeightAdjusted=0.0;
 
 //
-size(600, 200); //Landscape
+size(1300, 720); //Landscape
 appWidth = width;
 appHeight = height;
 //
