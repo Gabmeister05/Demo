@@ -61,5 +61,6 @@ rect( imageBackgroundX, imageBackgroundY, imageBackgroundWidth, imageBackgroundH
 if ( nightMode==false ) tint(255, 128); //Grey-Scale, day use: used 1/2 tint for white (128/255 = 1/2))
 if ( nightMode==true ) tint(64, 64, 40); //RGB: Night Mode
 //image( pic, imageBackgroundX, imageBackgroundY, imageBackgroundWidth, imageBackgroundHeight );
+println( imageBackgroundX, imageBackgroundY, picWidthAdjusted, picHeightAdjusted );
 image( pic, imageBackgroundX, imageBackgroundY, picWidthAdjusted, picHeightAdjusted );
 //End Main Program
