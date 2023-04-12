@@ -7,6 +7,8 @@ int appWidth, appHeight;
 float imageBackgroundX, imageBackgroundY, imageBackgroundWidth, imageBackgroundHeight;
 PImage pic;
 Boolean nightMode=false;
+float picWidthAdjusted, picHeightAdjusted;
+
 //
 size(600, 200); //Landscape
 appWidth = width;
@@ -21,17 +23,19 @@ imageBackgroundHeight = appHeight-1;
 //C:\FS-052\studuser$\Gr12\g.kazimierczak\My Documents\GitHub\Demo\Images\Images Used\Landscape
 //Pathway & Files
 String upFolder = "..";
-String opendFolder = "/";
+String openFolder = "/";
 String folder1 = "Images Used";
 String folder2 = "Landscape";
 String fileName = "Count-Dooku.jpeg";
 pic = loadImage( upFolder+openFolder+upFolder+openFolder+upFolder+openFolder+upFolder+openFolder+upFolder+openFolder+upFolder+openFolder+upFolder+openFolder+upFolder+openFolder+upFolder+openFolder+folder1+openFolder+folder2+openFolder+fileName );
 int picWidth = 1280;
 int picHeight = 720;
-//Larger Dimension Algorithm
+//Larger Dimension Algorithm, any image, ASPECT RATIO
+int smallerDimension, largerDimension; 
+float imageHeightRatio, imageWidthRatio;
 if ( picWidth >= picHeight ) { //TRUE if Landscape
   largerDimension = picWidth;
-  smalerDimension = picHeight;
+  smallerDimension = picHeight;
   imageHeightRatio = smallerDimension / largerDimension;
   picWidthAdjusted = imageBackgroundWidth;
   picHeightAdjusted = imageBackgroundWidth * imageHeightRatio;
