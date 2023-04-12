@@ -1,7 +1,7 @@
 /* Background Image Example
-No Aspect Ratio
-Filling the Rectangle
-*/
+ No Aspect Ratio
+ Filling the Rectangle
+ */
 //Global Variables
 int appWidth, appHeight;
 float imageBackgroundX, imageBackgroundY, imageBackgroundWidth, imageBackgroundHeight;
@@ -18,9 +18,27 @@ imageBackgroundY = appHeight*0;
 imageBackgroundWidth = appWidth-1;
 imageBackgroundHeight = appHeight-1;
 //
-pic = loadImage("C:/FS-052/studuser$/Gr12/g.kazimierczak/My Documents/GitHub/Demo/Images/Images Used/Landscape and Square/Count-Dooku.jpeg");
-int picWidth = ;
-int picHeight = ;
+//C:\FS-052\studuser$\Gr12\g.kazimierczak\My Documents\GitHub\Demo\Images\Images Used\Landscape
+//Pathway & Files
+String upFolder = "..";
+String opendFolder = "/";
+String folder1 = "Images Used";
+String folder2 = "Landscape";
+String fileName = "Count-Dooku.jpeg";
+pic = loadImage( upFolder+openFolder+upFolder+openFolder+upFolder+openFolder+upFolder+openFolder+upFolder+openFolder+upFolder+openFolder+upFolder+openFolder+upFolder+openFolder+upFolder+openFolder+folder1+openFolder+folder2+openFolder+fileName );
+int picWidth = 1280;
+int picHeight = 720;
+//Larger Dimension Algorithm
+if ( picWidth >= picHeight ) { //TRUE if Landscape
+  largerDimension = picWidth;
+  smalerDimension = picHeight;
+  imageHeightRatio = smallerDimension / largerDimension;
+  picWidthAdjusted = imageBackgroundWidth;
+} else { //FALSE if Portrait
+  largerDimension = picHeight;
+  smallerDimension = picWidth;
+  imageWidthRatio = largerDimension / smallerDimension;
+}
 //
 //Rectangle layout and Image drawing to Canvas
 rect( imageBackgroundX, imageBackgroundY, imageBackgroundWidth, imageBackgroundHeight );
