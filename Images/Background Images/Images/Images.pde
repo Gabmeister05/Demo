@@ -34,10 +34,13 @@ if ( picWidth >= picHeight ) { //TRUE if Landscape
   smalerDimension = picHeight;
   imageHeightRatio = smallerDimension / largerDimension;
   picWidthAdjusted = imageBackgroundWidth;
+  picHeightAdjusted = imageBackgroundWidth * imageHeightRatio;
 } else { //FALSE if Portrait
   largerDimension = picHeight;
   smallerDimension = picWidth;
   imageWidthRatio = largerDimension / smallerDimension;
+  picHeightAdjusted = imageBackgroundHeight;
+  picWidthAdjusted = imageBackgroundHeight * imageWidthRatio;
 }
 //
 //Rectangle layout and Image drawing to Canvas
