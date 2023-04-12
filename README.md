@@ -14,6 +14,7 @@ Top comments are edits in progress*
 - Autoplay button has function of 95% (The other 5% will have to be fixed) 
 - Time to modify the App Engine, autoplay and other button functions will have to be on hold for now
 - The modified App Engine will be on hold while text prototyping is online
+- Currently working on images and text prototyping is on hold
 
 List of buttons for music player:
 
