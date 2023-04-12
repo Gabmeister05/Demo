@@ -44,13 +44,13 @@ float imageHeightRatio, imageWidthRatio;
 if ( picWidth >= picHeight ) { //TRUE if Landscape
   largerDimension = picWidth;
   smallerDimension = picHeight;
-  imageHeightRatio = smallerDimension / largerDimension;
+  imageHeightRatio = float (smallerDimension) / float (largerDimension);
   picWidthAdjusted = imageBackgroundWidth;
   picHeightAdjusted = imageBackgroundWidth * imageHeightRatio;
 } else { //FALSE if Portrait
   largerDimension = picHeight;
   smallerDimension = picWidth;
-  imageWidthRatio = largerDimension / smallerDimension;
+  imageWidthRatio = float (largerDimension) / float (smallerDimension);
   picHeightAdjusted = imageBackgroundHeight;
   picWidthAdjusted = imageBackgroundHeight * imageWidthRatio;
 }
