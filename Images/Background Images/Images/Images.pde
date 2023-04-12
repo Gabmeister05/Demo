@@ -23,7 +23,7 @@ imageBackgroundHeight = appHeight-1;
 //C:\FS-052\studuser$\Gr12\g.kazimierczak\My Documents\GitHub\Demo\Images\Images Used\Landscape
 //Pathway & Files
 String Drive = "C:";
-String 052 = "FS-052";
+String FS = "FS-052";
 String starDust = "studuser$";
 String Grade = "Gr12";
 String Name = "g.kazimierczak";
@@ -35,7 +35,7 @@ String openFolder = "/";
 String folder1 = "Images Used";
 String folder2 = "Landscape";
 String fileName = "Count-Dooku.jpeg";
-pic = loadImage( Drive+openFolder+052+openFolder+starDust+openFolder+Grade+openFolder+Name+openFolder+docFolder+openFolder+gitFolder+openFolder+resFolder+openFolder+folder0+openFolder+folder1+openFolder+folder2+openFolder+fileName );
+pic = loadImage( Drive+openFolder+FS+openFolder+starDust+openFolder+Grade+openFolder+Name+openFolder+docFolder+openFolder+gitFolder+openFolder+resFolder+openFolder+folder0+openFolder+folder1+openFolder+folder2+openFolder+fileName );
 int picWidth = 1280;
 int picHeight = 720;
 //Larger Dimension Algorithm, any image, ASPECT RATIO
