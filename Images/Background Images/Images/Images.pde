@@ -54,7 +54,7 @@ if ( picWidth >= picHeight ) { //TRUE if Landscape
   picY_Adjusted = imageBackgroundY;
   picX_Adjusted = imageBackgroundX;
   if ( imageCenter==true ) picY_Adjusted = imageBackgroundY + whiteSpace*1/2;
-  if ( imageRightBottom==true ) picY_Adjusted = imageBackgroundY + whiteSpace;
+  if ( imageRightBottom==false ) picY_Adjusted = imageBackgroundY + whiteSpace;
   //
   if ( picHeightAdjusted > imageBackgroundHeight ) { //ERROR Catch: adjusted height is bigger then rect()
     picHeightAdjusted = imageBackgroundHeight;
