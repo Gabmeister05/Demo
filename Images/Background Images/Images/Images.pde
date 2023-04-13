@@ -57,7 +57,7 @@ if ( picWidth >= picHeight ) { //TRUE if Landscape
   imageWidthRatio = float (largerDimension) / float (smallerDimension);
   picHeightAdjusted = imageBackgroundHeight;
   picWidthAdjusted = imageBackgroundHeight * imageWidthRatio;
-   if ( picWidthAdjusted > imageBackgroundWidth ) { //ERROR Catch: adjusted height is bigger then rect()
+  if ( picWidthAdjusted > imageBackgroundWidth ) { //ERROR Catch: adjusted width is bigger then rect()
     picWidthAdjusted = imageBackgroundWidth;
     picHeightAdjusted = picHeightAdjusted * ( float(smallerDimension)/float(largerDimension) );
   }
