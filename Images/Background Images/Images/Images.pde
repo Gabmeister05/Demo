@@ -8,7 +8,8 @@ float imageBackgroundX, imageBackgroundY, imageBackgroundWidth, imageBackgroundH
 PImage pic;
 Boolean nightMode=false;
 float picWidthAdjusted=0.0, picHeightAdjusted=0.0;
-Boolean imageCenter==true; imageRight==false; //Vars Image Justification
+Boolean imageCenter=true; //Vars Image Justification
+Boolean imageRight=false; //Vars Image Justification
 
 //
 size(600, 200); //Landscape
