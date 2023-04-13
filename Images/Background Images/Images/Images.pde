@@ -39,20 +39,28 @@ pic = loadImage( Drive+openFolder+FS+openFolder+starDust+openFolder+Grade+openFo
 int picWidth = 1280;
 int picHeight = 720;
 //Larger Dimension Algorithm, any image, ASPECT RATIO
-int smallerDimension, largerDimension; 
+int smallerDimension, largerDimension;
 float imageHeightRatio, imageWidthRatio;
 if ( picWidth >= picHeight ) { //TRUE if Landscape
   largerDimension = picWidth;
   smallerDimension = picHeight;
   imageHeightRatio = float (smallerDimension) / float (largerDimension);
   picWidthAdjusted = imageBackgroundWidth;
-  picHeightAdjusted = imageBackgroundWidth * imageHeightRatio;
+  picHeightAdjusted = imageBackgroundWidth * imageHeightRatio
+    if ( picHeightAdjusted > imageBackgroundHeight ) { //ERROR Catch: adjusted height is bigger then rect()
+    picHeightAdjusted = imageBackgroundHeight;
+    picWidthAdjusted =  picWidthAdjusted * (largerDimension/smallerDimension);
+  }
 } else { //FALSE if Portrait
   largerDimension = picHeight;
   smallerDimension = picWidth;
   imageWidthRatio = float (largerDimension) / float (smallerDimension);
   picHeightAdjusted = imageBackgroundHeight;
   picWidthAdjusted = imageBackgroundHeight * imageWidthRatio;
+   if ( picWidthAdjusted > imageBackgroundWidth ) { //ERROR Catch: adjusted height is bigger then rect()
+    picWidthAdjusted = imageBackgroundWidth;
+    picHeightAdjusted = picHeightAdjusted * (smallerDimension/largerDimension);
+  }
 }
 //
 //Rectangle layout and Image drawing to Canvas
