@@ -8,8 +8,7 @@ float imageBackgroundX, imageBackgroundY, imageBackgroundWidth, imageBackgroundH
 PImage pic;
 Boolean nightMode=false;
 float picWidthAdjusted=0.0, picHeightAdjusted=0.0;
-Boolean imageCenter=true, imageRight=false; //Vars Image Justification
-
+Boolean imageCenter=true, imageRightBottom=false; //Vars Image Justification
 //
 size(600, 200); //Landscape
 appWidth = width;
@@ -52,7 +51,7 @@ if ( picWidth >= picHeight ) { //TRUE if Landscape
   whiteSpace = imageBackgroundHeight - picHeightAdjusted;
   //if image left justified, the no to Y-Var
   if ( imageCenter==true ) picY_Adjusted = imageBackgroundY + whiteSpace*1/2;
-  if ( imageRight==true ) picY_Adjusted = imageBackgroundY + whiteSpace;
+  if ( imageRightBottom==true ) picY_Adjusted = imageBackgroundY + whiteSpace;
   //
   if ( picHeightAdjusted > imageBackgroundHeight ) { //ERROR Catch: adjusted height is bigger then rect()
     picHeightAdjusted = imageBackgroundHeight;
@@ -66,8 +65,8 @@ if ( picWidth >= picHeight ) { //TRUE if Landscape
   picWidthAdjusted = imageBackgroundHeight * imageWidthRatio;
   whiteSpace = imageBackgroundWidth - picWidthAdjusted;
   //if image left justified, the no to X-Var
-  if ( imageCenter==true )picX_Adjusted = imageBackgroundX + whiteSpace*1/2;
-  if ( imageRight==true ) picX_Adjusted = imageBackgroundX + whiteSpace;
+  if ( imageCenter==true ) picX_Adjusted = imageBackgroundX + whiteSpace*1/2;
+  if ( imageRightBottom==true ) picX_Adjusted = imageBackgroundX + whiteSpace;
   //
   if ( picWidthAdjusted > imageBackgroundWidth ) { //ERROR Catch: adjusted width is bigger then rect()
     picWidthAdjusted = imageBackgroundWidth;
