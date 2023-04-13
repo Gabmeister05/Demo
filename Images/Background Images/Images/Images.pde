@@ -50,7 +50,9 @@ if ( picWidth >= picHeight ) { //TRUE if Landscape
   picHeightAdjusted = imageBackgroundWidth * imageHeightRatio;
   //If Image fits in rect: center the smaller dimension
   whiteSpace = imageBackgroundHeight - picHeightAdjusted;
+  //if image left justifie, the no to Y-Var
   if ( imageCenter==true ) picY_Adjusted = imageBackgroundY + whiteSpace*1/2;
+  if ( imageRight==true ) picY_Adjusted = imageBackgroundY + whiteSpace;
   if ( picHeightAdjusted > imageBackgroundHeight ) { //ERROR Catch: adjusted height is bigger then rect()
     picHeightAdjusted = imageBackgroundHeight;
     picWidthAdjusted =  picWidthAdjusted * imageHeightRatio;
@@ -62,7 +64,9 @@ if ( picWidth >= picHeight ) { //TRUE if Landscape
   picHeightAdjusted = imageBackgroundHeight;
   picWidthAdjusted = imageBackgroundHeight * imageWidthRatio;
   whiteSpace = imageBackgroundWidth - picWidthAdjusted;
+  //if image left justifie, the no to X-Var
   if ( imageCenter==true )picX_Adjusted = imageBackgroundX + whiteSpace*1/2;
+  if ( imageRight==true ) picX_Adjusted = imageBackgroundX + whiteSpace;
   if ( picWidthAdjusted > imageBackgroundWidth ) { //ERROR Catch: adjusted width is bigger then rect()
     picWidthAdjusted = imageBackgroundWidth;
     picHeightAdjusted = picHeightAdjusted * imageWidthRatio;
