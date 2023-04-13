@@ -7,6 +7,7 @@ int appWidth, appHeight;
 float imageBackgroundX, imageBackgroundY, imageBackgroundWidth, imageBackgroundHeight;
 PImage pic;
 Boolean nightMode=false;
+float whiteSpace=0.0, picX_Adjusted=0.0, picY_Adjusted=0.0;
 float picWidthAdjusted=0.0, picHeightAdjusted=0.0;
 Boolean imageCenter=true, imageRightBottom=false; //Vars Image Justification
 //
@@ -50,6 +51,8 @@ if ( picWidth >= picHeight ) { //TRUE if Landscape
   //If Image fits in rect: center the smaller dimension
   whiteSpace = imageBackgroundHeight - picHeightAdjusted;
   //if image left justified, the no to Y-Var
+  picY_Adjusted = imageBackgroundY;
+  picX_Adjusted = imageBackgroundX;
   if ( imageCenter==true ) picY_Adjusted = imageBackgroundY + whiteSpace*1/2;
   if ( imageRightBottom==true ) picY_Adjusted = imageBackgroundY + whiteSpace;
   //
@@ -63,8 +66,11 @@ if ( picWidth >= picHeight ) { //TRUE if Landscape
   imageWidthRatio = float (largerDimension) / float (smallerDimension);
   picHeightAdjusted = imageBackgroundHeight;
   picWidthAdjusted = imageBackgroundHeight * imageWidthRatio;
+  //If Image fits in rect: center the smaller dimension
   whiteSpace = imageBackgroundWidth - picWidthAdjusted;
   //if image left justified, the no to X-Var
+  picX_Adjusted = imageBackgroundX;
+  picY_Adjusted = imageBackgroundY;
   if ( imageCenter==true ) picX_Adjusted = imageBackgroundX + whiteSpace*1/2;
   if ( imageRightBottom==true ) picX_Adjusted = imageBackgroundX + whiteSpace;
   //
