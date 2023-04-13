@@ -8,6 +8,7 @@ float imageBackgroundX, imageBackgroundY, imageBackgroundWidth, imageBackgroundH
 PImage pic;
 Boolean nightMode=false;
 float picWidthAdjusted=0.0, picHeightAdjusted=0.0;
+Boolean imageCenter==true; imageRight==false; //Vars Image Justification
 
 //
 size(600, 200); //Landscape
@@ -47,7 +48,10 @@ if ( picWidth >= picHeight ) { //TRUE if Landscape
   imageHeightRatio = float (smallerDimension) / float (largerDimension);
   picWidthAdjusted = imageBackgroundWidth;
   picHeightAdjusted = imageBackgroundWidth * imageHeightRatio;
-    if ( picHeightAdjusted > imageBackgroundHeight ) { //ERROR Catch: adjusted height is bigger then rect()
+  //If Image fits in rect: center the smaller dimension
+  whiteSpace = imageBackgroundHeight - picHeightAdjusted;
+  if ( imageCenter==true ) picY_Adjusted = imageBackgroundY + whiteSpace*1/2;
+  if ( picHeightAdjusted > imageBackgroundHeight ) { //ERROR Catch: adjusted height is bigger then rect()
     picHeightAdjusted = imageBackgroundHeight;
     picWidthAdjusted =  picWidthAdjusted * imageHeightRatio;
   }
@@ -57,6 +61,8 @@ if ( picWidth >= picHeight ) { //TRUE if Landscape
   imageWidthRatio = float (largerDimension) / float (smallerDimension);
   picHeightAdjusted = imageBackgroundHeight;
   picWidthAdjusted = imageBackgroundHeight * imageWidthRatio;
+  whiteSpace = imageBackgroundWidth - picWidthAdjusted;
+  if ( imageCenter==true )picX_Adjusted = imageBackgroundX + whiteSpace*1/2;
   if ( picWidthAdjusted > imageBackgroundWidth ) { //ERROR Catch: adjusted width is bigger then rect()
     picWidthAdjusted = imageBackgroundWidth;
     picHeightAdjusted = picHeightAdjusted * imageWidthRatio;
@@ -64,7 +70,7 @@ if ( picWidth >= picHeight ) { //TRUE if Landscape
 }
 //
 //Rectangle layout and Image drawing to Canvas
-rect( imageBackgroundX, imageBackgroundY, imageBackgroundWidth, imageBackgroundHeight );
+rect( picX_Adjusted, picY_Adjusted, imageBackgroundWidth, imageBackgroundHeight );
 //
 if ( nightMode==false ) tint(255, 128); //Grey-Scale, day use: used 1/2 tint for white (128/255 = 1/2))
 if ( nightMode==true ) tint(64, 64, 40); //RGB: Night Mode
