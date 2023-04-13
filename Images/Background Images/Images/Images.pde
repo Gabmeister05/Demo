@@ -49,7 +49,7 @@ if ( picWidth >= picHeight ) { //TRUE if Landscape
   picHeightAdjusted = imageBackgroundWidth * imageHeightRatio
     if ( picHeightAdjusted > imageBackgroundHeight ) { //ERROR Catch: adjusted height is bigger then rect()
     picHeightAdjusted = imageBackgroundHeight;
-    picWidthAdjusted =  picWidthAdjusted * (largerDimension/smallerDimension);
+    picWidthAdjusted =  picWidthAdjusted * ( float(largerDimension)/float(smallerDimension) ); //CASTING, like previous formula
   }
 } else { //FALSE if Portrait
   largerDimension = picHeight;
@@ -59,7 +59,7 @@ if ( picWidth >= picHeight ) { //TRUE if Landscape
   picWidthAdjusted = imageBackgroundHeight * imageWidthRatio;
    if ( picWidthAdjusted > imageBackgroundWidth ) { //ERROR Catch: adjusted height is bigger then rect()
     picWidthAdjusted = imageBackgroundWidth;
-    picHeightAdjusted = picHeightAdjusted * (smallerDimension/largerDimension);
+    picHeightAdjusted = picHeightAdjusted * ( float(smallerDimension)/float(largerDimension) );
   }
 }
 //
