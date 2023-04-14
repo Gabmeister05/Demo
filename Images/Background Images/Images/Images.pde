@@ -51,7 +51,7 @@ if ( picWidth >= picHeight ) { //TRUE if Landscape
   picHeightAdjusted = imageBackgroundWidth * imageHeightRatio;
   //If Image fits in rect: center the smaller dimension
   whiteSpace = imageBackgroundHeight - picHeightAdjusted;
-  //if image left justified, the no to Y-Var
+  //if image left justified, the no to X&Y-Vars
   picY_Adjusted = imageBackgroundY;
   picX_Adjusted = imageBackgroundX;
   if ( imageCenter==true ) picY_Adjusted = imageBackgroundY + whiteSpace*1/2;
@@ -60,6 +60,13 @@ if ( picWidth >= picHeight ) { //TRUE if Landscape
   if ( picHeightAdjusted > imageBackgroundHeight ) { //ERROR Catch: adjusted height is bigger then rect()
     picHeightAdjusted = imageBackgroundHeight;
     picWidthAdjusted =  picWidthAdjusted * imageHeightRatio;
+    //If Image fits in rect: format or justify image
+    whiteSpace = imageBackgroundWidth - picWidthAdjusted;
+    //if image left justified, the no to X&Y-Vars
+    picX_Adjusted = imageBackgroundX;
+    picY_Adjusted = imageBackgroundY;
+    if ( imageCenter==true ) picX_Adjusted = imageBackgroundX + whiteSpace*1/2;
+    if ( imageRightBottom==true) picX_Adjusted = imageBackgroundX + whiteSpace;
   }
 } else { //FALSE if Portrait
   largerDimension = picHeight;
@@ -72,12 +79,19 @@ if ( picWidth >= picHeight ) { //TRUE if Landscape
   //if image left justified, the no to X-Var
   picX_Adjusted = imageBackgroundX;
   picY_Adjusted = imageBackgroundY;
-  if ( imageCenter==true ) picX_Adjusted = imageBackgroundX + whiteSpace*1/2;
-  if ( imageRightBottom==true ) picX_Adjusted = imageBackgroundX + whiteSpace;
+  if ( imageCenter==true ) picY_Adjusted = imageBackgroundY + whiteSpace*1/2;
+  if ( imageRightBottom==true ) picY_Adjusted = imageBackgroundY + whiteSpace;
   //
   if ( picWidthAdjusted > imageBackgroundWidth ) { //ERROR Catch: adjusted width is bigger then rect()
     picWidthAdjusted = imageBackgroundWidth;
     picHeightAdjusted = picHeightAdjusted * imageWidthRatio;
+    //If Image fits in rect: format or justify image
+    whiteSpace = imageBackgroundHeight - picHeightAdjusted;
+    //if image left justified, the no to X&Y-Vars
+    picX_Adjusted = imageBackgroundX;
+    picY_Adjusted = imageBackgroundY;
+    if ( imageCenter==true ) picY_Adjusted = imageBackgroundY + whiteSpace*1/2;
+    if ( imageRightBottom==true) picY_Adjusted = imageBackgroundY + whiteSpace;
   }
 }
 //
