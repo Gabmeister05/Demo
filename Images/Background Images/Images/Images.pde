@@ -9,7 +9,7 @@ PImage pic;
 Boolean nightMode=false;
 float whiteSpace=0.0, picX_Adjusted=0.0, picY_Adjusted=0.0;
 float picWidthAdjusted=0.0, picHeightAdjusted=0.0;
-Boolean imageCenter=false, imageRightBottom=false; //Vars Image Justification
+Boolean imageCenter=false, imageRightBottom=false; //Dev-level Image Justification
 //
 size(600, 200); //Landscape
 appWidth = width;
@@ -35,8 +35,9 @@ String folder0 = "Images";
 String openFolder = "/";
 String folder1 = "Images Used";
 String folder2 = "Landscape";
+String pathway = Drive+openFolder+FS+openFolder+starDust+openFolder+Grade+openFolder+Name+openFolder+docFolder+openFolder+gitFolder+openFolder+resFolder+openFolder+folder0+openFolder+folder1+openFolder+folder2+openFolder;
 String fileName = "Count-Dooku.jpeg";
-pic = loadImage( Drive+openFolder+FS+openFolder+starDust+openFolder+Grade+openFolder+Name+openFolder+docFolder+openFolder+gitFolder+openFolder+resFolder+openFolder+folder0+openFolder+folder1+openFolder+folder2+openFolder+fileName );
+pic = loadImage( pathway + fileName );
 int picWidth = 1280;
 int picHeight = 720;
 //Larger Dimension Algorithm, any image, ASPECT RATIO
@@ -54,7 +55,7 @@ if ( picWidth >= picHeight ) { //TRUE if Landscape
   picY_Adjusted = imageBackgroundY;
   picX_Adjusted = imageBackgroundX;
   if ( imageCenter==true ) picY_Adjusted = imageBackgroundY + whiteSpace*1/2;
-  if ( imageRightBottom==false ) picY_Adjusted = imageBackgroundY + whiteSpace;
+  if ( imageRightBottom==true ) picY_Adjusted = imageBackgroundY + whiteSpace;
   //
   if ( picHeightAdjusted > imageBackgroundHeight ) { //ERROR Catch: adjusted height is bigger then rect()
     picHeightAdjusted = imageBackgroundHeight;
