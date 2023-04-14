@@ -48,8 +48,8 @@ if ( picWidth >= picHeight ) { //TRUE if Landscape
   smallerDimension = picHeight;
   imageHeightRatio = float (smallerDimension) / float (largerDimension);
   picWidthAdjusted = imageBackgroundWidth;
-  picHeightAdjusted = imageBackgroundWidth * imageHeightRatio;
-  //If Image fits in rect: center the smaller dimension
+  picHeightAdjusted = picWidthAdjusted * imageHeightRatio;
+  //If Image fits in rect: format or justify image
   whiteSpace = imageBackgroundHeight - picHeightAdjusted;
   //if image left justified, the no to X&Y-Vars
   picY_Adjusted = imageBackgroundY;
@@ -73,7 +73,7 @@ if ( picWidth >= picHeight ) { //TRUE if Landscape
   smallerDimension = picWidth;
   imageWidthRatio = float (largerDimension) / float (smallerDimension);
   picHeightAdjusted = imageBackgroundHeight;
-  picWidthAdjusted = imageBackgroundHeight * imageWidthRatio;
+  picWidthAdjusted = picHeightAdjusted * imageWidthRatio;
   //If Image fits in rect: center the smaller dimension
   whiteSpace = imageBackgroundWidth - picWidthAdjusted;
   //if image left justified, the no to X-Var
