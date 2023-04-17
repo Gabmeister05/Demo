@@ -4,7 +4,7 @@ void setup()
 {
   size(1200, 800);
   flatText();
-  drawOneRectangle();
+  drawRectangleButton();
   textSetup();
 } //End setup
 //
