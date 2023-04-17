@@ -35,8 +35,11 @@ void setup()
 //
 void draw()
 {
+  background(black);
   rect(buttonX1, buttonY1, buttonWidth1, buttonHeight1);
   rect(buttonX2, buttonY2, buttonWidth2, buttonHeight2);
+  rect(rectDisplayX, rectDisplayY, rectDisplayWidth, rectDisplayHeight);
+  ellipse(x, y, xDiameter, yDiameter);
   text(buttonTextX2, buttonTextY2, buttonTextWidth2, buttonTextHeight2);
   fill(white);
 } //End draw
