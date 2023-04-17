@@ -2,7 +2,16 @@
 float displayWidth=0.0, displayHeight=0.0;
 float buttonX1, buttonY1, buttonWidth1, buttonHeight1;
 float buttonX2, buttonY2, buttonWidth2, buttonHeight2;
-boolean rectON, ellipseON;
+float rectDisplayX, rectDisplayY, rectDisplayWidth, rectDisplayHeight;
+float ellipseX, ellipseY, ellipseXDiameter, ellipseYDiameter;
+float x, y, xDiameter, yDiameter;
+color black=#000000, white=#FFFFE1; 
+boolean rectON=false, ellipseON=false;
+//
+String buttonText1= "Click Me";
+String buttonText2= "Or Me";
+PFont buttonFont;
+color purple = #2C08FF;
 //
 void setup()
 {
@@ -21,6 +30,7 @@ void setup()
     displayWidth = width;
     displayHeight = height;
   }
+  println("App Geometry isl", "\tDisplay Width:", displayWidth, "\t\tDisplay Height", displayHeight);
   //
   //Population
   //
@@ -32,6 +42,23 @@ void setup()
   buttonY2 = buttonY1;
   buttonWidth2 = buttonWidth1;
   buttonHeight2 = buttonHeight1;
+  rectDisplayX = displayWidth*1/8;
+  rectDisplayY = displayHeight*1/8;
+  rectDisplayWidth = buttonWidth1;
+  rectDisplayHeight = buttonWidth1;
+  ellipseX = displayWidth*6/8;
+  ellipseY = rectDisplayY;
+  ellipseXDiameter = displayWidth*1/8; //Note: formulae not "square" but same
+  ellipseYDiameter = displayHeight*1/8;
+  float ellipseRectXCenter = ellipseX + ellipseXDiameter*1/2 ;
+  float ellipseRectYCenter = ellipseY + ellipseYDiameter*1/2 ;
+  x = ellipseRectXCenter;
+  y = ellipseRectYCenter;
+  xDiameter = ellipseXDiameter;
+  yDiameter = ellipseYDiameter;
+  //
+  println("Start of Console");
+  buttonFont = createFont ("Harrington", 55);
 } //End setup
 //
 void draw()
@@ -41,8 +68,8 @@ void draw()
   rect(buttonX2, buttonY2, buttonWidth2, buttonHeight2);
   if (rectON==true && ellipseON==false) rect(rectDisplayX, rectDisplayY, rectDisplayWidth, rectDisplayHeight);
   if (rectON==true && ellipseON==false) ellipse(x, y, xDiameter, yDiameter);
-  text(buttonTextX1, buttonTextY1, buttonTextWidth1, buttonTextHeight1);
-  text(buttonTextX2, buttonTextY2, buttonTextWidth2, buttonTextHeight2);
+  text(buttonText1, buttonText1, buttonWidth1, buttonHeight1);
+  text(buttonText2, buttonText2, buttonWidth2, buttonHeight2);
   fill(white);
 } //End draw
 //
