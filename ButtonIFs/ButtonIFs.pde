@@ -40,6 +40,7 @@ void draw()
   rect(buttonX2, buttonY2, buttonWidth2, buttonHeight2);
   rect(rectDisplayX, rectDisplayY, rectDisplayWidth, rectDisplayHeight);
   ellipse(x, y, xDiameter, yDiameter);
+  text(buttonTextX1, buttonTextY1, buttonTextWidth1, buttonTextHeight1);
   text(buttonTextX2, buttonTextY2, buttonTextWidth2, buttonTextHeight2);
   fill(white);
 } //End draw
