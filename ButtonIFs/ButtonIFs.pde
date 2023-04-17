@@ -5,7 +5,7 @@ float buttonX2, buttonY2, buttonWidth2, buttonHeight2;
 //
 void setup()
 {
-  fullscreen();
+  fullScreen();
   int displayWidth = width;
   int displayHeight = height;
   println (width, height, displayWidth, displayHeight);
@@ -26,7 +26,11 @@ void setup()
   buttonX1 = displayWidth*1/4;
   buttonY1 = displayHeight*3/4;
   buttonWidth1 = displayWidth*1/5;
-  buttonHeight1 = displayHeight*4/5;
+  buttonHeight1 = displayHeight*1/5;
+  buttonX2 = displayWidth*3/4;
+  buttonY2 = buttonY1;
+  buttonWidth2 = ;
+  buttonHeight2 = ;
 } //End setup
 //
 void draw()
