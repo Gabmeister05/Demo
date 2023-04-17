@@ -37,6 +37,8 @@ void draw()
 {
   rect(buttonX1, buttonY1, buttonWidth1, buttonHeight1);
   rect(buttonX2, buttonY2, buttonWidth2, buttonHeight2);
+  text(buttonTextX2, buttonTextY2, buttonTextWidth2, buttonTextHeight2);
+  fill(white);
 } //End draw
 //
 void keyPressed() {
