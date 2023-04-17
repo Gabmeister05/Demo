@@ -13,7 +13,8 @@ void setup()
   {
     displayWidth = 0;
     displayHeight = 0;
-    print("Display is too small for App");
+    println("Display is too small for App");
+    exit();
   } else
   {
     displayWidth = width;
@@ -25,6 +26,7 @@ void setup()
   buttonX1 = displayWidth*1/4;
   buttonY1 = displayHeight*3/4;
   buttonWidth1 = displayWidth*1/5;
+  buttonHeight1 = displayHeight*4/5;
 } //End setup
 //
 void draw()
