@@ -6,10 +6,14 @@ void setup()
 {
   fullscreen( 1200, 800 );
   println (width, height, displayWidth, displayHeight);
-  int displayWidth = width;
-  int displayHeight = height;
-  if () {
-  } else {
+  boolean displayWidth =  mismatch width;
+  boolean displayHeight = mismatch height;
+  if ( displayHeight) 
+  {
+    
+  } else 
+  {
+    
   }
 } //End setup
 //
