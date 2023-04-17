@@ -1,20 +1,30 @@
 //Global Variables
+int displayWidth=0.0, displayHeight=0.0;
 float buttonX1, buttonY1, buttonWidth1, buttonHeight1;
 float buttonX2, buttonY2, buttonWidth2, buttonHeight2;
 //
 void setup()
 {
   fullscreen( 1200, 800 );
-  println (width, height, displayWidth, displayHeight);
   boolean displayWidth =  mismatch width;
   boolean displayHeight = mismatch height;
-  if ( displayHeight) 
+  println (width, height, displayWidth, displayHeight);
+  if ( width >= displayWidth || height >= displayHeight )
   {
-    
-  } else 
+    displayWidth = 0;
+    displayHeight = 0;
+    print("Display is too small for App");
+  } else
   {
-    
+    displayWidth = width;
+    displayHeight = height;
   }
+  //
+  //Population
+  //
+  buttonX1 = displayWidth*1/4;
+  buttonY1 = displayHeight*3/4;
+  buttonWidth1 = displayWidth*1/5;
 } //End setup
 //
 void draw()
