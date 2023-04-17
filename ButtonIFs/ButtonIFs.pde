@@ -29,8 +29,8 @@ void setup()
   buttonHeight1 = displayHeight*1/5;
   buttonX2 = displayWidth*3/4;
   buttonY2 = buttonY1;
-  buttonWidth2 = ;
-  buttonHeight2 = ;
+  buttonWidth2 = buttonWidth1;
+  buttonHeight2 = buttonHeight1;
 } //End setup
 //
 void draw()
