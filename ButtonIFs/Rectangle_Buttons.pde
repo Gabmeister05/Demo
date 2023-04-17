@@ -16,8 +16,11 @@ void drawRectangleButton1()
   buttonY1 = startingY - buttonHeight*1/2;
   buttonWidth1 = buttonWidth;
   buttonHeight1 = buttonHeight;
+  //
+  rect(buttonX1, buttonY1, buttonWidth1, buttonHeight1);
 } //End Draw Rectangle Button One
 //
 void drawRectangleButton2() {
+  rect(buttonX2, buttonY2, buttonWidth2, buttonHeight2);
 } //End Draw Rectangle Button Two
 //End One Rectangle SubProgram

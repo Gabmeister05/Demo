@@ -2,7 +2,8 @@
 PFont font;
 color ink, purpleInk=#AF00FF, whiteInk=#FFFFFF;
 int alignHorizontal, alignVertical;
-String string = "Global Values of String";
+String string1 = "Click Me";
+String string2 = "Or Me";
 //
 void textSetup() {
   String[] fontList = PFont.list();

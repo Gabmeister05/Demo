@@ -11,9 +11,8 @@ void setup()
 //
 void draw()
 {
-  textDraw( height, purpleInk, CENTER, CENTER, font, string, playX1, playY1, playWidth, playHeight );
-  rect(buttonX1, buttonY1, buttonWidth1, buttonHeight1);
-  rect(buttonX2, buttonY2, buttonWidth2, buttonHeight2);
+  textDraw( height, purpleInk, CENTER, CENTER, font, string1, buttonX1, buttonY1, buttonWidth1, buttonHeight1 );
+  textDraw( height, purpleInk, CENTER, CENTER, font, string2, buttonX2, buttonY2, buttonWidth2, buttonHeight2 );
 } //End draw
 //
 void keyPressed() {
