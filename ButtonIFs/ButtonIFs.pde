@@ -1,13 +1,13 @@
 //Global Variables
-int displayWidth=0.0, displayHeight=0.0;
+float displayWidth=0.0, displayHeight=0.0;
 float buttonX1, buttonY1, buttonWidth1, buttonHeight1;
 float buttonX2, buttonY2, buttonWidth2, buttonHeight2;
 //
 void setup()
 {
-  fullscreen( 1200, 800 );
-  boolean displayWidth =  mismatch width;
-  boolean displayHeight = mismatch height;
+  fullscreen();
+  int displayWidth = width;
+  int displayHeight = height;
   println (width, height, displayWidth, displayHeight);
   if ( width >= displayWidth || height >= displayHeight )
   {
