@@ -17,10 +17,10 @@ void preTextDraw( float height, color ink, int alignHorizontal, int alignVertica
   textFont(font, height);
 }// End preTextDraw
 //
-void textDraw( float height, color ink, int alignHorizontal, int alignVertical, PFont font, String string, float textRectX, float textRectY, float textRectWidth, float textRectHeight ) {
+void textDraw( float height, color ink, int alignHorizontal, int alignVertical, PFont font, String string1, float textRectX, float textRectY, float textRectWidth, float textRectHeight ) {
   preTextDraw( height, ink, alignHorizontal, alignVertical, font );
-  textSize(textCalculator(height, string, textRectWidth));
-  text(string, textRectX, textRectY, textRectWidth, textRectHeight);
+  textSize(textCalculator(height, string1, textRectWidth));
+  text(string1, textRectX, textRectY, textRectWidth, textRectHeight);
   textReset();
 }// End textDraw
 //
@@ -28,9 +28,9 @@ void textReset () {
   fill(whiteInk);
 }// End textReset
 //
-float textCalculator( float size, String string, float rectWidth ) {
+float textCalculator( float size, String string1, float rectWidth ) {
   textSize(size);
-  while ( textWidth(string) > rectWidth )
+  while ( textWidth(string1) > rectWidth )
   {
     size = size * 0.99;
     textSize(size);
