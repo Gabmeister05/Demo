@@ -4,10 +4,10 @@ float buttonX2, buttonY2, buttonWidth2, buttonHeight2;
 //
 void setup()
 {
-  size(1200, 800);
+  fullscreen( 1200, 800 );
   println (width, height, displayWidth, displayHeight);
-  int appWidth = width;
-  int appHeight = height;
+  int displayWidth = width;
+  int displayHeight = height;
   if () {
   } else {
   }
