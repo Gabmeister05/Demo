@@ -68,8 +68,8 @@ void draw()
   rect(buttonX2, buttonY2, buttonWidth2, buttonHeight2);
   if (rectON==true && ellipseON==false) rect(rectDisplayX, rectDisplayY, rectDisplayWidth, rectDisplayHeight);
   if (rectON==true && ellipseON==false) ellipse(x, y, xDiameter, yDiameter);
-  text(buttonText1, buttonText1, buttonWidth1, buttonHeight1);
-  text(buttonText2, buttonText2, buttonWidth2, buttonHeight2);
+  text(Click Me, Click Me, buttonWidth1, buttonHeight1);
+  text(Or Me, Or Me, buttonWidth2, buttonHeight2);
   fill(white);
 } //End draw
 //
