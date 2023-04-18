@@ -23,7 +23,7 @@ float prevX1, prevY1, prevX2, prevY2, prevX3, prevY3, prevXR, prevYR, prevWidth;
 float rrX, rrY, nextX, nextY, prevX, prevY, loop1X, loop1Y;
 float loopPlaylistX, loopPlaylistY;
 //
-color defaultWhite=#FFFFFF, red=#FF0000, green=#00FF00, yellow=#FFFF00; //Note: colours for nightmode
+color defaultWhite=#FFFFFF, red=#FF0000, green=#00FF00, yellow=#FFFF00, orange=#FFAF00; //Note: colours for nightmode
 //
 void setupMusic() {
   //
@@ -58,7 +58,7 @@ void drawMusic() {
   //rect( spaceX, spaceY, spaceHeight, buttonSide );
   //
   //Stop Button
-  if ( stopOn==true ) {fill(yellow);} else {fill(defaultWhite);};
+  if ( stopOn==true ) {fill(orange);} else {fill(defaultWhite);};
   if ( mouseX>=stopX && mouseX<=stopX+buttonSide && mouseY>=stopY && mouseY<=stopY+buttonSide ) fill(red);
   rect( stopX, stopY, buttonSide, buttonSide );
   fill(defaultWhite);
@@ -67,8 +67,8 @@ void drawMusic() {
   if ( pauseOn==true ) {fill(yellow);} else {fill(defaultWhite);};
   if ( mouseX>=pauseX1 && mouseX<=pauseX1+pauseWidth && mouseY>=pauseY1 && mouseY<=pauseY1+pauseHeight ) fill(green);
   if ( mouseX>=pauseX2 && mouseX<=pauseX2+pauseWidth && mouseY>=pauseY2 && mouseY<=pauseY2+pauseHeight ) fill(green);
-  rect( pauseX1, pauseY1, buttonSide, buttonSide );
-  rect( pauseX2, pauseY2, buttonSide, buttonSide );
+  rect( pauseX1, pauseY1, pauseWidth, pauseHeight );
+  rect( pauseX2, pauseY2, pauseWidth, pauseHeight );
   fill(defaultWhite);
   //
   //Play Button
