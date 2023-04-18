@@ -11,23 +11,21 @@ void population()
   print("Confirming Center X:", centerX);
   println("\t Confirming Center Y:", centerY); //Illstrates a character escape
   //
-  pauseX1 = centerX -  pauseWidth - pauseWidth*1/2;
-  pauseY1 = centerY - pauseHeight*1/2;
+  pauseX = centerX -  pauseWidth - pauseWidth*1/2;
+  pauseY = centerY - pauseHeight*1/2;
   pauseWidth = centerX * buttonReferentMeasure;
   pauseHeight = centerY * buttonReferentMeasure;
-  pauseX2 = centerX + pauseWidth*1/2;
-  pauseY2 = pauseY1;
-  playX = playX1 = pauseX1;
-  playY = playY1 = pauseY1;
+  playX = playX1 = pauseX;
+  playY = playY1 = pauseY;
   playX3 = playX1;
-  playY3 = pauseY1 + buttonReferentMeasure;
+  playY3 = pauseY + buttonReferentMeasure;
   //Note: need playY3 before playY2
   playX2 = playX1 + buttonReferentMeasure;
   playY2 = playY1 + (playY3-playY1)*1/2;
   //
   buttonPositionColumn = 3;
-  stopX = pauseX1 - ( buttonPositionColumn*buttonReferentMeasure );
-  stopY = pauseY1;
+  stopX = pauseX - ( buttonPositionColumn*buttonReferentMeasure );
+  stopY = pauseY;
   //
 } //End Population
 //
