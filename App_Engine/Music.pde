@@ -59,13 +59,14 @@ void drawMusic() {
   //
   //Stop Button
   if ( stopOn==true ) {fill(yellow);} else {fill(defaultWhite);};
-  if ( mouseX>=playX && mouseX<=playX+buttonSide && mouseY>=playY && mouseY<=playY+buttonSide ) fill(red);
+  if ( mouseX>=stopX && mouseX<=stopX+buttonSide && mouseY>=stopY && mouseY<=stopY+buttonSide ) fill(red);
   rect( stopX, stopY, buttonSide, buttonSide );
   fill(defaultWhite);
   //
   //Pause Button
   if ( pauseOn==true ) {fill(yellow);} else {fill(defaultWhite);};
-  if ( mouseX>=playX && mouseX<=playX+buttonSide && mouseY>=playY && mouseY<=playY+buttonSide ) fill(green);
+  if ( mouseX>=pauseX1 && mouseX<=pauseX1+pauseWidth && mouseY>=pauseY1 && mouseY<=pauseY1+pauseHeight ) fill(green);
+  if ( mouseX>=pauseX2 && mouseX<=pauseX2+pauseWidth && mouseY>=pauseY2 && mouseY<=pauseY2+pauseHeight ) fill(green);
   rect( pauseX1, pauseY1, buttonSide, buttonSide );
   rect( pauseX2, pauseY2, buttonSide, buttonSide );
   fill(defaultWhite);
@@ -98,8 +99,9 @@ void keyPressedMusic() {
 //
 void mousePressedMusic() {
   if ( mouseX>=playX && mouseX<=playX+buttonSide && mouseY>=playY && mouseY<=playY+buttonSide ) playPause();
-  if ( mouseX>=pauseX1 && mouseX<=pauseX1+buttonSide && mouseY>=pauseY1 && mouseY<=pauseY1+buttonSide ) playPause();
-  if ( mouseX>=pauseX2 && mouseX<=pauseX2+buttonSide && mouseY>=pauseY2 && mouseY<=pauseY2+buttonSide ) playPause();
+  if ( mouseX>=pauseX1 && mouseX<=pauseX1+pauseWidth && mouseY>=pauseY1 && mouseY<=pauseY1+pauseHeight ) playPause();
+  if ( mouseX>=pauseX2 && mouseX<=pauseX2+pauseWidth && mouseY>=pauseY2 && mouseY<=pauseY2+pauseHeight ) playPause();
+  if ( mouseX>=stopX && mouseX<=stopX+buttonSide && mouseY>=stopY && mouseY<=stopY+buttonSide ) stopSong();
 }//End mousePressedMusic
 //
 void concatenationOfMusicFiles() {
