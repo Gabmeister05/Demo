@@ -181,9 +181,11 @@ void stopSong() {
    - include auto previous & next track if STOP at beginning or end of ile
    */
   if ( songs[currentSong].isPlaying() ) {
+    stopOn=false;
     songs[currentSong].pause();
     songs[currentSong].rewind();
   } else {
+    stopOn=true;
     songs[currentSong].rewind();
   }
 }//End Stop Song
