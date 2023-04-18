@@ -7,13 +7,14 @@ import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 //
 //Global Variabes
+int appWidth, appHeight;
 //
 void setup() {
   //Display
-  //size(800, 600); //width, height
-  fullScreen(); //displayWidth, displayHeight
-  displayWidth = width;
-  displayHeight = height;
+  size(800, 600); //width, height
+  //fullScreen(); //displayWidth, displayHeight
+  appWidth = width;
+  appHeight = height;
   //
   setupMusic();
   population();

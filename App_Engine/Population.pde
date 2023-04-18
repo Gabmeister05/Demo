@@ -1,12 +1,12 @@
 void population()
 {
   //Population: visual data (hint, notes will lead to FOR or WHILE Loops to populate)
-  float buttonReferentMeasure = displayWidth * 1/9;
+  float buttonReferentMeasure = appWidth * 1/9;
   buttonSide = buttonReferentMeasure;
   spaceWidth = buttonReferentMeasure * 1/3;
   //
-  float centerX = displayWidth * 1/2; //Local Variable, garbage collected at end of setup(), see println in draw()
-  float centerY = displayHeight * 1/2;
+  float centerX = appWidth * 1/2; //Local Variable, garbage collected at end of setup(), see println in draw()
+  float centerY = appHeight * 1/2;
   int buttonPositionColumn;
   print("Confirming Center X:", centerX);
   println("\t Confirming Center Y:", centerY); //Illstrates a character escape
