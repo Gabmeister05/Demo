@@ -142,6 +142,7 @@ void playPause() {
     songs[currentSong].pause();
     playOn=false;
     pauseOn=true;
+    stopOn=true;
   } else if ( songs[currentSong].position() >= songs[currentSong].length()*3/4 ) {
     songs[currentSong].pause();
     currentSong+=1;
@@ -151,6 +152,7 @@ void playPause() {
     songs[currentSong].play(); //no auto rewind like loop()
     playOn=true;
     pauseOn=false;
+    stopOn=false;
   }
 }//End Play-Pause
 //
@@ -181,11 +183,11 @@ void stopSong() {
    - include auto previous & next track if STOP at beginning or end of ile
    */
   if ( songs[currentSong].isPlaying() ) {
-    stopOn=false;
+    stopOn=true;
     songs[currentSong].pause();
     songs[currentSong].rewind();
   } else {
-    stopOn=true;
+    stopOn=false;
     songs[currentSong].rewind();
   }
 }//End Stop Song
