@@ -10,8 +10,10 @@ import ddf.minim.ugens.*;
 //
 void setup() {
   //Display
-  size(800, 600); //width, height
-  //fullScreen(); //displayWidth, displayHeight
+  //size(800, 600); //width, height
+  fullScreen(); //displayWidth, displayHeight
+  displayWidth = width;
+  displayHeight = height;
   //
   setupMusic();
   population();

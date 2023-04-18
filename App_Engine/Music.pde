@@ -11,7 +11,7 @@ Boolean stopOn=false;
 Boolean muteOn=false;
 //
 float buttonSide, spaceWidth, spaceHeight;
-float pauseX, pauseY, pauseWidth, pauseHeight;
+float pauseX1, pauseY1, pauseX2, pauseY2, pauseWidth, pauseHeight;
 float playX, playY, playX1, playY1, playX2, playY2, playX3, playY3;
 float stopX, stopY, muteX, muteY, loopIX, loopIY;
 float ffX1A, ffY1A, ffX2A, ffY2A, ffX3A, ffY3A;
@@ -65,8 +65,8 @@ void drawMusic() {
   //
   //Pause Button
   if ( pauseOn==true ) {fill(yellow);} else {fill(defaultWhite);};
-  if ( mouseX>=pauseX && mouseX<=pauseX+pauseWidth && mouseY>=pauseY && mouseY<=pauseY+pauseHeight ) fill(green);
-  rect( pauseX, pauseY, buttonSide, buttonSide );
+  if ( mouseX>=pauseX1 && mouseX<=pauseX1+pauseWidth && mouseY>=pauseY1 && mouseY<=pauseY1+pauseHeight ) fill(green);
+  rect( pauseX1, pauseY1, buttonSide, buttonSide );
   fill(defaultWhite);
   //
   //Play Button
@@ -97,7 +97,7 @@ void keyPressedMusic() {
 //
 void mousePressedMusic() {
   if ( mouseX>=playX && mouseX<=playX+buttonSide && mouseY>=playY && mouseY<=playY+buttonSide ) playPause();
-  if ( mouseX>=pauseX && mouseX<=pauseX+pauseWidth && mouseY>=pauseY && mouseY<=pauseY+pauseHeight ) playPause();
+  if ( mouseX>=pauseX1 && mouseX<=pauseX1+pauseWidth && mouseY>=pauseY1 && mouseY<=pauseY1+pauseHeight ) playPause();
   if ( mouseX>=stopX && mouseX<=stopX+buttonSide && mouseY>=stopY && mouseY<=stopY+buttonSide ) stopSong();
 }//End mousePressedMusic
 //
