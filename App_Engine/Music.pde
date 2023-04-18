@@ -8,6 +8,7 @@ Boolean autoPlayOn=false;
 Boolean playOn=false;
 Boolean pauseOn=false;
 Boolean stopOn=false;
+Boolean muteOn=false;
 //
 float buttonSide, spaceWidth, spaceHeight;
 float pauseX1, pauseY1, pauseX2, pauseY2, pauseWidth, pauseHeight;
@@ -129,10 +130,14 @@ void autoPlay() { //See autoPlayMusic()
     autoPlayOn = true;
     playOn=true;
     pauseOn=true;
+    stopOn=true;
+    muteOn=true;
   } else {
     autoPlayOn = false;
     playOn=false;
     pauseOn=false;
+    stopOn=false;
+    muteOn=false;
   }
 }//End Auto Play
 //
@@ -143,6 +148,7 @@ void playPause() {
     playOn=false;
     pauseOn=true;
     stopOn=true;
+    muteOn=true;
   } else if ( songs[currentSong].position() >= songs[currentSong].length()*3/4 ) {
     songs[currentSong].pause();
     currentSong+=1;
@@ -153,6 +159,7 @@ void playPause() {
     playOn=true;
     pauseOn=false;
     stopOn=false;
+    muteOn=false;
   }
 }//End Play-Pause
 //
@@ -161,6 +168,7 @@ void mute() {
   //ERROR: this MUTE Button only works when song is playing
   //ERROR Fix: unmute or rewind when song is not playing (i.e. unmute next song)
   if ( songs[currentSong].isMuted() ) {
+    muteOn=false;
     songs[currentSong].unmute();
   } else if ( songs[currentSong].position() >= songs[currentSong].length()*3/4 ) {
     //Students to finish SMARTER Mute Button
@@ -173,6 +181,7 @@ void mute() {
     currentSong++; //ERROR: Just like the autoplay, both next and previous songs are mixed and match together
     songs[currentSong].rewind(); //simple solution, contains ERROR
   } else {
+     muteOn=true;
     songs[currentSong].mute();
   }
 }//End Mute
