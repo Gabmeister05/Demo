@@ -28,6 +28,7 @@ void keyPressed() {
 }//End keyPressed
 //
 void mousePressed() {
+  mousePressedMusic();
 }//End mousePressed
 //
 //End MAIN Program (Driver)
