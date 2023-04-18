@@ -1,7 +1,7 @@
 void population()
 {
   //Population: visual data (hint, notes will lead to FOR or WHILE Loops to populate)
-  float buttonReferentMeasure = appWidth * 1/9;
+  float buttonReferentMeasure = appWidth * 1/10;
   buttonSide = buttonReferentMeasure;
   spaceWidth = buttonReferentMeasure * 1/3;
   //
@@ -11,12 +11,12 @@ void population()
   print("Confirming Center X:", centerX);
   println("\t Confirming Center Y:", centerY); //Illstrates a character escape
   //
-  pauseWidth = centerX * buttonReferentMeasure;
-  pauseHeight = centerY * buttonReferentMeasure;
   pauseX1 = centerX -  pauseWidth - pauseWidth*1/2;
   pauseY1 = centerY - pauseHeight*1/2;
-  pauseX2 = centerX + buttonReferentMeasure*1/2;
+  pauseX2 = centerX + pauseWidth*1/2;
   pauseY2 = pauseY1;
+  pauseWidth = centerX * buttonReferentMeasure;
+  pauseHeight = centerY * buttonReferentMeasure;
   playX = playX1 = pauseX1;
   playY = playY1 = pauseY1;
   playX3 = playX1;

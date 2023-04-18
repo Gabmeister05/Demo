@@ -7,9 +7,6 @@ float sfX1, sfY1, sfX2, sfY2, sfX3, sfY3;
 float sfX4, sfY4, sfWidth, sfHeight;
 float sbX1, sbY1, sbX2, sbY2, sbX3, sbY3;
 float sbX4, sbY4, sbWidth, sbHeight;
-float deg=0.0;
-float x=0, y=0;
-float s=0;
 color black=#000000, resetcolorNightMode=#FFFF4B; //Night Mode Friendly
 color resetcolorDayMode=#FFFFFF; //Not Night Mode Friendly
 //Population
