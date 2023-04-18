@@ -7,6 +7,7 @@ int currentSong=0;
 Boolean autoPlayOn=false;
 Boolean playOn=false;
 Boolean pauseOn=false;
+Boolean stopOn=false;
 //
 float buttonSide, spaceWidth, spaceHeight;
 float pauseX1, pauseY1, pauseX2, pauseY2, pauseWidth, pauseHeight;
@@ -56,7 +57,10 @@ void drawMusic() {
   //rect( spaceX, spaceY, spaceHeight, buttonSide );
   //
   //Stop Button
+  if ( stopOn==true ) {fill(yellow);} else {fill(defaultWhite);};
+  if ( mouseX>=playX && mouseX<=playX+buttonSide && mouseY>=playY && mouseY<=playY+buttonSide ) fill(red);
   rect( stopX, stopY, buttonSide, buttonSide );
+  fill(defaultWhite);
   //
   //Pause Button
   if ( pauseOn==true ) {fill(yellow);} else {fill(defaultWhite);};
