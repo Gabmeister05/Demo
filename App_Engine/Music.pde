@@ -41,7 +41,10 @@ void setupMusic() {
 }//End setupMusic
 //
 void setupDisplay() {
-  //println (width, height, displayWidth, displayHeight);
+  //
+  int appWidth = width;
+  int appHeight = height;
+  println (width, height, displayWidth, displayHeight);
   if ( width >= displayWidth || height >= displayHeight )
   {
     appWidth = 0;

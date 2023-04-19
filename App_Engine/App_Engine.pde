@@ -7,7 +7,7 @@ import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 //
 //Global Variabes
-int appWidth, appHeight;
+int appWidth=0, appHeight=0;
 //
 void setup() {
   //Display
