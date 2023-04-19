@@ -15,6 +15,7 @@ Top comments are edits in progress*
 - Time to modify the App Engine, autoplay and other button functions will have to be on hold for now
 - The modified App Engine will be on hold while text prototyping is online
 - Currently working on images and text prototyping is on hold
+- Back to working on the App Engine but this time, images and texts will be in the code along with better code for button functions and shapes
 
 List of buttons for music player:
 
