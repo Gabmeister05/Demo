@@ -38,7 +38,10 @@ void setupMusic() {
   soundEffects[0] = minim.loadFile( pathway + factory );
   soundEffects[1] = minim.loadFile( pathway + daytimebonfire );
   //
-  println (width, height, displayWidth, displayHeight);
+}//End setupMusic
+//
+void setupDisplay() {
+  //println (width, height, displayWidth, displayHeight);
   if ( width >= displayWidth || height >= displayHeight )
   {
     appWidth = 0;
@@ -52,7 +55,7 @@ void setupMusic() {
   }
   println("App Geometry isl", "\tApp Width:", appWidth, "\t\tApp Height", appHeight);
   //
-}//End setupMusic
+}//End setupDisplay
 //
 void drawMusic() {
   //Debugging in CONSOLE
@@ -68,25 +71,41 @@ void drawMusic() {
   if (rectON==true && triangleON==false) rect(pauseX1, pauseY1, buttonSide, buttonSide);
   if (rectON==false && triangleON==true) triangle( playX1, playY1, playX2, playY2, playX3, playY3 );
   //Stop Button
-  if ( stopOn==true ) {fill(orange);} else {fill(defaultWhite);};
+  if ( stopOn==true ) {
+    fill(orange);
+  } else {
+    fill(defaultWhite);
+  };
   if ( mouseX>=stopX && mouseX<=stopX+buttonSide && mouseY>=stopY && mouseY<=stopY+buttonSide ) fill(darkred);
   rect( stopX, stopY, buttonSide, buttonSide );
   fill(defaultWhite);
   //
   //Pause Button
-  if ( pauseOn==false ) {fill(yellow);} else {fill(defaultWhite);};
+  if ( pauseOn==false ) {
+    fill(yellow);
+  } else {
+    fill(defaultWhite);
+  };
   if ( mouseX>=pauseX1 && mouseX<=pauseX1+pauseWidth && mouseY>=pauseY1 && mouseY<=pauseY1+pauseHeight ) fill(green);
   rect( pauseX1, pauseY1, buttonSide, buttonSide );
   fill(defaultWhite);
   //
   //Play Button
-  if ( playOn==true ) {fill(lime);} else {fill(defaultWhite);};
+  if ( playOn==true ) {
+    fill(lime);
+  } else {
+    fill(defaultWhite);
+  };
   if ( mouseX>=playX && mouseX<=playX+buttonSide && mouseY>=playY && mouseY<=playY+buttonSide ) fill(red);
   triangle( playX1, playY1, playX2, playY2, playX3, playY3 );
   fill(defaultWhite);
   //
   //Mute Button
-  if ( muteOn==true ) {fill(gold);} else {fill(defaultWhite);};
+  if ( muteOn==true ) {
+    fill(gold);
+  } else {
+    fill(defaultWhite);
+  };
   if ( mouseX>=muteX && mouseX<=muteX+buttonSide && mouseY>=muteY && mouseY<=muteY+buttonSide ) fill(darkorange);
   rect( muteX, muteY, buttonSide, buttonSide );
   fill(defaultWhite);
@@ -201,7 +220,7 @@ void mute() {
     currentSong++; //ERROR: Just like the autoplay, both next and previous songs are mixed and match together
     songs[currentSong].rewind(); //simple solution, contains ERROR
   } else {
-     muteOn=true;
+    muteOn=true;
     songs[currentSong].mute();
   }
 }//End Mute

@@ -17,6 +17,7 @@ void setup() {
   appHeight = height;
   //
   setupMusic();
+  setupDisplay();
   population();
   //
 }//End setup
