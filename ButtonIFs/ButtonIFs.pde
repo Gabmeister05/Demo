@@ -1,5 +1,5 @@
 //Global Variables
-float displayWidth=0.0, displayHeight=0.0;
+float appWidth=0, appHeight=0;
 float buttonX1, buttonY1, buttonWidth1, buttonHeight1;
 float buttonX2, buttonY2, buttonWidth2, buttonHeight2;
 float rectDisplayX, rectDisplayY, rectDisplayWidth, rectDisplayHeight;
@@ -15,41 +15,42 @@ color purple = #2C08FF;
 //
 void setup()
 {
-  fullScreen();
-  int displayWidth = width;
-  int displayHeight = height;
+  //fullScreen();
+  size( 600, 400 ); 
+  int appWidth = width;
+  int appHeight = height;
   println (width, height, displayWidth, displayHeight);
   if ( width >= displayWidth || height >= displayHeight )
   {
-    displayWidth = 0;
-    displayHeight = 0;
+    appWidth = 0;
+    appHeight = 0;
     println("Display is too small for App");
     exit();
   } else
   {
-    displayWidth = width;
-    displayHeight = height;
+    appWidth = width;
+    appHeight = height;
   }
-  println("App Geometry isl", "\tDisplay Width:", displayWidth, "\t\tDisplay Height", displayHeight);
+  println("App Geometry isl", "\tApp Width:", appWidth, "\t\tApp Height", appHeight);
   //
   //Population
   //
-  buttonX1 = displayWidth*1/4;
-  buttonY1 = displayHeight*3/4;
-  buttonWidth1 = displayWidth*1/5;
-  buttonHeight1 = displayHeight*1/5;
-  buttonX2 = displayWidth*3/4;
+  buttonX1 = appWidth*1/4;
+  buttonY1 = appHeight*3/4;
+  buttonWidth1 = appWidth*1/5;
+  buttonHeight1 = appHeight*1/5;
+  buttonX2 = appWidth*3/4;
   buttonY2 = buttonY1;
   buttonWidth2 = buttonWidth1;
   buttonHeight2 = buttonHeight1;
-  rectDisplayX = displayWidth*1/8;
-  rectDisplayY = displayHeight*1/8;
+  rectDisplayX = appWidth*1/8;
+  rectDisplayY = appHeight*1/8;
   rectDisplayWidth = buttonWidth1;
   rectDisplayHeight = buttonWidth1;
-  ellipseX = displayWidth*6/8;
+  ellipseX = appWidth*6/8;
   ellipseY = rectDisplayY;
-  ellipseXDiameter = displayWidth*1/8; //Note: formulae not "square" but same
-  ellipseYDiameter = displayHeight*1/8;
+  ellipseXDiameter = appWidth*1/8; //Note: formulae not "square" but same
+  ellipseYDiameter = appHeight*1/8;
   float ellipseRectXCenter = ellipseX + ellipseXDiameter*1/2 ;
   float ellipseRectYCenter = ellipseY + ellipseYDiameter*1/2 ;
   x = ellipseRectXCenter;
@@ -67,9 +68,12 @@ void draw()
   rect(buttonX1, buttonY1, buttonWidth1, buttonHeight1);
   rect(buttonX2, buttonY2, buttonWidth2, buttonHeight2);
   if (rectON==true && ellipseON==false) rect(rectDisplayX, rectDisplayY, rectDisplayWidth, rectDisplayHeight);
-  if (rectON==true && ellipseON==false) ellipse(x, y, xDiameter, yDiameter);
-  text(Click Me, Click Me, buttonWidth1, buttonHeight1);
-  text(Or Me, Or Me, buttonWidth2, buttonHeight2);
+  if (rectON==false && ellipseON==true) ellipse(x, y, xDiameter, yDiameter);
+  fill(purple); //Ink, hexidecimal copied from Color Selector
+  textAlign (CENTER, CENTER);
+  textFont(buttonFont, 25);
+  text(buttonText1, buttonX1, buttonY1, buttonWidth1, buttonHeight1);
+  text(buttonText2, buttonX2, buttonY2, buttonWidth2, buttonHeight2);
   fill(white);
 } //End draw
 //

@@ -15,6 +15,20 @@ void setup() {
   //fullScreen(); //displayWidth, displayHeight
   appWidth = width;
   appHeight = height;
+  println (width, height, displayWidth, displayHeight);
+  if ( width >= displayWidth || height >= displayHeight )
+  {
+    appWidth = 0;
+    appHeight = 0;
+    println("Display is too small for App");
+    exit();
+  } else
+  {
+    appWidth = width;
+    appHeight = height;
+  }
+  println("App Geometry isl", "\tApp Width:", appWidth, "\t\tApp Height", appHeight);
+  //
   //
   setupMusic();
   population();
