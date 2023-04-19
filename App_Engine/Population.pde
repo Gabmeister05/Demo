@@ -7,7 +7,7 @@ void population()
   //
   float centerX = appWidth * 1/2; //Local Variable, garbage collected at end of setup(), see println in draw()
   float centerY = appHeight * 1/2;
-  int buttonPositionColumn;
+  int buttonPositionColumn, buttonPositionRow;
   print("Confirming Center X:", centerX);
   println("\t Confirming Center Y:", centerY); //Illstrates a character escape
   //
