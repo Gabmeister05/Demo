@@ -37,6 +37,8 @@ void setup() {
 //
 void draw() {
   drawMusic();
+  if (rectON==true && triangleON==false) rect(pauseX1, pauseY1, buttonSide, buttonSide);
+  if (rectON==false && triangleON==true) triangle( playX1, playY1, playX2, playY2, playX3, playY3 );
 }//End draw
 //
 void keyPressed() {
@@ -46,6 +48,10 @@ void keyPressed() {
 //
 void mousePressed() {
   mousePressedMusic();
+  rectON = false;
+  triangleON = false;
+  if ( mouseX>=pauseX1 && mouseX<=pauseX1+pauseWidth && mouseY>=pauseY1 && mouseY<=pauseY1+pauseHeight ) rectON = true;
+  if ( mouseX>=playX && mouseX<=playX+buttonSide && mouseY>=playY && mouseY<=playY+buttonSide ) triangleON = true;
 }//End mousePressed
 //
 //End MAIN Program (Driver)
