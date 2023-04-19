@@ -193,7 +193,6 @@ void playPause() {
     currentSong+=1;
     songs[currentSong].rewind();
   } else {
-    autoPlay();
     songs[currentSong].play(); //no auto rewind like loop()
     playOn=true;
     pauseOn=false;
