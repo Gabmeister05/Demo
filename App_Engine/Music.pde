@@ -57,7 +57,7 @@ void drawMusic() {
   //
   //Stop Button
   if ( stopOn==true ) {fill(orange);} else {fill(defaultWhite);};
-  if ( mouseX>=stopX && mouseX<=stopX+buttonSide && mouseY>=stopY && mouseY<=stopY+buttonSide ) fill(red);
+  if ( mouseX>=stopX && mouseX<=stopX+buttonSide && mouseY>=stopY && mouseY<=stopY+buttonSide ) fill(darkred);
   rect( stopX, stopY, buttonSide, buttonSide );
   fill(defaultWhite);
   //
@@ -73,6 +73,11 @@ void drawMusic() {
   triangle( playX1, playY1, playX2, playY2, playX3, playY3 );
   fill(defaultWhite);
   //
+  //Mute Button
+  if ( muteOn==true ) {fill(gold);} else {fill(defaultWhite);};
+  if ( mouseX>=muteX && mouseX<=muteX+buttonSide && mouseY>=muteY && mouseY<=muteY+buttonSide ) fill(darkorange);
+  rect( muteX, muteY, buttonSide, buttonSide );
+  fill(defaultWhite);
 }//End drawMusic
 //
 void keyPressedMusic() {
@@ -97,6 +102,7 @@ void mousePressedMusic() {
   if ( mouseX>=playX && mouseX<=playX+buttonSide && mouseY>=playY && mouseY<=playY+buttonSide ) playPause();
   if ( mouseX>=pauseX1 && mouseX<=pauseX1+pauseWidth && mouseY>=pauseY1 && mouseY<=pauseY1+pauseHeight ) playPause();
   if ( mouseX>=stopX && mouseX<=stopX+buttonSide && mouseY>=stopY && mouseY<=stopY+buttonSide ) stopSong();
+  if ( mouseX>=muteX && mouseX<=muteX+buttonSide && mouseY>=muteY && mouseY<=muteY+buttonSide ) mute();
 }//End mousePressedMusic
 //
 void concatenationOfMusicFiles() {
@@ -109,9 +115,9 @@ void concatenationOfMusicFiles() {
 //
 void autoPlayMusic() {
   if ( autoPlayOn ) {
-    if ( songs[currentSong].position() <= songs[currentSong].length()*1/2 ) {
+    if ( songs[currentSong].position() <= songs[currentSong].length()*4/5 ) {
       songs[currentSong].play();
-    } else if ( songs[currentSong].position() >= songs[currentSong].length()*3/4 ) {
+    } else if ( songs[currentSong].position() >= songs[currentSong].length()*9/10 ) {
       currentSong+=1;
     } else {
       songs[currentSong].rewind();
@@ -146,7 +152,7 @@ void playPause() {
     pauseOn=true;
     stopOn=true;
     muteOn=true;
-  } else if ( songs[currentSong].position() >= songs[currentSong].length()*3/4 ) {
+  } else if ( songs[currentSong].position() >= songs[currentSong].length()*9/10 ) {
     songs[currentSong].pause();
     currentSong+=1;
     songs[currentSong].rewind();
@@ -167,7 +173,7 @@ void mute() {
   if ( songs[currentSong].isMuted() ) {
     muteOn=false;
     songs[currentSong].unmute();
-  } else if ( songs[currentSong].position() >= songs[currentSong].length()*3/4 ) {
+  } else if ( songs[currentSong].position() >= songs[currentSong].length()*9/10 ) {
     //Students to finish SMARTER Mute Button
     //ERROR: music player breaks if song finishes
     /* Ideas
@@ -202,7 +208,7 @@ void fastForward() {
   //ERROR: if at end, plays begining
   if ( songs[currentSong].isPlaying() ) {
     songs[currentSong].skip(10000); //parameter in milliseconds
-  } else if ( songs[currentSong].position() >= songs[currentSong].length()*3/4 );
+  } else if ( songs[currentSong].position() >= songs[currentSong].length()*9/10 );
   //Finish Conditional
   //ERROR Catch: if end of song then next song
 }//End Fast Forward
