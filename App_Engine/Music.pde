@@ -58,6 +58,8 @@ void setupDisplay() {
   }
   println("App Geometry isl", "\tApp Width:", appWidth, "\t\tApp Height", appHeight);
   //
+  if (rectON==true && triangleON==false) rect(pauseX1, pauseY1, buttonSide, buttonSide);
+  if (rectON==false && triangleON==true) triangle( playX1, playY1, playX2, playY2, playX3, playY3 );
 }//End setupDisplay
 //
 void drawMusic() {
@@ -70,9 +72,6 @@ void drawMusic() {
   print("Confirming Center X:", centerX);
   print("\t Confirming Center Y:", centerY);
   println("\t Confirming Button Position Couter:", buttonPosition);
-  //
-  if (rectON==true && triangleON==false) rect(pauseX1, pauseY1, buttonSide, buttonSide);
-  if (rectON==false && triangleON==true) triangle( playX1, playY1, playX2, playY2, playX3, playY3 );
   //Stop Button
   if ( stopOn==true ) {
     fill(orange);
