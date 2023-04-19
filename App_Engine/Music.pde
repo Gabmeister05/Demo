@@ -32,16 +32,25 @@ void setupMusic() {
   //
   minim = new Minim (this); //load from data directory, loadFile should also load from project folder, like loadImage
   //
-  //Set the Directory or Pathway to the Music
-  //Pathway: data / Music or Sound Effect Files
-  //
-  //Remininder: finish OS_Level COde to auto read pathway and files (See Operating System)
-  //
   concatenationOfMusicFiles();
   songs[0] = minim.loadFile( pathway + iceandfire );
   songs[1] = minim.loadFile( pathway + iwishiknew );
   soundEffects[0] = minim.loadFile( pathway + factory );
   soundEffects[1] = minim.loadFile( pathway + daytimebonfire );
+  //
+  println (width, height, displayWidth, displayHeight);
+  if ( width >= displayWidth || height >= displayHeight )
+  {
+    appWidth = 0;
+    appHeight = 0;
+    println("Display is too small for App");
+    exit();
+  } else
+  {
+    appWidth = width;
+    appHeight = height;
+  }
+  println("App Geometry isl", "\tApp Width:", appWidth, "\t\tApp Height", appHeight);
   //
 }//End setupMusic
 //
@@ -56,6 +65,8 @@ void drawMusic() {
   print("/t Confirming Center Y:", centerY);
   println("/t Confirming Button Position Couter:", buttonPosition);
   //
+  if (rectON==true && triangleON==false) rect(pauseX1, pauseY1, buttonSide, buttonSide);
+  if (rectON==false && triangleON==true) triangle( playX1, playY1, playX2, playY2, playX3, playY3 );
   //Stop Button
   if ( stopOn==true ) {fill(orange);} else {fill(defaultWhite);};
   if ( mouseX>=stopX && mouseX<=stopX+buttonSide && mouseY>=stopY && mouseY<=stopY+buttonSide ) fill(darkred);
@@ -100,6 +111,11 @@ void keyPressedMusic() {
 }//End keyPressedMusic
 //
 void mousePressedMusic() {
+  rectON = false;
+  triangleON = false;
+  if ( mouseX>=pauseX1 && mouseX<=pauseX1+pauseWidth && mouseY>=pauseY1 && mouseY<=pauseY1+pauseHeight ) rectON = true;
+  if ( mouseX>=playX && mouseX<=playX+buttonSide && mouseY>=playY && mouseY<=playY+buttonSide ) triangleON = true;
+  //
   if ( mouseX>=playX && mouseX<=playX+buttonSide && mouseY>=playY && mouseY<=playY+buttonSide ) playPause();
   if ( mouseX>=pauseX1 && mouseX<=pauseX1+pauseWidth && mouseY>=pauseY1 && mouseY<=pauseY1+pauseHeight ) playPause();
   if ( mouseX>=stopX && mouseX<=stopX+buttonSide && mouseY>=stopY && mouseY<=stopY+buttonSide ) stopSong();
