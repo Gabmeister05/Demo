@@ -188,8 +188,6 @@ void playPause() {
     songs[currentSong].pause();
     playOn=false;
     pauseOn=true;
-    stopOn=true;
-    muteOn=true;
   } else if ( songs[currentSong].position() >= songs[currentSong].length()*9/10 ) {
     songs[currentSong].pause();
     currentSong+=1;
@@ -199,8 +197,6 @@ void playPause() {
     songs[currentSong].play(); //no auto rewind like loop()
     playOn=true;
     pauseOn=false;
-    stopOn=false;
-    muteOn=false;
   }
 }//End Play-Pause
 //
