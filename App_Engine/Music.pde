@@ -25,7 +25,7 @@ float rrX, rrY, nextX, nextY, prevX, prevY, loop1X, loop1Y;
 float loopPlaylistX, loopPlaylistY;
 //
 color defaultWhite=#FFFFFF, red=#FF0000, lime=#00FF00, yellow=#FFFF00, orange=#FFA500; //Note: colours for nightmode
-color green=#000800; //Note: colours for nightmode
+color green=#000800, darkred=#8B0000, darkorange=#FF8C00, darkgreen=#006400, gold=#FFD700; //Note: colours for nightmode
 //
 void setupMusic() {
   //
