@@ -11,9 +11,10 @@ Boolean stopOn=false;
 Boolean muteOn=false;
 //
 float buttonSide, spaceWidth, spaceHeight;
+float centerX, centerY, buttonPosition;
 float pauseX1, pauseY1, pauseX2, pauseY2, pauseWidth, pauseHeight;
 float playX, playY, playX1, playY1, playX2, playY2, playX3, playY3;
-float stopX, stopY, muteX, muteY, loopIX, loopIY;
+float stopX, stopY, muteX, muteY, spaceX, spaceY, loopIX, loopIY;
 float ffX1A, ffY1A, ffX2A, ffY2A, ffX3A, ffY3A;
 float ffX1B, ffY1B, ffX2B, ffY2B, ffX3B, ffY3B;
 float rrX1A, rrY1A, rrX2A, rrY2A, rrX3A, rrY3A;
@@ -24,6 +25,7 @@ float rrX, rrY, nextX, nextY, prevX, prevY, loop1X, loop1Y;
 float loopPlaylistX, loopPlaylistY;
 //
 color defaultWhite=#FFFFFF, red=#FF0000, green=#00FF00, yellow=#FFFF00, orange=#FFAF00; //Note: colours for nightmode
+color ; //Note: colours for nightmode
 //
 void setupMusic() {
   //
@@ -49,13 +51,13 @@ void drawMusic() {
   //
   autoPlayMusic();
   //
-  //print("Confirming Center X:", centerX);
-  //print("/t Confirming Center Y:", centerY);
-  //println("/t Confirming Button Position Couter:", buttonPosition);
+  print("Confirming Center X:", centerX);
+  print("/t Confirming Center Y:", centerY);
+  println("/t Confirming Button Position Couter:", buttonPosition);
   //
   //Button Space
-  //rect( spaceX, spaceY, spaceWidth, buttonSide );
-  //rect( spaceX, spaceY, spaceHeight, buttonSide );
+  rect( spaceX, spaceY, spaceWidth, buttonSide );
+  rect( spaceX, spaceY, spaceHeight, buttonSide );
   //
   //Stop Button
   if ( stopOn==true ) {fill(orange);} else {fill(defaultWhite);};
@@ -64,7 +66,7 @@ void drawMusic() {
   fill(defaultWhite);
   //
   //Pause Button
-  if ( pauseOn==true ) {fill(yellow);} else {fill(defaultWhite);};
+  if ( pauseOn==false ) {fill(yellow);} else {fill(defaultWhite);};
   if ( mouseX>=pauseX1 && mouseX<=pauseX1+pauseWidth && mouseY>=pauseY1 && mouseY<=pauseY1+pauseHeight ) fill(green);
   rect( pauseX1, pauseY1, buttonSide, buttonSide );
   fill(defaultWhite);
