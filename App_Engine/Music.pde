@@ -71,7 +71,7 @@ void drawMusic() {
   //
   print("Confirming Center X:", centerX);
   print("\t Confirming Center Y:", centerY);
-  println("\t Confirming Button Position Couter:", buttonPosition);
+  println("\t Confirming Button Position Counter:", buttonPosition);
   //Stop Button
   if ( stopOn==true ) {
     fill(orange);
@@ -111,6 +111,7 @@ void drawMusic() {
   if ( mouseX>=muteX && mouseX<=muteX+buttonSide && mouseY>=muteY && mouseY<=muteY+buttonSide ) fill(darkorange);
   rect( muteX, muteY, buttonSide, buttonSide );
   fill(defaultWhite);
+  //
 }//End drawMusic
 //
 void keyPressedMusic() {
