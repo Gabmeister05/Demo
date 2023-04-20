@@ -136,11 +136,25 @@ void drawMusic() {
   fill(defaultWhite);
   //
   //Next Button
+  if ( nextOn==true ) {
+    fill(darkred);
+  } else {
+    fill(defaultWhite);
+  };
+  if ( mouseX>=nextX && mouseX<=nextX+buttonSide && mouseY>=nextY && mouseY<=nextY+buttonSide ) fill(gold);
+  if ( mouseX>=nextX1 && mouseX<=nextX1+buttonSide && mouseY>=nextY1 && mouseY<=nextY1+buttonSide ) fill(gold);
   rect( nextX, nextY, nextWidth, buttonSide );
   triangle( nextX1, nextY1, nextX2, nextY2, nextX3, nextY3 );
   fill(defaultWhite);
   //
   //PreviousButton
+  if ( prevOn==true ) {
+    fill(darkred);
+  } else {
+    fill(defaultWhite);
+  };
+  if ( mouseX>=prevX && mouseX<=prevX+buttonSide && mouseY>=prevY && mouseY<=prevY+buttonSide ) fill(gold);
+  if ( mouseX>=prevX1 && mouseX<=prevX1+buttonSide && mouseY>=prevY1 && mouseY<=prevY1+buttonSide ) fill(gold);
   rect( prevX, prevY, prevWidth, buttonSide );
   triangle( prevX1, prevY1, prevX2, prevY2, prevX3, prevY3 );
   fill(defaultWhite);
