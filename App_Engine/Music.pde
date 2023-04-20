@@ -135,6 +135,16 @@ void drawMusic() {
   triangle( rrX1B, rrY1B, rrX2B, rrY2B, rrX3B, rrY3B );
   fill(defaultWhite);
   //
+  //Next Button
+  rect( nextX, nextY, nextWidth, buttonSide );
+  triangle( nextX1, nextY1, nextX2, nextY2, nextX3, nextY3 );
+  fill(defaultWhite);
+  //
+  //PreviousButton
+  rect( prevX, prevY, prevWidth, buttonSide );
+  triangle( prevX1, prevY1, prevX2, prevY2, prevX3, prevY3 );
+  fill(defaultWhite);
+  //
   //
 }//End drawMusic
 //
@@ -269,6 +279,7 @@ void stopSong() {
 void fastForward() {
   //ERROR: if at end, plays begining
   if ( songs[currentSong].isPlaying() ) {
+    ffOn=true;
     songs[currentSong].skip(10000); //parameter in milliseconds
   } else if ( songs[currentSong].position() >= songs[currentSong].length()*9/10 );
   //Finish Conditional
@@ -277,8 +288,9 @@ void fastForward() {
 //
 void reverseRewind() {
   //Spamming R means start playing at begining of song
+  rrOn=true;
   songs[currentSong].skip(-10000); //parameter in milliseconds
-}//End Fast Rewind
+}//End Reverse Rewind
 //
 void songNext() {
   if ( songs[currentSong].isPlaying() ) {

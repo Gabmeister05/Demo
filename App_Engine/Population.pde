@@ -32,7 +32,7 @@ void population()
   loopIX = pauseX1;
   loopIY = pauseY1 + ( buttonPositionRow * buttonReferentMeasure );
   //
-  buttonPositionColumn = 2;
+  buttonPositionColumn = 1;
   ffX1A = pauseX1 + ( buttonPositionColumn*buttonReferentMeasure );
   ffY1A = pauseY1;
   //Note: need points 1 & 3 to calculate 2
@@ -62,7 +62,7 @@ void population()
   rrX3B = rrX2A;
   rrY3B = rrY3A;
   //
-  buttonPositionColumn = 3; //can increment with +=1
+  buttonPositionColumn = 2; //can increment with +=1
   nextX = pauseX1 + ( buttonPositionColumn*buttonReferentMeasure );
   nextY = pauseY1;
   nextX1 = nextX;
