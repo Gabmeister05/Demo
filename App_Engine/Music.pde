@@ -6,10 +6,9 @@ String pathway, iceandfire, iwishiknew, factory, daytimebonfire;
 int currentSong=0;
 Boolean rectON=false, triangleON=false;
 Boolean autoPlayOn=false;
-Boolean playOn=false;
-Boolean pauseOn=false;
-Boolean stopOn=false;
-Boolean muteOn=false;
+Boolean playOn=false, pauseOn=false, stopOn=false, muteOn=false;
+Boolean ffOn=false, rrOn=false, nextOn=false, prevOn=false;
+Boolean loopOn=false, loopPlayOn=false;
 //
 float buttonSide, spaceWidth, spaceHeight;
 float centerX, centerY, buttonPosition;
@@ -112,18 +111,43 @@ void drawMusic() {
   rect( muteX, muteY, buttonSide, buttonSide );
   fill(defaultWhite);
   //
+  //Fast Forward Button
+  if ( ffOn==true ) {
+    fill(green);
+  } else {
+    fill(defaultWhite);
+  };
+  if ( mouseX>=ffX1A && mouseX<=ffX1A+buttonSide && mouseY>=ffY1A && mouseY<=ffY1A+buttonSide ) fill(darkorange);
+  if ( mouseX>=ffX1B && mouseX<=ffX1B+buttonSide && mouseY>=ffY1B && mouseY<=ffY1B+buttonSide ) fill(darkorange);
+  triangle( ffX1A, ffY1A, ffX2A, ffY2A, ffX3A, ffY3A );
+  triangle( ffX1B, ffY1B, ffX2B, ffY2B, ffX3B, ffY3B );
+  fill(defaultWhite);
+  //
+  //Reverse Rewind Button
+  if ( rrOn==true ) {
+    fill(green);
+  } else {
+    fill(defaultWhite);
+  };
+  if ( mouseX>=rrX1A && mouseX<=rrX1A+buttonSide && mouseY>=rrY1A && mouseY<=rrY1A+buttonSide ) fill(darkorange);
+  if ( mouseX>=rrX1B && mouseX<=rrX1B+buttonSide && mouseY>=rrY1B && mouseY<=rrY1B+buttonSide ) fill(darkorange);
+  triangle( rrX1A, rrY1A, rrX2A, rrY2A, rrX3A, rrY3A );
+  triangle( rrX1B, rrY1B, rrX2B, rrY2B, rrX3B, rrY3B );
+  fill(defaultWhite);
+  //
+  //
 }//End drawMusic
 //
 void keyPressedMusic() {
   //Music Key Board Short Cuts
-  if ( key == 'U' || key=='u' ) autoPlay(); 
-  if ( key == 'P' || key=='p' ) playPause(); 
-  if ( key == 'M' || key=='m' ) mute(); 
-  if ( key == 'S' || key=='s' ) stopSong(); 
-  if ( key == 'F' || key=='f' ) fastForward(); 
-  if ( key == 'R' || key=='r' ) fastRewind(); 
-  if ( key == 'N' || key=='n' ) songNext(); 
-  if ( key == 'B' || key=='b' ) songPrevious(); 
+  if ( key == 'U' || key=='u' ) autoPlay();
+  if ( key == 'P' || key=='p' ) playPause();
+  if ( key == 'M' || key=='m' ) mute();
+  if ( key == 'S' || key=='s' ) stopSong();
+  if ( key == 'F' || key=='f' ) fastForward();
+  if ( key == 'R' || key=='r' ) reverseRewind();
+  if ( key == 'N' || key=='n' ) songNext();
+  if ( key == 'B' || key=='b' ) songPrevious();
   if ( key == 'L' || key=='l' ) singleLoop(); //loops current song once
   if ( key == 'O' || key=='o' ) infiniteLoop(); //loops current song infinitely
   if ( key == 'K' || key=='k' ) loopPlaylist(); //entire playlist
@@ -136,10 +160,12 @@ void mousePressedMusic() {
   rectON = false;
   triangleON = false;
   if ( mouseX>=pauseX1 && mouseX<=pauseX1+pauseWidth && mouseY>=pauseY1 && mouseY<=pauseY1+pauseHeight ) rectON = true;
+  if ( mouseX>=pauseX2 && mouseX<=pauseX2+pauseWidth && mouseY>=pauseY2 && mouseY<=pauseY2+pauseHeight ) rectON = true;
   if ( mouseX>=playX && mouseX<=playX+buttonSide && mouseY>=playY && mouseY<=playY+buttonSide ) triangleON = true;
   //
   if ( mouseX>=playX && mouseX<=playX+buttonSide && mouseY>=playY && mouseY<=playY+buttonSide ) playPause();
   if ( mouseX>=pauseX1 && mouseX<=pauseX1+pauseWidth && mouseY>=pauseY1 && mouseY<=pauseY1+pauseHeight ) playPause();
+  if ( mouseX>=pauseX2 && mouseX<=pauseX2+pauseWidth && mouseY>=pauseY2 && mouseY<=pauseY2+pauseHeight ) playPause();
   if ( mouseX>=stopX && mouseX<=stopX+buttonSide && mouseY>=stopY && mouseY<=stopY+buttonSide ) stopSong();
   if ( mouseX>=muteX && mouseX<=muteX+buttonSide && mouseY>=muteY && mouseY<=muteY+buttonSide ) mute();
 }//End mousePressedMusic
@@ -243,7 +269,7 @@ void fastForward() {
   //ERROR Catch: if end of song then next song
 }//End Fast Forward
 //
-void fastRewind() {
+void reverseRewind() {
   //Spamming R means start playing at begining of song
   songs[currentSong].skip(-10000); //parameter in milliseconds
 }//End Fast Rewind
