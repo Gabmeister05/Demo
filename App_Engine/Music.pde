@@ -56,7 +56,7 @@ void setupDisplay() {
     appWidth = width;
     appHeight = height;
   }
-  println("App Geometry isl", "\tApp Width:", appWidth, "\t\tApp Height", appHeight);
+  println("App Geometry is", "\tApp Width:", appWidth, "\t\tApp Height", appHeight);
   //
   if (rectON==true && triangleON==false) rect(pauseX1, pauseY1, buttonSide, buttonSide);
   if (rectON==false && triangleON==true) triangle( playX1, playY1, playX2, playY2, playX3, playY3 );
@@ -88,7 +88,7 @@ void drawMusic() {
   } else {
     fill(defaultWhite);
   };
-  if ( mouseX>=pauseX1 && mouseX<=pauseX1+buttonSide && mouseY>=pauseY1 && mouseY<=pauseY1+buttonSide ) fill(green);
+  if ( mouseX>=pauseX1 && mouseX<=pauseX1+buttonSide && mouseY>=pauseY1 && mouseY<=pauseY1+buttonSide ) fill(darkgreen);
   rect( pauseX1, pauseY1, buttonSide, buttonSide );
   fill(defaultWhite);
   //
@@ -116,14 +116,14 @@ void drawMusic() {
 //
 void keyPressedMusic() {
   //Music Key Board Short Cuts
-  if ( key == 'U' || key=='u' ) autoPlay(); //teacher started
-  if ( key == 'P' || key=='p' ) playPause(); //teacher started
-  if ( key == 'M' || key=='m' ) mute(); //teacher started
-  if ( key == 'S' || key=='s' ) stopSong(); //teacher started
-  if ( key == 'F' || key=='f' ) fastForward(); //teacher started
-  if ( key == 'R' || key=='r' ) fastRewind(); //teacher started
-  if ( key == 'N' || key=='n' ) songNext(); //teacher started
-  if ( key == 'B' || key=='b' ) songPrevious(); //See Next Button, student finishes Previous Button
+  if ( key == 'U' || key=='u' ) autoPlay(); 
+  if ( key == 'P' || key=='p' ) playPause(); 
+  if ( key == 'M' || key=='m' ) mute(); 
+  if ( key == 'S' || key=='s' ) stopSong(); 
+  if ( key == 'F' || key=='f' ) fastForward(); 
+  if ( key == 'R' || key=='r' ) fastRewind(); 
+  if ( key == 'N' || key=='n' ) songNext(); 
+  if ( key == 'B' || key=='b' ) songPrevious(); 
   if ( key == 'L' || key=='l' ) singleLoop(); //loops current song once
   if ( key == 'O' || key=='o' ) infiniteLoop(); //loops current song infinitely
   if ( key == 'K' || key=='k' ) loopPlaylist(); //entire playlist
@@ -172,14 +172,10 @@ void autoPlay() { //See autoPlayMusic()
     autoPlayOn = true;
     playOn=true;
     pauseOn=true;
-    stopOn=true;
-    muteOn=true;
   } else {
     autoPlayOn = false;
     playOn=false;
     pauseOn=false;
-    stopOn=false;
-    muteOn=false;
   }
 }//End Auto Play
 //
