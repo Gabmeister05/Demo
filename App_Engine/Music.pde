@@ -249,7 +249,6 @@ void playPause() {
   } else if ( songs[currentSong].position() >= songs[currentSong].length()*9/10 ) {
     songs[currentSong].pause();
     currentSong+=1;
-    songs[currentSong].rewind();
   } else {
     songs[currentSong].play(); //no auto rewind like loop()
     playOn=true;
