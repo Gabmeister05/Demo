@@ -25,7 +25,7 @@ void population()
   playX2 = playX1 + buttonReferentMeasure;
   playY2 = playY1 + (playY3-playY1)*1/2;
   //
-  buttonPositionRow = 1;
+  buttonPositionRow = 2;
   muteX = pauseX1;
   muteY = pauseY1 - ( buttonPositionRow * buttonReferentMeasure );
   //
@@ -94,7 +94,7 @@ void population()
   stopX = pauseX1 - ( buttonPositionColumn*buttonReferentMeasure );
   stopY = pauseY1;
   //
-  buttonPositionRow = 2;
+  buttonPositionRow = 3;
   loopPlaylistX = pauseX1;
   loopPlaylistY = pauseY1 + ( buttonPositionRow*buttonReferentMeasure );
   //
