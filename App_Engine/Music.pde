@@ -168,6 +168,12 @@ void mousePressedMusic() {
   if ( mouseX>=pauseX2 && mouseX<=pauseX2+pauseWidth && mouseY>=pauseY2 && mouseY<=pauseY2+pauseHeight ) playPause();
   if ( mouseX>=stopX && mouseX<=stopX+buttonSide && mouseY>=stopY && mouseY<=stopY+buttonSide ) stopSong();
   if ( mouseX>=muteX && mouseX<=muteX+buttonSide && mouseY>=muteY && mouseY<=muteY+buttonSide ) mute();
+  //
+  if ( mouseX>=ffX1A && mouseX<=ffX1A+buttonSide && mouseY>=ffY1A && mouseY<=ffY1A+buttonSide ) fastForward();
+  if ( mouseX>=ffX1B && mouseX<=ffX1B+buttonSide && mouseY>=ffY1B && mouseY<=ffY1B+buttonSide ) fastForward();
+  if ( mouseX>=rrX1A && mouseX<=rrX1A+buttonSide && mouseY>=rrY1A && mouseY<=rrY1A+buttonSide ) reverseRewind();
+  if ( mouseX>=rrX1B && mouseX<=rrX1B+buttonSide && mouseY>=rrY1B && mouseY<=rrY1B+buttonSide ) reverseRewind();
+  //
 }//End mousePressedMusic
 //
 void concatenationOfMusicFiles() {
