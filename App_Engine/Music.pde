@@ -1,8 +1,8 @@
 //Global Variables
 Minim minim; //creates an object to access all functions
-AudioPlayer[] songs = new AudioPlayer[3]; //creates "Play List" variable holding extensions WAV, AIFF, AU, SND, and MP3
+AudioPlayer[] songs = new AudioPlayer[4]; //creates "Play List" variable holding extensions WAV, AIFF, AU, SND, and MP3
 AudioPlayer[] soundEffects = new AudioPlayer[2];
-String pathway, iceandfire, iwishiknew, jetpack;
+String pathway, iceandfire, iwishiknew, jetpack, andreas;
 String factory, daytimebonfire;
 int currentSong=0;
 Boolean rectON=false, triangleON=false;
@@ -36,6 +36,7 @@ void setupMusic() {
   songs[0] = minim.loadFile( pathway + iceandfire );
   songs[1] = minim.loadFile( pathway + iwishiknew );
   songs[2] = minim.loadFile ( pathway + jetpack );
+  songs[3] = minim.loadFile ( pathway + andreas );
   soundEffects[0] = minim.loadFile( pathway + factory );
   soundEffects[1] = minim.loadFile( pathway + daytimebonfire );
   //
@@ -214,13 +215,14 @@ void concatenationOfMusicFiles() {
   factory = "Factory Background.mp3";
   daytimebonfire = "Daytime Forrest Bonfire.mp3";
   jetpack = "Jetpack-Joyride-Theme-Song.mp3";
+  andreas = "Grand-Theft-Auto-San-Andreas-Theme-Song.mp3";
 }//End concatentation
 //
 void autoPlayMusic() {
   if ( autoPlayOn ) {
-    if ( songs[currentSong].position() <= songs[currentSong].length()*4/5 ) {
+    if ( songs[currentSong].position() <= songs[currentSong].length()*7/10 ) {
       songs[currentSong].play();
-    } else if ( songs[currentSong].position() >= songs[currentSong].length()*9/10 ) {
+    } else if ( songs[currentSong].position() >= songs[currentSong].length()*17/20 ) {
       currentSong+=1;
     } else {
       songs[currentSong].rewind();
@@ -249,7 +251,7 @@ void playPause() {
     songs[currentSong].pause();
     playOn=false;
     pauseOn=true;
-  } else if ( songs[currentSong].position() >= songs[currentSong].length()*9/10 ) {
+  } else if ( songs[currentSong].position() >= songs[currentSong].length()*17/20 ) {
     songs[currentSong].pause();
     currentSong+=1;
   } else {
@@ -266,7 +268,7 @@ void mute() {
   if ( songs[currentSong].isMuted() ) {
     muteOn=false;
     songs[currentSong].unmute();
-  } else if ( songs[currentSong].position() >= songs[currentSong].length()*9/10 ) {
+  } else if ( songs[currentSong].position() >= songs[currentSong].length()*17/20 ) {
     //Students to finish SMARTER Mute Button
     //ERROR: music player breaks if song finishes
     /* Ideas
