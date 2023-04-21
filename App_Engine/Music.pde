@@ -1,8 +1,9 @@
 //Global Variables
 Minim minim; //creates an object to access all functions
-AudioPlayer[] songs = new AudioPlayer[2]; //creates "Play List" variable holding extensions WAV, AIFF, AU, SND, and MP3
+AudioPlayer[] songs = new AudioPlayer[3]; //creates "Play List" variable holding extensions WAV, AIFF, AU, SND, and MP3
 AudioPlayer[] soundEffects = new AudioPlayer[2];
-String pathway, iceandfire, iwishiknew, factory, daytimebonfire;
+String pathway, iceandfire, iwishiknew, jetpack;
+String factory, daytimebonfire;
 int currentSong=0;
 Boolean rectON=false, triangleON=false;
 Boolean autoPlayOn=false;
@@ -34,6 +35,7 @@ void setupMusic() {
   concatenationOfMusicFiles();
   songs[0] = minim.loadFile( pathway + iceandfire );
   songs[1] = minim.loadFile( pathway + iwishiknew );
+  songs[2] = minim.loadFile ( pathway + jetpack );
   soundEffects[0] = minim.loadFile( pathway + factory );
   soundEffects[1] = minim.loadFile( pathway + daytimebonfire );
   //
@@ -211,6 +213,7 @@ void concatenationOfMusicFiles() {
   iwishiknew  = "I Wish I Knew - Otis McDonald.mp3";
   factory = "Factory Background.mp3";
   daytimebonfire = "Daytime Forrest Bonfire.mp3";
+  jetpack = "Jetpack-Joyride-Theme-Song.mp3";
 }//End concatentation
 //
 void autoPlayMusic() {
