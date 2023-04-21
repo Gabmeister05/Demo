@@ -39,8 +39,9 @@ void setupMusic() {
   songs[3] = minim.loadFile ( pathway + andreas );
   soundEffects[0] = minim.loadFile( pathway + factory );
   soundEffects[1] = minim.loadFile( pathway + daytimebonfire );
+}
   //
-}//End setupMusic
+//End setupMusic
 //
 void setupDisplay() {
   //

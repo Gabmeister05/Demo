@@ -6,7 +6,7 @@ float whiteSpace=0.0, picX_Adjusted=0.0, picY_Adjusted=0.0;
 float picWidthAdjusted=0.0, picHeightAdjusted=0.0;
 Boolean imageCenter=false, imageRightBottom=false; 
 //
-{size{800,600};}
+{size(800,600);
 appWidth = width;
 appHeight = height;
 //Population
