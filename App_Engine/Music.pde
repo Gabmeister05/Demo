@@ -341,7 +341,6 @@ void songPrevious() {
     //Absolute value of a number is always postive, should be able to fix the problem
     abs(-1);
     currentSong--;
-    currentSong++;
     songs[currentSong].rewind();
   }
 }//Previous Song
