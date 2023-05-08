@@ -5,7 +5,6 @@ AudioPlayer[] soundEffects = new AudioPlayer[2];
 String pathway, iceandfire, iwishiknew, jetpack, andreas;
 String factory, daytimebonfire;
 int currentSong=0;
-int abs(songs[currentSong]);
 Boolean rectON=false, triangleON=false;
 Boolean autoPlayOn=false;
 Boolean playOn=false, pauseOn=false, stopOn=false, muteOn=false;
@@ -331,6 +330,7 @@ void songNext() {
 }// Next Song
 //
 void songPrevious() {
+  float abs(songs[currentSong]);
   if ( songs[currentSong].isPlaying() ) {
   } else if ( currentSong == songs.length - 1 ) { //ERROR Catch:ArrayOutOfBounds
     currentSong = songs.length - songs.length; //Suppost intention is Zero
