@@ -336,12 +336,13 @@ void songPrevious() {
     currentSong = songs.length - songs.length; //Suppost intention is Zero
     songs[currentSong].rewind();
   } else {
-    //.rewind();
     //ERROR: -1 is out of bounds, needs a better solution instead of rewind()
     //error is gone but it can't rewind from song[0] back to whaatever songs the program has
+    //Absolute value of a number is always postive, should be able to fix the problem
     abs(-1);
     currentSong--;
     currentSong++;
+    songs[currentSong].rewind();
   }
 }//Previous Song
 //
