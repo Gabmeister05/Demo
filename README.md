@@ -11,11 +11,12 @@ Top comments are edits in progress*
 - Fast Forward, Backward and Shuffle buttons are optional
 - Planning Night-Mode and possible button functions, working and fixing on ERRORS
 - The Autoplay button has function (sort of, it ran into a gitch ERROR)
-- Autoplay button has function of 95% (The other 5% will have to be fixed) 
+- Autoplay button has function of 95% (The other 5% will have to be fixed)
 - Time to modify the App Engine, autoplay and other button functions will have to be on hold for now
 - The modified App Engine will be on hold while text prototyping is online
 - Currently working on images and text prototyping is on hold
 - Back to working on the App Engine but this time, images and texts will be in the code along with better code for button functions and shapes
+- Weather App is main priority right now, few ideas to fix the modified App Engine
 
 List of buttons for music player:
 
