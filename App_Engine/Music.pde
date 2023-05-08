@@ -5,6 +5,7 @@ AudioPlayer[] soundEffects = new AudioPlayer[2];
 String pathway, iceandfire, iwishiknew, jetpack, andreas;
 String factory, daytimebonfire;
 int currentSong=0;
+int a=abs(-1);
 Boolean rectON=false, triangleON=false;
 Boolean autoPlayOn=false;
 Boolean playOn=false, pauseOn=false, stopOn=false, muteOn=false;
@@ -338,6 +339,7 @@ void songPrevious() {
     //.rewind();
     //ERROR: -1 is out of bounds, needs a better solution instead of rewind()
     //error is gone but it can't rewind from song[0] back to whaatever songs the program has
+    abs(-1);
     currentSong--;
     currentSong++;
   }
