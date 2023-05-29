@@ -11,7 +11,7 @@ void population()
   print("Confirming Center X:", centerX);
   println("\t Confirming Center Y:", centerY); //Illstrates a character escape
   //
-  buttonPositionColumn = 4;
+  buttonPositionColumn = 3;
   buttonPositionRow = 3;
   quitX = stopX  - ( buttonPositionColumn*buttonReferentMeasure );
   quitY = stopY - ( buttonPositionRow*buttonReferentMeasure );
