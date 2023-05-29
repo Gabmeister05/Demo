@@ -10,9 +10,11 @@ Boolean autoPlayOn=false;
 Boolean playOn=false, pauseOn=false, stopOn=false, muteOn=false;
 Boolean ffOn=false, rrOn=false, nextOn=false, prevOn=false;
 Boolean loopOn=false, loopPlayOn=false;
+Boolean quitOn=false;
 //
 float buttonSide, spaceWidth, spaceHeight;
 float centerX, centerY, buttonPosition;
+float quitX, quitY, quitWidth, quitHeight;
 float pauseX1, pauseY1, pauseX2, pauseY2, pauseWidth, pauseHeight;
 float playX, playY, playX1, playY1, playX2, playY2, playX3, playY3;
 float stopX, stopY, muteX, muteY, loopIX, loopIY;
@@ -27,6 +29,7 @@ float loopPlaylistX, loopPlaylistY;
 //
 color defaultWhite=#FFFFFF, red=#FF0000, lime=#00FF00, yellow=#FFFF00, orange=#FFA500; //Note: colours for nightmode
 color green=#000800, darkred=#8B0000, darkorange=#FF8C00, darkgreen=#006400, gold=#FFD700; //Note: colours for nightmode
+color purple=#FF00FF;
 //
 void setupMusic() {
   //
@@ -40,7 +43,7 @@ void setupMusic() {
   soundEffects[0] = minim.loadFile( pathway + factory );
   soundEffects[1] = minim.loadFile( pathway + daytimebonfire );
 }
-  //
+//
 //End setupMusic
 //
 void setupDisplay() {
@@ -83,6 +86,16 @@ void drawMusic() {
   };
   if ( mouseX>=stopX && mouseX<=stopX+buttonSide && mouseY>=stopY && mouseY<=stopY+buttonSide ) fill(darkred);
   rect( stopX, stopY, buttonSide, buttonSide );
+  fill(defaultWhite);
+  //
+  //Quit Button
+  if ( quitOn==false ) {
+    fill(purple);
+  } else {
+    fill(defaultWhite);
+  };
+  if ( mouseX>=pauseX1 && mouseX<=pauseX1+buttonSide && mouseY>=pauseY1 && mouseY<=pauseY1+buttonSide ) fill(yellow);
+  rect( quitX, quitY, quitWidth, quitHeight );
   fill(defaultWhite);
   //
   //Pause Button
@@ -182,6 +195,9 @@ void keyPressedMusic() {
   if ( key == 'W' || key=='w' ) shufflePlaylist(); //shuffle
   if ( key == 'E' || key=='e' ) loopAndShuffle(); //Loop and Shuffle
   //
+  if ( key == 'Q' || key == 'q' ) exit(); 
+  if ( keyCode == ESC ) exit();
+  //
 }//End keyPressedMusic
 //
 void mousePressedMusic() {
@@ -190,6 +206,8 @@ void mousePressedMusic() {
   if ( mouseX>=pauseX1 && mouseX<=pauseX1+pauseWidth && mouseY>=pauseY1 && mouseY<=pauseY1+pauseHeight ) rectON = true;
   if ( mouseX>=pauseX2 && mouseX<=pauseX2+pauseWidth && mouseY>=pauseY2 && mouseY<=pauseY2+pauseHeight ) rectON = true;
   if ( mouseX>=playX && mouseX<=playX+buttonSide && mouseY>=playY && mouseY<=playY+buttonSide ) triangleON = true;
+  //
+  if ( mouseX>=playX && mouseX<=playX+buttonSide && mouseY>=playY && mouseY<=playY+buttonSide ) exit();
   //
   if ( mouseX>=playX && mouseX<=playX+buttonSide && mouseY>=playY && mouseY<=playY+buttonSide ) playPause();
   if ( mouseX>=pauseX1 && mouseX<=pauseX1+pauseWidth && mouseY>=pauseY1 && mouseY<=pauseY1+pauseHeight ) playPause();
@@ -245,6 +263,15 @@ void autoPlay() { //See autoPlayMusic()
     pauseOn=false;
   }
 }//End Auto Play
+//
+void exit() {
+  //Quit Button
+  if ( songs[currentSong].isPlaying() ) {
+    quitOn=false;
+  } else {
+    quitOn=true;
+  }
+}//End Quit
 //
 void playPause() {
   //Play-Pause Button
