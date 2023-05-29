@@ -330,11 +330,9 @@ void songNext() {
 }// Next Song
 //
 void songPrevious() {
-  float abs(songs[currentSong]);
   if ( songs[currentSong].isPlaying() ) {
   } else if ( currentSong == songs.length - 1 ) { //ERROR Catch:ArrayOutOfBounds
     currentSong = songs.length - songs.length; //Suppost intention is Zero
-    abs(songs[currentSong]) = -songs[currentSong].rewind();
   } else {
     //ERROR: -1 is out of bounds, needs a better solution instead of rewind()
     //error is gone but it can't rewind from song[0] back to whaatever songs the program has
