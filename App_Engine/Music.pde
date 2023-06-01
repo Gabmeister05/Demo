@@ -66,6 +66,17 @@ void setupDisplay() {
   //
   if (rectON==true && triangleON==false) rect(pauseX1, pauseY1, buttonSide, buttonSide);
   if (rectON==false && triangleON==true) triangle( playX1, playY1, playX2, playY2, playX3, playY3 );
+  //
+  if ( width == appWidth || height == appHeight ) {
+    draw();
+  } else if ( width > appWidth || height > appHeight ) {
+    println("Display is nonexistent");
+    exit();
+  } else {
+    println("Display is nonexistent");
+    exit();
+  }
+  //
 }//End setupDisplay
 //
 void drawMusic() {
