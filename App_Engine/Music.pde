@@ -2,7 +2,7 @@
 Minim minim; //creates an object to access all functions
 AudioPlayer[] songs = new AudioPlayer[5]; //creates "Play List" variable holding extensions WAV, AIFF, AU, SND, and MP3
 AudioPlayer[] soundEffects = new AudioPlayer[2];
-String pathway, iceandfire, iwishiknew, jetpack, andreas;
+String pathway, iceandfire, iwishiknew, jetpack, andreas, observatory;
 String factory, daytimebonfire;
 int currentSong=0;
 Boolean rectON=false, triangleON=false;
@@ -40,7 +40,7 @@ void setupMusic() {
   songs[1] = minim.loadFile( pathway + iwishiknew );
   songs[2] = minim.loadFile ( pathway + jetpack );
   songs[3] = minim.loadFile ( pathway + andreas );
-  songs[4] minim.loadFile ( pathway + observatory );
+  songs[4] = minim.loadFile ( pathway + observatory );
   soundEffects[0] = minim.loadFile( pathway + factory );
   soundEffects[1] = minim.loadFile( pathway + daytimebonfire );
 }
@@ -247,7 +247,7 @@ void concatenationOfMusicFiles() {
   daytimebonfire = "Daytime Forrest Bonfire.mp3";
   jetpack = "Jetpack-Joyride-Theme-Song.mp3";
   andreas = "Grand-Theft-Auto-San-Andreas-Theme-Song.mp3";
-  observatory = "Super Mario Galaxy Comet Observatory.mp3";
+  observatory = "Super Mario Galaxy Comet Observatory Music.mp3";
 }//End concatentation
 //
 void autoPlayMusic() {
