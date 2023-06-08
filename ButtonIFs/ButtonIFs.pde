@@ -5,7 +5,7 @@ float buttonX2, buttonY2, buttonWidth2, buttonHeight2;
 float rectDisplayX, rectDisplayY, rectDisplayWidth, rectDisplayHeight;
 float ellipseX, ellipseY, ellipseXDiameter, ellipseYDiameter;
 float x, y, xDiameter, yDiameter;
-color black=#000000, white=#FFFFE1; 
+color black=#000000, white=#FFFFE1;
 boolean rectON=false, ellipseON=false;
 //
 String buttonText1= "Click Me";
@@ -16,7 +16,7 @@ color purple = #2C08FF;
 void setup()
 {
   //fullScreen();
-  size( 600, 400 ); 
+  size( 600, 400 );
   int appWidth = width;
   int appHeight = height;
   println (width, height, displayWidth, displayHeight);

@@ -283,16 +283,11 @@ void quit() {
     quitOn=false;
   } else if ( songs[currentSong].position() >= songs[currentSong].length()*17/20 ) {
     songs[currentSong].pause();
-    if ( quitOn=false;) {
-      songs[currentSong].isPlaying() else {
-        quitOn=true;
-        exit();
-}
-}
-} else {
-    quitOn=true;
-    exit();
   }
+} else {
+  quitOn=true;
+  exit();
+}
 }//End Quit
 //
 void playPause() {
