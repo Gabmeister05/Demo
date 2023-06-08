@@ -207,7 +207,7 @@ void keyPressedMusic() {
   if ( key == 'W' || key=='w' ) shufflePlaylist(); //shuffle
   if ( key == 'E' || key=='e' ) loopAndShuffle(); //Loop and Shuffle
   //
-  if ( key == 'Q' || key == 'q' ) quit(); 
+  if ( key == 'Q' || key == 'q' ) quit();
   if ( keyCode == ESC ) quit();
   //
 }//End keyPressedMusic
@@ -281,7 +281,15 @@ void quit() {
   //Quit Button
   if ( songs[currentSong].isPlaying() ) {
     quitOn=false;
-  } else {
+  } else if ( songs[currentSong].position() >= songs[currentSong].length()*17/20 ) {
+    songs[currentSong].pause();
+    if ( quitOn=false;) {
+      songs[currentSong].isPlaying() else {
+        quitOn=true;
+        exit();
+}
+}
+} else {
     quitOn=true;
     exit();
   }
