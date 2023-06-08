@@ -281,13 +281,10 @@ void quit() {
   //Quit Button
   if ( songs[currentSong].isPlaying() ) {
     quitOn=false;
-  } else if ( songs[currentSong].position() >= songs[currentSong].length()*17/20 ) {
-    songs[currentSong].pause();
+  } else {
+    quitOn=true;
+    exit();
   }
-} else {
-  quitOn=true;
-  exit();
-}
 }//End Quit
 //
 void playPause() {
