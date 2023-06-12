@@ -9,7 +9,7 @@ Boolean rectON=false, triangleON=false;
 Boolean autoPlayOn=false;
 Boolean playOn=false, pauseOn=false, stopOn=false, muteOn=false;
 Boolean ffOn=false, rrOn=false, nextOn=false, prevOn=false;
-Boolean loopOn=false, loopPlayOn=false;
+Boolean 1loopOn=false, IloopOn=false, loopPlayOn=false;
 Boolean quitOn=false;
 //
 float buttonSide, spaceWidth, spaceHeight;
@@ -188,7 +188,35 @@ void drawMusic() {
   triangle( prevX1, prevY1, prevX2, prevY2, prevX3, prevY3 );
   fill(defaultWhite);
   //
+  //SingleloopButton
+  if ( 1loopOn=true ) {
+    fill(gold);
+  } else {
+    fill(defaultWhite);
+  };
+  if ( mouseX>=loop1X && mouseX<=loop1X+buttonSide && mouseY>=loop1Y && mouseY<=loop1Y+buttonSide ) fill(green);
+  square( loop1X, loop1Y );
+  fill(defaultWhite);
   //
+  //InfintieloopButton
+  if ( IloopOn=true ) {
+    fill(green);
+  } else {
+    fill(defaultWhite);
+  };
+  if ( mouseX>=loopIX && mouseX<=loopIX+buttonSide && mouseY>=loopIY && mouseY<=loopIY+buttonSide ) fill(gold);
+  square( loopIX, loopIY );
+  fill(defaultWhite);
+  //
+  //PlaylistloopButton
+  if ( loopPlayOn=true ) {
+    fill(darkorange);
+  } else {
+    fill(darkred);
+  };
+  if ( mouseX>=loopPlaylistX && mouseX<=loopPlaylistX+buttonSide && mouseY>=loopPlaylistY && mouseY<=loopPlaylistY+buttonSide ) fill(defaultWhite);
+  square( loopPlaylistX, loopPlaylistY );
+  fill(defaultWhite);
 }//End drawMusic
 //
 void keyPressedMusic() {
@@ -236,6 +264,10 @@ void mousePressedMusic() {
   if ( mouseX>=nextX1 && mouseX<=nextX1+buttonSide && mouseY>=nextY1 && mouseY<=nextY1+buttonSide ) songNext();
   if ( mouseX>=prevX && mouseX<=prevX+buttonSide && mouseY>=prevY && mouseY<=prevY+buttonSide ) songPrevious();
   if ( mouseX>=prevX1 && mouseX<=prevX1+buttonSide && mouseY>=prevY1 && mouseY<=prevY1+buttonSide ) songPrevious();
+  //
+  if ( mouseX>=loop1X && mouseX<=loop1X+buttonSide && mouseY>=loop1Y && mouseY<=loop1Y+buttonSide ) singleLoop();
+  if ( mouseX>=loopIX && mouseX<=loopIX+buttonSide && mouseY>=loopIY && mouseY<=loopIY+buttonSide ) infiniteLoop();
+  if ( mouseX>=loopPlaylistX && mouseX<=loopPlaylistX+buttonSide && mouseY>=loopPlaylistY && mouseY<=loopPlaylistY+buttonSide ) loopPlaylist(); 
   //
 }//End mousePressedMusic
 //
