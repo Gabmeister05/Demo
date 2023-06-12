@@ -106,7 +106,7 @@ void drawMusic() {
   } else {
     fill(defaultWhite);
   };
-  if ( mouseX>=quitX && mouseX<=quitX+quitWidth && mouseY>=quitY && mouseY<=quitY+quitHeight ) fill(yellow);
+  if ( mouseX>=quitX && mouseX<=quitX+spaceWidth && mouseY>=quitY && mouseY<=quitY+spaceHeight ) fill(yellow);
   rect( quitX, quitY, quitWidth, quitHeight );
   fill(defaultWhite);
   //
