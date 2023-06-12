@@ -9,7 +9,7 @@ Boolean rectON=false, triangleON=false;
 Boolean autoPlayOn=false;
 Boolean playOn=false, pauseOn=false, stopOn=false, muteOn=false;
 Boolean ffOn=false, rrOn=false, nextOn=false, prevOn=false;
-Boolean 1loopOn=false, IloopOn=false, loopPlayOn=false;
+Boolean oneloopOn=false, IloopOn=false, loopPlayOn=false;
 Boolean quitOn=false;
 //
 float buttonSide, spaceWidth, spaceHeight;
@@ -189,13 +189,13 @@ void drawMusic() {
   fill(defaultWhite);
   //
   //SingleloopButton
-  if ( 1loopOn=true ) {
+  if ( oneloopOn=true ) {
     fill(gold);
   } else {
     fill(defaultWhite);
   };
   if ( mouseX>=loop1X && mouseX<=loop1X+buttonSide && mouseY>=loop1Y && mouseY<=loop1Y+buttonSide ) fill(green);
-  square( loop1X, loop1Y );
+  square( loop1X, loop1Y, buttonSide );
   fill(defaultWhite);
   //
   //InfintieloopButton
@@ -205,7 +205,7 @@ void drawMusic() {
     fill(defaultWhite);
   };
   if ( mouseX>=loopIX && mouseX<=loopIX+buttonSide && mouseY>=loopIY && mouseY<=loopIY+buttonSide ) fill(gold);
-  square( loopIX, loopIY );
+  square( loopIX, loopIY, buttonSide );
   fill(defaultWhite);
   //
   //PlaylistloopButton
@@ -215,7 +215,7 @@ void drawMusic() {
     fill(darkred);
   };
   if ( mouseX>=loopPlaylistX && mouseX<=loopPlaylistX+buttonSide && mouseY>=loopPlaylistY && mouseY<=loopPlaylistY+buttonSide ) fill(defaultWhite);
-  square( loopPlaylistX, loopPlaylistY );
+  square( loopPlaylistX, loopPlaylistY, buttonSide );
   fill(defaultWhite);
 }//End drawMusic
 //
