@@ -14,7 +14,7 @@ Boolean quitOn=false;
 //
 float buttonSide, spaceWidth, spaceHeight;
 float centerX, centerY, buttonPosition;
-float quitX, quitY, quitWidth, quitHeight;
+float quitX, quitY;
 float pauseX1, pauseY1, pauseX2, pauseY2, pauseWidth, pauseHeight;
 float playX, playY, playX1, playY1, playX2, playY2, playX3, playY3;
 float stopX, stopY, muteX, muteY, loopIX, loopIY;
@@ -107,7 +107,7 @@ void drawMusic() {
     fill(defaultWhite);
   };
   if ( mouseX>=quitX && mouseX<=quitX+spaceWidth && mouseY>=quitY && mouseY<=quitY+spaceHeight ) fill(yellow);
-  rect( quitX, quitY, quitWidth, quitHeight );
+  rect( quitX, quitY, spaceWidth, spaceHeight );
   fill(defaultWhite);
   //
   //Pause Button

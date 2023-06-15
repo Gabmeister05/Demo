@@ -103,8 +103,6 @@ void population()
   buttonPositionRow = 3;
   quitX = pauseX1  - ( buttonPositionColumn*buttonReferentMeasure );
   quitY = pauseY2 - ( buttonPositionRow*buttonReferentMeasure );
-  quitWidth = stopX + stopY;
-  quitHeight = quitWidth;
   //
 } //End Population
 //
